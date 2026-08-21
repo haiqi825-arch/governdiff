@@ -1,0 +1,19 @@
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+*.docx binary
+*.gif binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.png binary
+*.woff binary
+*.woff2 binary
+*.zip binary
+
+# Parser fixtures are byte-sensitive, including invalid UTF-8 and mixed newlines.
+tests/format_fixtures/** binary

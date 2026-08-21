@@ -1,0 +1,10 @@
+{
+  "schema_version": "governdiff-reproducible-build/1.0",
+  "source_date_epoch": "1704067200",
+  "artifact": "governdiff-0.6.0-py3-none-any.whl",
+  "sha256": "e2b543acd4b87743c594a4c748959712a0d0126a73dd4a5c381b5a505cf2997f",
+  "second_sha256": "e2b543acd4b87743c594a4c748959712a0d0126a73dd4a5c381b5a505cf2997f",
+  "byte_identical": true,
+  "clean_install_smoke": true,
+  "passed": true
+}

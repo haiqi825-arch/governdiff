@@ -1,0 +1,8 @@
+include LICENSE
+include reviewer-ui/THIRD_PARTY_NOTICES.md
+include reviewer-ui/scripts/review-session.mjs
+recursive-include reviewer-ui/dist *
+prune reviewer-ui/dist/.openai
+prune tests/policy_corpus
+prune tests/expansion_corpus
+prune reviewer-ui/node_modules

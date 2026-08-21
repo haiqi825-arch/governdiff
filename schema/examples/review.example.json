@@ -1,0 +1,33 @@
+{
+  "schema_version": "governdiff-review/1.1",
+  "report": {
+    "old_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "new_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "generated_at": "2026-08-09T08:00:00+00:00"
+  },
+  "exported_at": "2026-08-09T08:15:00+00:00",
+  "decisions": [
+    {
+      "change_fingerprint": "GVC-EXAMPLE01",
+      "state": "modified",
+      "note": "Deadline normalized to the signed text.",
+      "updated_at": "2026-08-09T08:14:00+00:00"
+    }
+  ],
+  "field_edits": [
+    {
+      "change_fingerprint": "GVC-EXAMPLE01",
+      "finding_fingerprint": "GVD-EXAMPLE01",
+      "field": "deadline",
+      "machine_old_value": "30 days",
+      "machine_new_value": "10 days",
+      "reviewed_old_value": "30 calendar days",
+      "reviewed_new_value": "10 business days",
+      "updated_at": "2026-08-09T08:14:00+00:00"
+    }
+  ],
+  "alignment_overrides": [],
+  "filters": {
+    "visible_change_fingerprints": ["GVC-EXAMPLE01"]
+  }
+}

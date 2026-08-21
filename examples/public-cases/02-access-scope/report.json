@@ -1,0 +1,506 @@
+{
+  "schema_version": "1.5",
+  "generator": "governdiff/0.6.0",
+  "generated_at": "2026-08-13T00:00:00+00:00",
+  "disclaimer": "GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise.",
+  "selection": {
+    "scope": "all",
+    "minimum_confidence": "low",
+    "filters": {},
+    "selected_change_count": 1,
+    "selected_finding_count": 2
+  },
+  "redacted": false,
+  "review_import": null,
+  "waiver_diagnostics": [],
+  "old_document": {
+    "path": "examples/public-cases/02-access-scope/old.md",
+    "sha256": "953030ddd679381ea70f6d87e8c31b3d905982270dd048d7a6bc4c80f6dfa7ad",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-13T00:00:00+00:00",
+    "block_count": 1,
+    "word_count": 7,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-1CCE4A8DEB",
+        "title": "Repository access policy",
+        "path": [
+          "Repository access policy"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-2E8CC2FCC1",
+            "title": "Eligibility",
+            "path": [
+              "Repository access policy",
+              "Eligibility"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-336DF7901DA6"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 101,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 3,
+      "word_count": 11,
+      "character_count": 101,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "new_document": {
+    "path": "examples/public-cases/02-access-scope/new.md",
+    "sha256": "001f08bbc0bec7cd4219f8280c44c152b49950606cddc1c0d22fb36dfc422eef",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-13T00:00:00+00:00",
+    "block_count": 1,
+    "word_count": 9,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-1CCE4A8DEB",
+        "title": "Repository access policy",
+        "path": [
+          "Repository access policy"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-2E8CC2FCC1",
+            "title": "Eligibility",
+            "path": [
+              "Repository access policy",
+              "Eligibility"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-5CC033F215D7"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 112,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 3,
+      "word_count": 13,
+      "character_count": 112,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 2,
+    "active_findings": 2,
+    "breaking_findings": 2,
+    "high_confidence_breaking_findings": 2,
+    "confidence": {
+      "changes": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "findings": {
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "high"
+  },
+  "article_mappings": [],
+  "section_tree": [
+    {
+      "section_id": "SEC-1CCE4A8DEB",
+      "title": "Repository access policy",
+      "path": [
+        "Repository access policy"
+      ],
+      "depth": 1,
+      "change_count": 1,
+      "breaking_count": 1,
+      "change_types": {
+        "modified": 1
+      },
+      "confidence": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "children": [
+        {
+          "section_id": "SEC-2E8CC2FCC1",
+          "title": "Eligibility",
+          "path": [
+            "Repository access policy",
+            "Eligibility"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 1,
+          "change_types": {
+            "modified": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "fingerprint": "GVC-89A893C43B",
+      "change_type": "modified",
+      "similarity": 0.8366,
+      "severity": "high",
+      "section": "Repository access policy > Eligibility",
+      "section_path": [
+        "Repository access policy",
+        "Eligibility"
+      ],
+      "section_id": "SEC-2E8CC2FCC1",
+      "old_article": null,
+      "new_article": null,
+      "article_mapping": null,
+      "confidence_score": 0.852,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.84"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-336DF7901DA6",
+        "section": [
+          "Repository access policy",
+          "Eligibility"
+        ],
+        "text": "Approved employees may access the governance repository.",
+        "normalized_text": "Approved employees may access the governance repository.",
+        "comparison_text": "approvedemployeesmayaccessthegovernancerepository",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 44,
+        "char_end": 100,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "Repository access policy > Eligibility",
+        "evidence_label": "paragraph 1 · chars 44-100"
+      },
+      "new_block": {
+        "block_id": "BLK-5CC033F215D7",
+        "section": [
+          "Repository access policy",
+          "Eligibility"
+        ],
+        "text": "All employees and contractors may access the governance repository.",
+        "normalized_text": "All employees and contractors may access the governance repository.",
+        "comparison_text": "allemployeesandcontractorsmayaccessthegovernancerepository",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 44,
+        "char_end": 111,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "Repository access policy > Eligibility",
+        "evidence_label": "paragraph 1 · chars 44-111"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-336DF7901DA6",
+          "section": [
+            "Repository access policy",
+            "Eligibility"
+          ],
+          "text": "Approved employees may access the governance repository.",
+          "normalized_text": "Approved employees may access the governance repository.",
+          "comparison_text": "approvedemployeesmayaccessthegovernancerepository",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 44,
+          "char_end": 100,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "Repository access policy > Eligibility",
+          "evidence_label": "paragraph 1 · chars 44-100"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-5CC033F215D7",
+          "section": [
+            "Repository access policy",
+            "Eligibility"
+          ],
+          "text": "All employees and contractors may access the governance repository.",
+          "normalized_text": "All employees and contractors may access the governance repository.",
+          "comparison_text": "allemployeesandcontractorsmayaccessthegovernancerepository",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 44,
+          "char_end": 111,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "Repository access policy > Eligibility",
+          "evidence_label": "paragraph 1 · chars 44-111"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "replace",
+          "old_text": "Approved",
+          "new_text": "All",
+          "old_start": 0,
+          "old_end": 1,
+          "new_start": 0,
+          "new_end": 1
+        },
+        {
+          "operation": "equal",
+          "old_text": " employees",
+          "new_text": " employees",
+          "old_start": 1,
+          "old_end": 3,
+          "new_start": 1,
+          "new_end": 3
+        },
+        {
+          "operation": "insert",
+          "old_text": "",
+          "new_text": " and contractors",
+          "old_start": 3,
+          "old_end": 3,
+          "new_start": 3,
+          "new_end": 7
+        },
+        {
+          "operation": "equal",
+          "old_text": " may access the governance repository.",
+          "new_text": " may access the governance repository.",
+          "old_start": 3,
+          "old_end": 14,
+          "new_start": 7,
+          "new_end": 18
+        }
+      ],
+      "temporal_changes": [],
+      "findings": [
+        {
+          "fingerprint": "GVD-B8C03980CA",
+          "check_id": "scope-expanded",
+          "severity": "high",
+          "breaking": true,
+          "summary": "The governed scope may have expanded.",
+          "field": "scope",
+          "old_value": "0",
+          "new_value": "1",
+          "old_evidence": "Approved employees may access the governance repository.",
+          "new_evidence": "All employees and contractors may access the governance repository.",
+          "explanation": "The revised clause contains more universal or inclusive scope terms without more limiting terms.",
+          "confidence_score": 0.8015897196261683,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.85)",
+            "scope-expanded rule specificity is 0.74"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "0",
+            "new": "1"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "0",
+            "new": "1"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-CFC35C0F88",
+          "check_id": "authority-shifted",
+          "severity": "high",
+          "breaking": true,
+          "summary": "Responsibility or authority shifted from Approved employees to All employees and contractors.",
+          "field": "actor",
+          "old_value": "Approved employees",
+          "new_value": "All employees and contractors",
+          "old_evidence": "Approved employees may access the governance repository.",
+          "new_evidence": "All employees and contractors may access the governance repository.",
+          "explanation": "The grammatical actor attached to normative language changed in the aligned clause.",
+          "confidence_score": 0.8555897196261683,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.85)",
+            "authority-shifted rule specificity is 0.86"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Approved employees",
+            "new": "All employees and contractors"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Approved employees",
+            "new": "All employees and contractors"
+          },
+          "active": true
+        }
+      ]
+    }
+  ],
+  "unfiltered_summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 2,
+    "active_findings": 2,
+    "breaking_findings": 2,
+    "high_confidence_breaking_findings": 2,
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "confidence": {
+      "changes": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "findings": {
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "high"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "governdiff-action/1.0",
+  "release_channel": "v1",
+  "generated_at": "2026-08-21T13:07:56.216918+00:00",
+  "mode": "pair",
+  "base_ref": null,
+  "base_commit": null,
+  "patterns": [],
+  "gate": {
+    "enabled": true,
+    "failed": true,
+    "minimum_confidence": "medium",
+    "minimum_severity": "high",
+    "finding_count": 2,
+    "reason": "2 active breaking finding(s) crossed both thresholds."
+  },
+  "summary": {
+    "files": 1,
+    "changes": 1,
+    "active_findings": 2,
+    "breaking_at_confidence_threshold": 2,
+    "high_confidence_breaking_findings": 2,
+    "matched_waivers": 0,
+    "statuses": {
+      "added": 0,
+      "broken_pairing": 0,
+      "copied": 0,
+      "deleted": 0,
+      "modified": 1,
+      "renamed": 0,
+      "type_changed": 0,
+      "unknown": 0,
+      "unmerged": 0
+    }
+  },
+  "files": [
+    {
+      "status": "modified",
+      "old_path": "examples\\public-cases\\01-incident-deadline\\old.md",
+      "new_path": "examples\\public-cases\\01-incident-deadline\\new.md",
+      "display_path": "examples\\public-cases\\01-incident-deadline\\old.md → examples\\public-cases\\01-incident-deadline\\new.md",
+      "old_sha256": "55dbb4cf8170d29e82169ecbbd0962b479f649b07e0db89b992d5dd269f9947c",
+      "new_sha256": "516f8aa9aa304f2789595d14160245dd816ea65b9a40ebe743e1e50f1176a65f",
+      "summary": {
+        "total_changes": 1,
+        "change_types": {
+          "added": 0,
+          "removed": 0,
+          "modified": 1,
+          "split": 0,
+          "merged": 0,
+          "moved": 0,
+          "format_only": 0
+        },
+        "findings": 2,
+        "active_findings": 2,
+        "breaking_findings": 2,
+        "high_confidence_breaking_findings": 2,
+        "review_states": {
+          "unreviewed": 1,
+          "confirmed": 0,
+          "rejected": 0,
+          "modified": 0,
+          "waived": 0
+        },
+        "confidence": {
+          "changes": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "findings": {
+            "high": 2,
+            "medium": 0,
+            "low": 0
+          }
+        },
+        "article_mappings": 0,
+        "renumbered_article_mappings": 0,
+        "article_mapping_conflicts": 0,
+        "highest_severity": "high"
+      },
+      "breaking_at_confidence_threshold": 2,
+      "gate_finding_fingerprints": [
+        "GVD-CA93F47FA2",
+        "GVD-FE2A1C4EB0"
+      ],
+      "reports": {
+        "json": "reports/001-examples-public-cases-01-incident-deadline-new.md-c08e0fcc/report.json",
+        "markdown": "reports/001-examples-public-cases-01-incident-deadline-new.md-c08e0fcc/report.md",
+        "html": "reports/001-examples-public-cases-01-incident-deadline-new.md-c08e0fcc/report.html",
+        "csv": "reports/001-examples-public-cases-01-incident-deadline-new.md-c08e0fcc/report.csv"
+      }
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://governdiff.dev/schema/report/1.5.json",
+  "title": "GovernDiff analysis report",
+  "description": "Public report contract for GovernDiff 0.6.x.",
+  "type": "object",
+  "required": [
+    "schema_version", "generator", "generated_at", "disclaimer", "selection",
+    "redacted", "review_import", "waiver_diagnostics", "old_document",
+    "new_document", "summary", "unfiltered_summary", "article_mappings",
+    "section_tree", "changes"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.5" },
+    "generator": { "type": "string", "pattern": "^governdiff/[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "disclaimer": { "type": "string", "minLength": 40 },
+    "selection": { "$ref": "#/$defs/selection" },
+    "redacted": { "type": "boolean" },
+    "review_import": { "type": ["object", "null"] },
+    "waiver_diagnostics": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/diagnostic" }
+    },
+    "old_document": { "$ref": "#/$defs/document" },
+    "new_document": { "$ref": "#/$defs/document" },
+    "summary": { "$ref": "#/$defs/summary" },
+    "unfiltered_summary": { "$ref": "#/$defs/summary" },
+    "article_mappings": { "type": "array", "items": { "type": "object" } },
+    "section_tree": { "type": "array", "items": { "type": "object" } },
+    "changes": { "type": "array", "items": { "$ref": "#/$defs/change" } }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "reviewState": {
+      "enum": ["unreviewed", "confirmed", "rejected", "modified", "waived"]
+    },
+    "nullableString": { "type": ["string", "null"] },
+    "selection": {
+      "type": "object",
+      "required": [
+        "scope", "minimum_confidence", "filters", "selected_change_count",
+        "selected_finding_count"
+      ],
+      "properties": {
+        "scope": { "enum": ["all", "breaking", "confirmed", "unreviewed", "filtered"] },
+        "minimum_confidence": { "enum": ["low", "medium", "high"] },
+        "filters": {
+          "type": "object",
+          "properties": {
+            "change_types": { "$ref": "#/$defs/stringArray" },
+            "checks": { "$ref": "#/$defs/stringArray" },
+            "severities": { "$ref": "#/$defs/stringArray" },
+            "confidence_levels": { "$ref": "#/$defs/stringArray" },
+            "review_states": { "$ref": "#/$defs/stringArray" },
+            "sections": { "$ref": "#/$defs/stringArray" },
+            "visible_change_fingerprints": { "$ref": "#/$defs/stringArray" },
+            "visible_finding_fingerprints": { "$ref": "#/$defs/stringArray" }
+          },
+          "additionalProperties": false
+        },
+        "selected_change_count": { "type": "integer", "minimum": 0 },
+        "selected_finding_count": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "diagnostic": {
+      "type": "object",
+      "required": ["code", "severity", "message"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "severity": { "enum": ["info", "warning", "error"] },
+        "message": { "type": "string", "minLength": 1 },
+        "fingerprint": { "type": "string" },
+        "expires_at": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "document": {
+      "type": "object",
+      "required": [
+        "sha256", "language", "format", "imported_at", "block_count",
+        "word_count", "table_count", "preflight"
+      ],
+      "properties": {
+        "path": { "type": "string" },
+        "source_name": { "type": "string" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "language": { "type": "string" },
+        "format": { "type": "string" },
+        "imported_at": { "type": "string", "format": "date-time" },
+        "block_count": { "type": "integer", "minimum": 0 },
+        "word_count": { "type": "integer", "minimum": 0 },
+        "table_count": { "type": "integer", "minimum": 0 },
+        "section_tree": { "type": "array" },
+        "tables": { "type": "array" },
+        "preflight": { "type": ["object", "null"] }
+      },
+      "anyOf": [
+        { "required": ["path"] },
+        { "required": ["source_name"] }
+      ],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_changes", "change_types", "findings", "active_findings",
+        "breaking_findings", "high_confidence_breaking_findings", "review_states",
+        "confidence", "article_mappings", "renumbered_article_mappings",
+        "article_mapping_conflicts", "highest_severity"
+      ],
+      "properties": {
+        "total_changes": { "type": "integer", "minimum": 0 },
+        "change_types": { "type": "object" },
+        "findings": { "type": "integer", "minimum": 0 },
+        "active_findings": { "type": "integer", "minimum": 0 },
+        "breaking_findings": { "type": "integer", "minimum": 0 },
+        "high_confidence_breaking_findings": { "type": "integer", "minimum": 0 },
+        "review_states": { "type": "object" },
+        "confidence": { "type": "object" },
+        "article_mappings": { "type": "integer", "minimum": 0 },
+        "renumbered_article_mappings": { "type": "integer", "minimum": 0 },
+        "article_mapping_conflicts": { "type": "integer", "minimum": 0 },
+        "highest_severity": { "enum": ["info", "low", "medium", "high", "critical"] }
+      },
+      "additionalProperties": false
+    },
+    "block": {
+      "type": ["object", "null"],
+      "properties": {
+        "block_id": { "type": "string" },
+        "section": { "type": "array", "items": { "type": "string" } },
+        "text": { "type": "string" },
+        "normalized_text": { "type": "string" },
+        "comparison_text": { "type": "string" },
+        "ordinal": { "type": "integer" },
+        "line_start": { "type": "integer" },
+        "line_end": { "type": "integer" },
+        "block_type": { "type": "string" },
+        "page_start": { "type": ["integer", "null"] },
+        "page_end": { "type": ["integer", "null"] },
+        "paragraph_start": { "type": ["integer", "null"] },
+        "paragraph_end": { "type": ["integer", "null"] },
+        "char_start": { "type": ["integer", "null"] },
+        "char_end": { "type": ["integer", "null"] },
+        "list_level": { "type": ["integer", "null"] },
+        "table_id": { "type": ["string", "null"] },
+        "table_row": { "type": ["integer", "null"] },
+        "table_column": { "type": ["integer", "null"] },
+        "is_noise": { "type": "boolean" },
+        "section_label": { "type": "string" },
+        "evidence_label": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "fingerprint", "check_id", "severity", "breaking", "summary", "field",
+        "old_value", "new_value", "old_evidence", "new_evidence", "explanation",
+        "confidence_score", "confidence_level", "confidence_reasons", "waived",
+        "waiver_reason", "waiver_approver", "waiver_created_at", "waiver_expires_at",
+        "review_state", "review_note", "review_updated_at", "reviewed_old_value",
+        "reviewed_new_value", "field_modified", "machine_values", "reviewed_values",
+        "effective_values", "active"
+      ],
+      "properties": {
+        "fingerprint": { "type": "string", "pattern": "^GVD-[A-Z0-9]+$" },
+        "check_id": { "type": "string" },
+        "severity": { "enum": ["info", "low", "medium", "high", "critical"] },
+        "breaking": { "type": "boolean" },
+        "summary": { "type": "string" },
+        "field": { "type": "string" },
+        "old_value": { "$ref": "#/$defs/nullableString" },
+        "new_value": { "$ref": "#/$defs/nullableString" },
+        "old_evidence": { "$ref": "#/$defs/nullableString" },
+        "new_evidence": { "$ref": "#/$defs/nullableString" },
+        "explanation": { "type": "string" },
+        "confidence_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "confidence_level": { "enum": ["low", "medium", "high"] },
+        "confidence_reasons": { "$ref": "#/$defs/stringArray" },
+        "waived": { "type": "boolean" },
+        "waiver_reason": { "$ref": "#/$defs/nullableString" },
+        "waiver_approver": { "$ref": "#/$defs/nullableString" },
+        "waiver_created_at": { "$ref": "#/$defs/nullableString" },
+        "waiver_expires_at": { "$ref": "#/$defs/nullableString" },
+        "review_state": { "$ref": "#/$defs/reviewState" },
+        "review_note": { "$ref": "#/$defs/nullableString" },
+        "review_updated_at": { "$ref": "#/$defs/nullableString" },
+        "reviewed_old_value": { "$ref": "#/$defs/nullableString" },
+        "reviewed_new_value": { "$ref": "#/$defs/nullableString" },
+        "field_modified": { "type": "boolean" },
+        "machine_values": { "$ref": "#/$defs/valuePair" },
+        "reviewed_values": { "anyOf": [{ "$ref": "#/$defs/valuePair" }, { "type": "null" }] },
+        "effective_values": { "$ref": "#/$defs/valuePair" },
+        "active": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "valuePair": {
+      "type": "object",
+      "required": ["old", "new"],
+      "properties": {
+        "old": { "$ref": "#/$defs/nullableString" },
+        "new": { "$ref": "#/$defs/nullableString" }
+      },
+      "additionalProperties": false
+    },
+    "change": {
+      "type": "object",
+      "required": [
+        "fingerprint", "change_type", "similarity", "severity", "section",
+        "section_path", "section_id", "old_article", "new_article", "article_mapping",
+        "confidence_score", "confidence_level", "confidence_reasons", "alignment_status",
+        "review", "old_block", "new_block", "old_blocks", "new_blocks", "word_diff",
+        "temporal_changes", "findings"
+      ],
+      "properties": {
+        "fingerprint": { "type": "string", "pattern": "^GVC-[A-Z0-9]+$" },
+        "change_type": { "enum": ["added", "removed", "modified", "split", "merged", "moved", "format_only", "unchanged"] },
+        "similarity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "severity": { "enum": ["info", "low", "medium", "high", "critical"] },
+        "section": { "type": "string" },
+        "section_path": { "type": "array", "items": { "type": "string" } },
+        "section_id": { "type": "string" },
+        "old_article": { "$ref": "#/$defs/nullableString" },
+        "new_article": { "$ref": "#/$defs/nullableString" },
+        "article_mapping": { "type": ["object", "null"] },
+        "confidence_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "confidence_level": { "enum": ["low", "medium", "high"] },
+        "confidence_reasons": { "$ref": "#/$defs/stringArray" },
+        "alignment_status": { "type": "string" },
+        "review": {
+          "type": "object",
+          "required": ["state", "note", "updated_at"],
+          "properties": {
+            "state": { "$ref": "#/$defs/reviewState" },
+            "note": { "$ref": "#/$defs/nullableString" },
+            "updated_at": { "$ref": "#/$defs/nullableString" }
+          },
+          "additionalProperties": false
+        },
+        "old_block": { "$ref": "#/$defs/block" },
+        "new_block": { "$ref": "#/$defs/block" },
+        "old_blocks": { "type": "array", "items": { "$ref": "#/$defs/block" } },
+        "new_blocks": { "type": "array", "items": { "$ref": "#/$defs/block" } },
+        "word_diff": { "type": "array", "items": { "type": "object" } },
+        "temporal_changes": { "type": "array", "items": { "type": "object" } },
+        "findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

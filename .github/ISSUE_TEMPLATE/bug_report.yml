@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible GovernDiff defect without sharing sensitive policy text.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach confidential policies, review notes, credentials, or unredacted reports.
+  - type: input
+    id: version
+    attributes:
+      label: GovernDiff version
+      placeholder: governdiff 0.6.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options: [CLI, Reviewer, GitHub Action, report or schema, packaging, documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use synthetic or redacted text and list exact commands.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, Node.js, browser, and input format.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed confidential text, tokens, reviewer notes, and local absolute paths.
+          required: true
+        - label: This is not a vulnerability report; I will follow SECURITY.md for security issues.
+          required: true

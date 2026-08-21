@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "case_count": 7,
+  "description": "Focused project-reviewed Phase 3 acceptance cases; not a production accuracy claim.",
+  "cases": [
+    {
+      "id": "en-one-to-two-split",
+      "language": "en",
+      "old": "# Rules\n\nMembers must submit annual reports within 30 days. They must notify the Secretariat.\n",
+      "new": "# Rules\n\nMembers must submit annual reports within 30 days.\n\nThey must notify the Secretariat.\n",
+      "expected": {"change_type": "split", "old_blocks": 1, "new_blocks": 2}
+    },
+    {
+      "id": "zh-two-to-one-merge",
+      "language": "zh",
+      "old": "# 报告规则\n\n成员应当在三十日内提交年度报告。\n\n成员应当通知秘书处。\n",
+      "new": "# 报告规则\n\n成员应当在三十日内提交年度报告。成员应当通知秘书处。\n",
+      "expected": {"change_type": "merged", "old_blocks": 2, "new_blocks": 1}
+    },
+    {
+      "id": "en-word-replacement",
+      "language": "en",
+      "old": "# Rule\n\nMembers may respond within 20 days.\n",
+      "new": "# Rule\n\nMembers must respond within 10 days.\n",
+      "expected": {"change_type": "modified", "word_operations": ["equal", "replace"], "checks": ["modality-strengthened", "deadline-shortened"]}
+    },
+    {
+      "id": "zh-reference-retargeted",
+      "language": "zh",
+      "old": "# 规则\n\n委员会应当依照第五条作出决定。\n",
+      "new": "# 规则\n\n委员会应当依照第六条作出决定。\n",
+      "expected": {"change_type": "modified", "checks": ["reference-retargeted"]}
+    },
+    {
+      "id": "en-effective-date-shift",
+      "language": "en",
+      "old": "# Dates\n\nThis policy takes effect on 2026-01-01.\n",
+      "new": "# Dates\n\nThis policy takes effect on 2026-02-01.\n",
+      "expected": {"change_type": "modified", "checks": ["effective-date-shifted"], "excluded_checks": ["deadline-shortened", "deadline-extended"], "temporal_kind": "effective_date"}
+    },
+    {
+      "id": "en-article-target-conflict",
+      "language": "en",
+      "old": "# Policy\n\n## Article 1\n\nAlpha governance clause remains unchanged.\n\nBeta governance clause remains unchanged.\n",
+      "new": "# Policy\n\n## Article 2\n\nAlpha governance clause remains unchanged.\n\n## Article 3\n\nBeta governance clause remains unchanged.\n",
+      "expected": {"mapping_old_key": "article:1", "mapping_status": "ambiguous", "candidate_count": 2}
+    },
+    {
+      "id": "en-nested-section-tree",
+      "language": "en",
+      "old": "# Governance\n\n## Appeals\n\nMembers may appeal.\n",
+      "new": "# Governance\n\n## Appeals\n\nMembers must appeal within 10 days.\n",
+      "expected": {"change_type": "modified", "section_path": ["Governance", "Appeals"], "section_change_count": 1}
+    }
+  ]
+}

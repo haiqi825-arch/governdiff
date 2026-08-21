@@ -1,0 +1,38 @@
+version: 1
+
+documents:
+  - path: policies/**/*.md
+    language: en
+
+checks:
+  enabled:
+    - article-remapped
+    - authority-shifted
+    - deadline-shortened
+    - duty-added
+    - exception-added
+    - exception-removed
+    - definition-changed
+    - modality-strengthened
+    - policy-clause-removed
+    - permission-removed
+    - prohibition-added
+    - protection-removed
+    - restriction-added
+    - scope-expanded
+    - threshold-changed
+  fail_on: high
+  min_confidence: medium
+
+review:
+  waivers: .governdiff-waivers.yml
+  require_reason: true
+
+report:
+  scope: all
+  redacted: false
+  # For scope: filtered, uncomment one or more filters.
+  # checks:
+  #   - deadline-shortened
+  # review_states:
+  #   - unreviewed

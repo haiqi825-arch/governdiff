@@ -1,0 +1,175 @@
+name: GovernDiff policy review
+description: Audit natural-language policy changes with confidence layers and article remapping.
+author: GovernDiff contributors
+
+branding:
+  icon: shield
+  color: purple
+
+inputs:
+  paths:
+    description: Comma- or newline-separated repository paths/globs compared automatically with the PR base.
+    required: false
+    default: ""
+  base:
+    description: Optional Git base revision; pull requests use the event base SHA automatically.
+    required: false
+    default: ""
+  old:
+    description: Optional old document path for backward-compatible explicit pair mode.
+    required: false
+    default: ""
+  new:
+    description: Optional new document path for backward-compatible explicit pair mode.
+    required: false
+    default: ""
+  config:
+    description: Optional path to a GovernDiff YAML or JSON configuration.
+    required: false
+    default: ""
+  min-confidence:
+    description: Lowest confidence layer allowed to fail the gate (low, medium, or high).
+    required: false
+    default: medium
+  fail-on-severity:
+    description: Lowest severity allowed to fail the gate.
+    required: false
+    default: high
+  fail-on-breaking:
+    description: Fail when an active breaking finding reaches both configured thresholds.
+    required: false
+    default: "true"
+  report-dir:
+    description: Directory for the manifest, compact summary, and complete per-file reports.
+    required: false
+    default: governdiff-report
+  artifact-name:
+    description: Stable workflow artifact label used in outputs and the Job Summary.
+    required: false
+    default: governdiff-report
+  upload-artifact:
+    description: Upload the report directory as a workflow artifact.
+    required: false
+    default: "true"
+  include-annotation-details:
+    description: Opt in to repository file paths, source lines, and finding summaries in workflow annotations.
+    required: false
+    default: "false"
+
+outputs:
+  action-schema:
+    description: Stable aggregate output contract identifier.
+    value: ${{ steps.audit.outputs.action-schema }}
+  release-channel:
+    description: Stable major Action tag expected for compatible releases.
+    value: ${{ steps.audit.outputs.release-channel }}
+  gate-failed:
+    description: Whether a finding crossed the configured CI gate.
+    value: ${{ steps.audit.outputs.gate-failed }}
+  breaking-count:
+    description: Number of unwaived breaking findings at or above the confidence threshold.
+    value: ${{ steps.audit.outputs.breaking-count }}
+  high-confidence-breaking-count:
+    description: Number of unwaived high-confidence breaking findings.
+    value: ${{ steps.audit.outputs.high-confidence-breaking-count }}
+  files-audited:
+    description: Number of changed policy files matched by paths or config globs.
+    value: ${{ steps.audit.outputs.files-audited }}
+  report-dir:
+    description: Path to the complete report artifact directory.
+    value: ${{ steps.audit.outputs.report-dir }}
+  report-manifest:
+    description: Path to the governdiff-action/1.0 aggregate manifest.
+    value: ${{ steps.audit.outputs.report-manifest }}
+  report-summary:
+    description: Path to the compact Markdown summary.
+    value: ${{ steps.audit.outputs.report-summary }}
+  report-json:
+    description: Path to the single-file JSON report; empty when multiple files were audited.
+    value: ${{ steps.audit.outputs.report-json }}
+  report-markdown:
+    description: Path to the single-file Markdown report; empty for multiple files.
+    value: ${{ steps.audit.outputs.report-markdown }}
+  report-html:
+    description: Path to the single-file self-contained HTML report; empty for multiple files.
+    value: ${{ steps.audit.outputs.report-html }}
+  report-csv:
+    description: Path to the single-file CSV report; empty for multiple files.
+    value: ${{ steps.audit.outputs.report-csv }}
+  artifact-url:
+    description: GitHub URL for the uploaded complete report bundle.
+    value: ${{ steps.report.outputs.artifact-url }}
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.12"
+
+    - name: Install GovernDiff
+      shell: bash
+      run: python -m pip install "${GITHUB_ACTION_PATH}"
+
+    - name: Audit policy change
+      id: audit
+      shell: bash
+      env:
+        GOVERNDIFF_PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        GOVERNDIFF_INPUT_OLD: ${{ inputs.old }}
+        GOVERNDIFF_INPUT_NEW: ${{ inputs.new }}
+        GOVERNDIFF_INPUT_BASE: ${{ inputs.base }}
+        GOVERNDIFF_INPUT_PATHS: ${{ inputs.paths }}
+        GOVERNDIFF_INPUT_CONFIG: ${{ inputs.config }}
+        GOVERNDIFF_INPUT_MIN_CONFIDENCE: ${{ inputs.min-confidence }}
+        GOVERNDIFF_INPUT_FAIL_ON_SEVERITY: ${{ inputs.fail-on-severity }}
+        GOVERNDIFF_INPUT_FAIL_ON_BREAKING: ${{ inputs.fail-on-breaking }}
+        GOVERNDIFF_INPUT_REPORT_DIR: ${{ inputs.report-dir }}
+        GOVERNDIFF_INPUT_ARTIFACT_NAME: ${{ inputs.artifact-name }}
+        GOVERNDIFF_INPUT_ANNOTATION_DETAILS: ${{ inputs.include-annotation-details }}
+      run: >-
+        python "${GITHUB_ACTION_PATH}/scripts/github_action.py"
+        --old "${GOVERNDIFF_INPUT_OLD}"
+        --new "${GOVERNDIFF_INPUT_NEW}"
+        --base "${GOVERNDIFF_INPUT_BASE}"
+        --paths "${GOVERNDIFF_INPUT_PATHS}"
+        --config "${GOVERNDIFF_INPUT_CONFIG}"
+        --min-confidence "${GOVERNDIFF_INPUT_MIN_CONFIDENCE}"
+        --fail-on-severity "${GOVERNDIFF_INPUT_FAIL_ON_SEVERITY}"
+        --fail-on-breaking "${GOVERNDIFF_INPUT_FAIL_ON_BREAKING}"
+        --report-dir "${GOVERNDIFF_INPUT_REPORT_DIR}"
+        --artifact-name "${GOVERNDIFF_INPUT_ARTIFACT_NAME}"
+        --include-annotation-details "${GOVERNDIFF_INPUT_ANNOTATION_DETAILS}"
+        --defer-failure
+
+    - name: Upload GovernDiff report
+      id: report
+      if: ${{ always() && steps.audit.outcome == 'success' && inputs.upload-artifact == 'true' }}
+      uses: actions/upload-artifact@v7
+      with:
+        name: ${{ inputs.artifact-name }}
+        path: ${{ inputs.report-dir }}
+        if-no-files-found: error
+
+    - name: Publish compact policy summary
+      if: ${{ always() && steps.audit.outcome == 'success' }}
+      shell: bash
+      env:
+        GOVERNDIFF_ARTIFACT_URL: ${{ steps.report.outputs.artifact-url }}
+        GOVERNDIFF_INPUT_ARTIFACT_NAME: ${{ inputs.artifact-name }}
+        GOVERNDIFF_INPUT_UPLOAD_ARTIFACT: ${{ inputs.upload-artifact }}
+        GOVERNDIFF_REPORT_SUMMARY: ${{ steps.audit.outputs.report-summary }}
+      run: >-
+        python "${GITHUB_ACTION_PATH}/scripts/github_action.py" publish-summary
+        --summary-file "${GOVERNDIFF_REPORT_SUMMARY}"
+        --artifact-url "${GOVERNDIFF_ARTIFACT_URL}"
+        --artifact-name "${GOVERNDIFF_INPUT_ARTIFACT_NAME}"
+        --upload-artifact "${GOVERNDIFF_INPUT_UPLOAD_ARTIFACT}"
+
+    - name: Enforce policy gate
+      if: ${{ steps.audit.outputs.gate-failed == 'true' }}
+      shell: bash
+      run: |
+        echo "GovernDiff found a policy change above the configured severity and confidence thresholds."
+        exit 2

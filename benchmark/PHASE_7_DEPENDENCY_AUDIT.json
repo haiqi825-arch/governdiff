@@ -1,0 +1,20 @@
+{
+  "schema_version": "governdiff-dependency-audit/1.0",
+  "audited_at": "2026-08-11",
+  "python": {
+    "tool": "pip-audit 2.10.1",
+    "source": "pyproject.toml",
+    "known_vulnerabilities": 0,
+    "passed": true
+  },
+  "reviewer": {
+    "tool": "npm audit",
+    "lockfile_version": 3,
+    "threshold": "high",
+    "high_or_critical_vulnerabilities": 0,
+    "moderate_development_vulnerabilities": 4,
+    "moderate_chain": "drizzle-kit -> @esbuild-kit -> esbuild",
+    "passed": true
+  },
+  "passed": true
+}

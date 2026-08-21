@@ -1,0 +1,29 @@
+{
+  "schema_version": "governdiff-public-cases/1.0",
+  "generated_at": "2026-08-13T00:00:00+00:00",
+  "license": "MIT",
+  "provenance": "Synthetic policy text written for GovernDiff demonstrations; no external corpus text is reproduced.",
+  "cases": [
+    {
+      "id": "01-incident-deadline",
+      "title": "Incident reporting deadline",
+      "language": "en",
+      "story": "A permissive 72-hour vendor report becomes a mandatory 24-hour deadline.",
+      "expected_checks": ["modality-strengthened", "deadline-shortened"]
+    },
+    {
+      "id": "02-access-scope",
+      "title": "Access scope expansion",
+      "language": "en",
+      "story": "Repository access expands from approved employees to all employees and contractors.",
+      "expected_checks": ["scope-expanded"]
+    },
+    {
+      "id": "03-exception-authority",
+      "title": "Exception and authority change",
+      "language": "en",
+      "story": "Approval authority moves to a committee while a monetary exception is introduced.",
+      "expected_checks": ["authority-shifted", "exception-added"]
+    }
+  ]
+}

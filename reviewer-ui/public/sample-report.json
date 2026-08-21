@@ -1,0 +1,2259 @@
+{
+  "schema_version": "1.5",
+  "generator": "governdiff/0.6.0",
+  "generated_at": "2026-08-11T02:16:34.980716+00:00",
+  "disclaimer": "GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise.",
+  "selection": {
+    "scope": "all",
+    "minimum_confidence": "low",
+    "filters": {},
+    "selected_change_count": 6,
+    "selected_finding_count": 10
+  },
+  "redacted": false,
+  "review_import": null,
+  "waiver_diagnostics": [],
+  "old_document": {
+    "path": "policies/grants-policy-2025.md",
+    "sha256": "3fab3dadc18ff085fb1674664c4cece4c27d3ff877492ccb80354b5dbf11d7e1",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-11T02:16:34.943140+00:00",
+    "block_count": 6,
+    "word_count": 53,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-FAFDC83CEA",
+        "title": "GovernDiff Grant Policy",
+        "path": [
+          "GovernDiff Grant Policy"
+        ],
+        "depth": 1,
+        "block_count": 6,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-7A6042C2C5",
+            "title": "Article 4 Review period",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 4 Review period"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-281FF1237DBB"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-BCB06F9250",
+            "title": "Article 7 Covered entities",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 7 Covered entities"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-A204644C1EF5"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-42D4170143",
+            "title": "Article 9 Commencement",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 9 Commencement"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-3F0DEEC6418F"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-B579382182",
+            "title": "Article 12 Reporting",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 12 Reporting"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-B8A6E6655CA7"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-EA8D85E902",
+            "title": "Article 20 Disclosures",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 20 Disclosures"
+            ],
+            "depth": 2,
+            "block_count": 2,
+            "block_ids": [
+              "BLK-BFD2AEFF2A44",
+              "BLK-28626052732E"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 549,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 6,
+      "word_count": 53,
+      "character_count": 549,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "new_document": {
+    "path": "policies/grants-policy-2026.md",
+    "sha256": "d69d7c4171d4604374acbfcd4e0e52c8ddab75833da9a1e453ff3e3b528d3c81",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-11T02:16:34.943140+00:00",
+    "block_count": 7,
+    "word_count": 56,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-FAFDC83CEA",
+        "title": "GovernDiff Grant Policy",
+        "path": [
+          "GovernDiff Grant Policy"
+        ],
+        "depth": 1,
+        "block_count": 7,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-4CE45A9A71",
+            "title": "Article 5 Review period",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 5 Review period"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-065E050B2B43"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-296E31819A",
+            "title": "Article 8 Covered entities",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 8 Covered entities"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-BC25417379A9"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-8809D6EA39",
+            "title": "Article 10 Commencement",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 10 Commencement"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-41405E521E92"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-15D176A0C2",
+            "title": "Article 13 Reporting",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 13 Reporting"
+            ],
+            "depth": 2,
+            "block_count": 2,
+            "block_ids": [
+              "BLK-0581BA1AB15B",
+              "BLK-BFDC3187283D"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-6B7A1F57E9",
+            "title": "Article 21 Disclosures",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 21 Disclosures"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-B608885B054E"
+            ],
+            "children": []
+          },
+          {
+            "section_id": "SEC-BF9D013342",
+            "title": "Article 22 Disclosures",
+            "path": [
+              "GovernDiff Grant Policy",
+              "Article 22 Disclosures"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-46A2BAD583D7"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 603,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 7,
+      "word_count": 56,
+      "character_count": 603,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "summary": {
+    "total_changes": 6,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 3,
+      "split": 1,
+      "merged": 0,
+      "moved": 2,
+      "format_only": 0
+    },
+    "findings": 10,
+    "active_findings": 10,
+    "breaking_findings": 3,
+    "high_confidence_breaking_findings": 2,
+    "confidence": {
+      "changes": {
+        "high": 6,
+        "medium": 0,
+        "low": 0
+      },
+      "findings": {
+        "high": 8,
+        "medium": 2,
+        "low": 0
+      }
+    },
+    "review_states": {
+      "unreviewed": 6,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "article_mappings": 5,
+    "renumbered_article_mappings": 4,
+    "article_mapping_conflicts": 1,
+    "highest_severity": "high"
+  },
+  "article_mappings": [
+    {
+      "old_key": "article:12",
+      "new_key": "article:13",
+      "old_article": "Article 12",
+      "new_article": "Article 13",
+      "evidence_count": 1,
+      "average_similarity": 0.9953,
+      "confidence_score": 0.9482,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "1 aligned clause pair(s) support this mapping",
+        "mean clause similarity is 1.00",
+        "no close competing target article was observed"
+      ],
+      "status": "unique",
+      "competition_margin": 1.0,
+      "candidates": [
+        {
+          "new_key": "article:13",
+          "new_article": "Article 13",
+          "evidence_count": 1,
+          "average_similarity": 0.9953,
+          "competition_score": 1.0,
+          "rank": 1,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "old_key": "article:20",
+      "new_key": "article:21",
+      "old_article": "Article 20",
+      "new_article": "Article 21",
+      "evidence_count": 1,
+      "average_similarity": 1.0,
+      "confidence_score": 0.61,
+      "confidence_level": "low",
+      "confidence_reasons": [
+        "1 aligned clause pair(s) support this mapping",
+        "mean clause similarity is 1.00",
+        "two or more target articles have near-equal evidence"
+      ],
+      "status": "ambiguous",
+      "competition_margin": 0.0,
+      "candidates": [
+        {
+          "new_key": "article:21",
+          "new_article": "Article 21",
+          "evidence_count": 1,
+          "average_similarity": 1.0,
+          "competition_score": 0.5,
+          "rank": 1,
+          "selected": false
+        },
+        {
+          "new_key": "article:22",
+          "new_article": "Article 22",
+          "evidence_count": 1,
+          "average_similarity": 1.0,
+          "competition_score": 0.5,
+          "rank": 2,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "old_key": "article:4",
+      "new_key": "article:5",
+      "old_article": "Article 4",
+      "new_article": "Article 5",
+      "evidence_count": 1,
+      "average_similarity": 0.9783,
+      "confidence_score": 0.9415,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "1 aligned clause pair(s) support this mapping",
+        "mean clause similarity is 0.98",
+        "no close competing target article was observed"
+      ],
+      "status": "unique",
+      "competition_margin": 1.0,
+      "candidates": [
+        {
+          "new_key": "article:5",
+          "new_article": "Article 5",
+          "evidence_count": 1,
+          "average_similarity": 0.9783,
+          "competition_score": 1.0,
+          "rank": 1,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "old_key": "article:7",
+      "new_key": "article:8",
+      "old_article": "Article 7",
+      "new_article": "Article 8",
+      "evidence_count": 1,
+      "average_similarity": 0.7539,
+      "confidence_score": 0.854,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "1 aligned clause pair(s) support this mapping",
+        "mean clause similarity is 0.75",
+        "no close competing target article was observed"
+      ],
+      "status": "unique",
+      "competition_margin": 1.0,
+      "candidates": [
+        {
+          "new_key": "article:8",
+          "new_article": "Article 8",
+          "evidence_count": 1,
+          "average_similarity": 0.7539,
+          "competition_score": 1.0,
+          "rank": 1,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "old_key": "article:9",
+      "new_key": "article:10",
+      "old_article": "Article 9",
+      "new_article": "Article 10",
+      "evidence_count": 1,
+      "average_similarity": 0.967,
+      "confidence_score": 0.9371,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "1 aligned clause pair(s) support this mapping",
+        "mean clause similarity is 0.97",
+        "no close competing target article was observed"
+      ],
+      "status": "unique",
+      "competition_margin": 1.0,
+      "candidates": [
+        {
+          "new_key": "article:10",
+          "new_article": "Article 10",
+          "evidence_count": 1,
+          "average_similarity": 0.967,
+          "competition_score": 1.0,
+          "rank": 1,
+          "selected": true
+        }
+      ]
+    }
+  ],
+  "section_tree": [
+    {
+      "section_id": "SEC-FAFDC83CEA",
+      "title": "GovernDiff Grant Policy",
+      "path": [
+        "GovernDiff Grant Policy"
+      ],
+      "depth": 1,
+      "change_count": 6,
+      "breaking_count": 3,
+      "change_types": {
+        "modified": 3,
+        "split": 1,
+        "moved": 2
+      },
+      "confidence": {
+        "high": 6,
+        "medium": 0,
+        "low": 0
+      },
+      "children": [
+        {
+          "section_id": "SEC-4CE45A9A71",
+          "title": "Article 5 Review period",
+          "path": [
+            "GovernDiff Grant Policy",
+            "Article 5 Review period"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 1,
+          "change_types": {
+            "modified": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        },
+        {
+          "section_id": "SEC-296E31819A",
+          "title": "Article 8 Covered entities",
+          "path": [
+            "GovernDiff Grant Policy",
+            "Article 8 Covered entities"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 1,
+          "change_types": {
+            "modified": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        },
+        {
+          "section_id": "SEC-8809D6EA39",
+          "title": "Article 10 Commencement",
+          "path": [
+            "GovernDiff Grant Policy",
+            "Article 10 Commencement"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 1,
+          "change_types": {
+            "modified": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        },
+        {
+          "section_id": "SEC-15D176A0C2",
+          "title": "Article 13 Reporting",
+          "path": [
+            "GovernDiff Grant Policy",
+            "Article 13 Reporting"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 0,
+          "change_types": {
+            "split": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        },
+        {
+          "section_id": "SEC-6B7A1F57E9",
+          "title": "Article 21 Disclosures",
+          "path": [
+            "GovernDiff Grant Policy",
+            "Article 21 Disclosures"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 0,
+          "change_types": {
+            "moved": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        },
+        {
+          "section_id": "SEC-BF9D013342",
+          "title": "Article 22 Disclosures",
+          "path": [
+            "GovernDiff Grant Policy",
+            "Article 22 Disclosures"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 0,
+          "change_types": {
+            "moved": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "fingerprint": "GVC-E30FF52F50",
+      "change_type": "modified",
+      "similarity": 0.9783,
+      "severity": "high",
+      "section": "GovernDiff Grant Policy > Article 5 Review period",
+      "section_path": [
+        "GovernDiff Grant Policy",
+        "Article 5 Review period"
+      ],
+      "section_id": "SEC-4CE45A9A71",
+      "old_article": "Article 4",
+      "new_article": "Article 5",
+      "article_mapping": {
+        "old_key": "article:4",
+        "new_key": "article:5",
+        "old_article": "Article 4",
+        "new_article": "Article 5",
+        "evidence_count": 1,
+        "average_similarity": 0.9783,
+        "confidence_score": 0.9415,
+        "confidence_level": "high",
+        "confidence_reasons": [
+          "1 aligned clause pair(s) support this mapping",
+          "mean clause similarity is 0.98",
+          "no close competing target article was observed"
+        ],
+        "status": "unique",
+        "competition_margin": 1.0,
+        "candidates": [
+          {
+            "new_key": "article:5",
+            "new_article": "Article 5",
+            "evidence_count": 1,
+            "average_similarity": 0.9783,
+            "competition_score": 1.0,
+            "rank": 1,
+            "selected": true
+          }
+        ]
+      },
+      "confidence_score": 0.984,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.98",
+        "article mapping Article 4 → Article 5 is high confidence"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-281FF1237DBB",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 4 Review period"
+        ],
+        "text": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+        "normalized_text": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+        "comparison_text": "thesecretariatmustissueaneligibilitydecisionwithin20businessdayspursuanttoarticle7",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 55,
+        "char_end": 152,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 4 Review period",
+        "evidence_label": "paragraph 1 · chars 55-152"
+      },
+      "new_block": {
+        "block_id": "BLK-065E050B2B43",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 5 Review period"
+        ],
+        "text": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8.",
+        "normalized_text": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8.",
+        "comparison_text": "thesecretariatmustissueaneligibilitydecisionwithin10businessdayspursuanttoarticle8",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 55,
+        "char_end": 152,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 5 Review period",
+        "evidence_label": "paragraph 1 · chars 55-152"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-281FF1237DBB",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 4 Review period"
+          ],
+          "text": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+          "normalized_text": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+          "comparison_text": "thesecretariatmustissueaneligibilitydecisionwithin20businessdayspursuanttoarticle7",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 55,
+          "char_end": 152,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 4 Review period",
+          "evidence_label": "paragraph 1 · chars 55-152"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-065E050B2B43",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 5 Review period"
+          ],
+          "text": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8.",
+          "normalized_text": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8.",
+          "comparison_text": "thesecretariatmustissueaneligibilitydecisionwithin10businessdayspursuanttoarticle8",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 55,
+          "char_end": 152,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 5 Review period",
+          "evidence_label": "paragraph 1 · chars 55-152"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "The Secretariat must issue an eligibility decision within ",
+          "new_text": "The Secretariat must issue an eligibility decision within ",
+          "old_start": 0,
+          "old_end": 16,
+          "new_start": 0,
+          "new_end": 16
+        },
+        {
+          "operation": "replace",
+          "old_text": "20",
+          "new_text": "10",
+          "old_start": 16,
+          "old_end": 17,
+          "new_start": 16,
+          "new_end": 17
+        },
+        {
+          "operation": "equal",
+          "old_text": " business days pursuant to Article ",
+          "new_text": " business days pursuant to Article ",
+          "old_start": 17,
+          "old_end": 28,
+          "new_start": 17,
+          "new_end": 28
+        },
+        {
+          "operation": "replace",
+          "old_text": "7",
+          "new_text": "8",
+          "old_start": 28,
+          "old_end": 29,
+          "new_start": 28,
+          "new_end": 29
+        },
+        {
+          "operation": "equal",
+          "old_text": ".",
+          "new_text": ".",
+          "old_start": 29,
+          "old_end": 30,
+          "new_start": 29,
+          "new_end": 30
+        }
+      ],
+      "temporal_changes": [
+        {
+          "kind": "deadline",
+          "old_value": "20 business days",
+          "new_value": "10 business days",
+          "old_normalized": "20 business days",
+          "new_normalized": "10 business days",
+          "direction": "shortened",
+          "old_evidence": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+          "new_evidence": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8."
+        }
+      ],
+      "findings": [
+        {
+          "fingerprint": "GVD-309ADEEC50",
+          "check_id": "deadline-shortened",
+          "severity": "high",
+          "breaking": true,
+          "summary": "A deadline changed from 20 business days to 10 business days.",
+          "field": "deadline",
+          "old_value": "20 business days",
+          "new_value": "10 business days",
+          "old_evidence": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+          "new_evidence": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8.",
+          "explanation": "A relative duration with the same unit appears once in both aligned clauses.",
+          "confidence_score": 0.9732188019512196,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.98)",
+            "deadline-shortened rule specificity is 0.96"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "20 business days",
+            "new": "10 business days"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "20 business days",
+            "new": "10 business days"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-3842E77BF1",
+          "check_id": "reference-retargeted",
+          "severity": "medium",
+          "breaking": false,
+          "summary": "A cross-reference target changed from Article 7 to Article 8.",
+          "field": "cross_reference",
+          "old_value": "Article 7",
+          "new_value": "Article 8",
+          "old_evidence": "The Secretariat must issue an eligibility decision within 20 business days pursuant to Article 7.",
+          "new_evidence": "The Secretariat must issue an eligibility decision within 10 business days pursuant to Article 8.",
+          "explanation": "Explicit article or section references changed inside an otherwise aligned clause and should be checked against the mapped target.",
+          "confidence_score": 0.9687188019512195,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.98)",
+            "reference-retargeted rule specificity is 0.95"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Article 7",
+            "new": "Article 8"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Article 7",
+            "new": "Article 8"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-16955C6C3B",
+          "check_id": "article-remapped",
+          "severity": "info",
+          "breaking": false,
+          "summary": "The clause maps from Article 4 to Article 5.",
+          "field": "article",
+          "old_value": "Article 4",
+          "new_value": "Article 5",
+          "old_evidence": "GovernDiff Grant Policy > Article 4 Review period",
+          "new_evidence": "GovernDiff Grant Policy > Article 5 Review period",
+          "explanation": "Aligned clause evidence indicates that the article identity was retained while its marker changed.",
+          "confidence_score": 0.9415227317073172,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "1 aligned clause pair(s) support this mapping",
+            "mean clause similarity is 0.98",
+            "no close competing target article was observed"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Article 4",
+            "new": "Article 5"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Article 4",
+            "new": "Article 5"
+          },
+          "active": true
+        }
+      ]
+    },
+    {
+      "fingerprint": "GVC-37FBC3CA2F",
+      "change_type": "modified",
+      "similarity": 0.7539,
+      "severity": "high",
+      "section": "GovernDiff Grant Policy > Article 8 Covered entities",
+      "section_path": [
+        "GovernDiff Grant Policy",
+        "Article 8 Covered entities"
+      ],
+      "section_id": "SEC-296E31819A",
+      "old_article": "Article 7",
+      "new_article": "Article 8",
+      "article_mapping": {
+        "old_key": "article:7",
+        "new_key": "article:8",
+        "old_article": "Article 7",
+        "new_article": "Article 8",
+        "evidence_count": 1,
+        "average_similarity": 0.7539,
+        "confidence_score": 0.854,
+        "confidence_level": "high",
+        "confidence_reasons": [
+          "1 aligned clause pair(s) support this mapping",
+          "mean clause similarity is 0.75",
+          "no close competing target article was observed"
+        ],
+        "status": "unique",
+        "competition_margin": 1.0,
+        "candidates": [
+          {
+            "new_key": "article:8",
+            "new_article": "Article 8",
+            "evidence_count": 1,
+            "average_similarity": 0.7539,
+            "competition_score": 1.0,
+            "rank": 1,
+            "selected": true
+          }
+        ]
+      },
+      "confidence_score": 0.8451,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.75",
+        "article mapping Article 7 → Article 8 is high confidence"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-A204644C1EF5",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 7 Covered entities"
+        ],
+        "text": "Registered nonprofit organizations may apply for a grant.",
+        "normalized_text": "Registered nonprofit organizations may apply for a grant.",
+        "comparison_text": "registerednonprofitorganizationsmayapplyforagrant",
+        "ordinal": 1,
+        "line_start": 9,
+        "line_end": 9,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 2,
+        "paragraph_end": 2,
+        "char_start": 185,
+        "char_end": 242,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 7 Covered entities",
+        "evidence_label": "paragraph 2 · chars 185-242"
+      },
+      "new_block": {
+        "block_id": "BLK-BC25417379A9",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 8 Covered entities"
+        ],
+        "text": "Any registered organization, including for-profit entities, may apply for a grant.",
+        "normalized_text": "Any registered organization, including for-profit entities, may apply for a grant.",
+        "comparison_text": "anyregisteredorganizationincludingforprofitentitiesmayapplyforagrant",
+        "ordinal": 1,
+        "line_start": 9,
+        "line_end": 9,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 2,
+        "paragraph_end": 2,
+        "char_start": 185,
+        "char_end": 267,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 8 Covered entities",
+        "evidence_label": "paragraph 2 · chars 185-267"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-A204644C1EF5",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 7 Covered entities"
+          ],
+          "text": "Registered nonprofit organizations may apply for a grant.",
+          "normalized_text": "Registered nonprofit organizations may apply for a grant.",
+          "comparison_text": "registerednonprofitorganizationsmayapplyforagrant",
+          "ordinal": 1,
+          "line_start": 9,
+          "line_end": 9,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 2,
+          "paragraph_end": 2,
+          "char_start": 185,
+          "char_end": 242,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 7 Covered entities",
+          "evidence_label": "paragraph 2 · chars 185-242"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-BC25417379A9",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 8 Covered entities"
+          ],
+          "text": "Any registered organization, including for-profit entities, may apply for a grant.",
+          "normalized_text": "Any registered organization, including for-profit entities, may apply for a grant.",
+          "comparison_text": "anyregisteredorganizationincludingforprofitentitiesmayapplyforagrant",
+          "ordinal": 1,
+          "line_start": 9,
+          "line_end": 9,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 2,
+          "paragraph_end": 2,
+          "char_start": 185,
+          "char_end": 267,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 8 Covered entities",
+          "evidence_label": "paragraph 2 · chars 185-267"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "insert",
+          "old_text": "",
+          "new_text": "Any ",
+          "old_start": 0,
+          "old_end": 0,
+          "new_start": 0,
+          "new_end": 2
+        },
+        {
+          "operation": "equal",
+          "old_text": "Registered ",
+          "new_text": "registered ",
+          "old_start": 0,
+          "old_end": 2,
+          "new_start": 2,
+          "new_end": 4
+        },
+        {
+          "operation": "replace",
+          "old_text": "nonprofit",
+          "new_text": "organization,",
+          "old_start": 2,
+          "old_end": 3,
+          "new_start": 4,
+          "new_end": 6
+        },
+        {
+          "operation": "equal",
+          "old_text": " ",
+          "new_text": " ",
+          "old_start": 3,
+          "old_end": 4,
+          "new_start": 6,
+          "new_end": 7
+        },
+        {
+          "operation": "replace",
+          "old_text": "organizations",
+          "new_text": "including for-profit entities,",
+          "old_start": 4,
+          "old_end": 5,
+          "new_start": 7,
+          "new_end": 15
+        },
+        {
+          "operation": "equal",
+          "old_text": " may apply for a grant.",
+          "new_text": " may apply for a grant.",
+          "old_start": 5,
+          "old_end": 16,
+          "new_start": 15,
+          "new_end": 26
+        }
+      ],
+      "temporal_changes": [],
+      "findings": [
+        {
+          "fingerprint": "GVD-EC5F429194",
+          "check_id": "scope-expanded",
+          "severity": "high",
+          "breaking": true,
+          "summary": "The governed scope may have expanded.",
+          "field": "scope",
+          "old_value": "0",
+          "new_value": "2",
+          "old_evidence": "Registered nonprofit organizations may apply for a grant.",
+          "new_evidence": "Any registered organization, including for-profit entities, may apply for a grant.",
+          "explanation": "The revised clause contains more universal or inclusive scope terms without more limiting terms.",
+          "confidence_score": 0.7977775282051283,
+          "confidence_level": "medium",
+          "confidence_reasons": [
+            "parent change is high confidence (0.85)",
+            "scope-expanded rule specificity is 0.74"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "0",
+            "new": "2"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "0",
+            "new": "2"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-6B0802ABD6",
+          "check_id": "article-remapped",
+          "severity": "info",
+          "breaking": false,
+          "summary": "The clause maps from Article 7 to Article 8.",
+          "field": "article",
+          "old_value": "Article 7",
+          "new_value": "Article 8",
+          "old_evidence": "GovernDiff Grant Policy > Article 7 Covered entities",
+          "new_evidence": "GovernDiff Grant Policy > Article 8 Covered entities",
+          "explanation": "Aligned clause evidence indicates that the article identity was retained while its marker changed.",
+          "confidence_score": 0.8540266666666667,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "1 aligned clause pair(s) support this mapping",
+            "mean clause similarity is 0.75",
+            "no close competing target article was observed"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Article 7",
+            "new": "Article 8"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Article 7",
+            "new": "Article 8"
+          },
+          "active": true
+        }
+      ]
+    },
+    {
+      "fingerprint": "GVC-806604B23F",
+      "change_type": "modified",
+      "similarity": 0.967,
+      "severity": "high",
+      "section": "GovernDiff Grant Policy > Article 10 Commencement",
+      "section_path": [
+        "GovernDiff Grant Policy",
+        "Article 10 Commencement"
+      ],
+      "section_id": "SEC-8809D6EA39",
+      "old_article": "Article 9",
+      "new_article": "Article 10",
+      "article_mapping": {
+        "old_key": "article:9",
+        "new_key": "article:10",
+        "old_article": "Article 9",
+        "new_article": "Article 10",
+        "evidence_count": 1,
+        "average_similarity": 0.967,
+        "confidence_score": 0.9371,
+        "confidence_level": "high",
+        "confidence_reasons": [
+          "1 aligned clause pair(s) support this mapping",
+          "mean clause similarity is 0.97",
+          "no close competing target article was observed"
+        ],
+        "status": "unique",
+        "competition_margin": 1.0,
+        "candidates": [
+          {
+            "new_key": "article:10",
+            "new_article": "Article 10",
+            "evidence_count": 1,
+            "average_similarity": 0.967,
+            "competition_score": 1.0,
+            "rank": 1,
+            "selected": true
+          }
+        ]
+      },
+      "confidence_score": 0.977,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.97",
+        "article mapping Article 9 → Article 10 is high confidence"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-3F0DEEC6418F",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 9 Commencement"
+        ],
+        "text": "This policy takes effect on 2026-01-01.",
+        "normalized_text": "This policy takes effect on 2026-01-01.",
+        "comparison_text": "thispolicytakeseffecton20260101",
+        "ordinal": 2,
+        "line_start": 13,
+        "line_end": 13,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 3,
+        "paragraph_end": 3,
+        "char_start": 271,
+        "char_end": 310,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 9 Commencement",
+        "evidence_label": "paragraph 3 · chars 271-310"
+      },
+      "new_block": {
+        "block_id": "BLK-41405E521E92",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 10 Commencement"
+        ],
+        "text": "This policy takes effect on 2026-02-01.",
+        "normalized_text": "This policy takes effect on 2026-02-01.",
+        "comparison_text": "thispolicytakeseffecton20260201",
+        "ordinal": 2,
+        "line_start": 13,
+        "line_end": 13,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 3,
+        "paragraph_end": 3,
+        "char_start": 297,
+        "char_end": 336,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 10 Commencement",
+        "evidence_label": "paragraph 3 · chars 297-336"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-3F0DEEC6418F",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 9 Commencement"
+          ],
+          "text": "This policy takes effect on 2026-01-01.",
+          "normalized_text": "This policy takes effect on 2026-01-01.",
+          "comparison_text": "thispolicytakeseffecton20260101",
+          "ordinal": 2,
+          "line_start": 13,
+          "line_end": 13,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 3,
+          "paragraph_end": 3,
+          "char_start": 271,
+          "char_end": 310,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 9 Commencement",
+          "evidence_label": "paragraph 3 · chars 271-310"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-41405E521E92",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 10 Commencement"
+          ],
+          "text": "This policy takes effect on 2026-02-01.",
+          "normalized_text": "This policy takes effect on 2026-02-01.",
+          "comparison_text": "thispolicytakeseffecton20260201",
+          "ordinal": 2,
+          "line_start": 13,
+          "line_end": 13,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 3,
+          "paragraph_end": 3,
+          "char_start": 297,
+          "char_end": 336,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 10 Commencement",
+          "evidence_label": "paragraph 3 · chars 297-336"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "This policy takes effect on 2026-",
+          "new_text": "This policy takes effect on 2026-",
+          "old_start": 0,
+          "old_end": 12,
+          "new_start": 0,
+          "new_end": 12
+        },
+        {
+          "operation": "replace",
+          "old_text": "01",
+          "new_text": "02",
+          "old_start": 12,
+          "old_end": 13,
+          "new_start": 12,
+          "new_end": 13
+        },
+        {
+          "operation": "equal",
+          "old_text": "-01.",
+          "new_text": "-01.",
+          "old_start": 13,
+          "old_end": 16,
+          "new_start": 13,
+          "new_end": 16
+        }
+      ],
+      "temporal_changes": [
+        {
+          "kind": "effective_date",
+          "old_value": "2026-01-01",
+          "new_value": "2026-02-01",
+          "old_normalized": "2026-01-01",
+          "new_normalized": "2026-02-01",
+          "direction": "later",
+          "old_evidence": "This policy takes effect on 2026-01-01.",
+          "new_evidence": "This policy takes effect on 2026-02-01."
+        }
+      ],
+      "findings": [
+        {
+          "fingerprint": "GVD-F7E313F0F4",
+          "check_id": "effective-date-shifted",
+          "severity": "high",
+          "breaking": true,
+          "summary": "The policy effective date changed from 2026-01-01 to 2026-02-01.",
+          "field": "effective_date",
+          "old_value": "2026-01-01",
+          "new_value": "2026-02-01",
+          "old_evidence": "This policy takes effect on 2026-01-01.",
+          "new_evidence": "This policy takes effect on 2026-02-01.",
+          "explanation": "Absolute effective dates are compared separately from relative deadlines; the new date is later.",
+          "confidence_score": 0.9738642219354838,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.98)",
+            "effective-date-shifted rule specificity is 0.97"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "2026-01-01",
+            "new": "2026-02-01"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "2026-01-01",
+            "new": "2026-02-01"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-7D3FEDF1B2",
+          "check_id": "article-remapped",
+          "severity": "info",
+          "breaking": false,
+          "summary": "The clause maps from Article 9 to Article 10.",
+          "field": "article",
+          "old_value": "Article 9",
+          "new_value": "Article 10",
+          "old_evidence": "GovernDiff Grant Policy > Article 9 Commencement",
+          "new_evidence": "GovernDiff Grant Policy > Article 10 Commencement",
+          "explanation": "Aligned clause evidence indicates that the article identity was retained while its marker changed.",
+          "confidence_score": 0.9371107096774194,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "1 aligned clause pair(s) support this mapping",
+            "mean clause similarity is 0.97",
+            "no close competing target article was observed"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Article 9",
+            "new": "Article 10"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Article 9",
+            "new": "Article 10"
+          },
+          "active": true
+        }
+      ]
+    },
+    {
+      "fingerprint": "GVC-D0D228F5FC",
+      "change_type": "split",
+      "similarity": 0.9953,
+      "severity": "low",
+      "section": "GovernDiff Grant Policy > Article 13 Reporting",
+      "section_path": [
+        "GovernDiff Grant Policy",
+        "Article 13 Reporting"
+      ],
+      "section_id": "SEC-15D176A0C2",
+      "old_article": "Article 12",
+      "new_article": "Article 13",
+      "article_mapping": {
+        "old_key": "article:12",
+        "new_key": "article:13",
+        "old_article": "Article 12",
+        "new_article": "Article 13",
+        "evidence_count": 1,
+        "average_similarity": 0.9953,
+        "confidence_score": 0.9482,
+        "confidence_level": "high",
+        "confidence_reasons": [
+          "1 aligned clause pair(s) support this mapping",
+          "mean clause similarity is 1.00",
+          "no close competing target article was observed"
+        ],
+        "status": "unique",
+        "competition_margin": 1.0,
+        "candidates": [
+          {
+            "new_key": "article:13",
+            "new_article": "Article 13",
+            "evidence_count": 1,
+            "average_similarity": 0.9953,
+            "competition_score": 1.0,
+            "rank": 1,
+            "selected": true
+          }
+        ]
+      },
+      "confidence_score": 0.9546,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "split alignment similarity is 1.00",
+        "1 old block(s) align to 2 new block(s)",
+        "article mapping Article 12 → Article 13 is high confidence"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-B8A6E6655CA7",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 12 Reporting"
+        ],
+        "text": "Recipients must submit an annual report within 30 days. They must notify the Secretariat.",
+        "normalized_text": "Recipients must submit an annual report within 30 days. They must notify the Secretariat.",
+        "comparison_text": "recipientsmustsubmitanannualreportwithin30daystheymustnotifythesecretariat",
+        "ordinal": 3,
+        "line_start": 17,
+        "line_end": 17,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 4,
+        "paragraph_end": 4,
+        "char_start": 337,
+        "char_end": 426,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 12 Reporting",
+        "evidence_label": "paragraph 4 · chars 337-426"
+      },
+      "new_block": {
+        "block_id": "BLK-GROUP-CE70A85803",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 13 Reporting"
+        ],
+        "text": "Recipients must submit an annual report within 30 days.\nThey must notify the Secretariat.",
+        "normalized_text": "Recipients must submit an annual report within 30 days.\nThey must notify the Secretariat.",
+        "comparison_text": "recipientsmustsubmitanannualreportwithin30daystheymustnotifythesecretariat",
+        "ordinal": 3,
+        "line_start": 17,
+        "line_end": 19,
+        "block_type": "alignment_group",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 4,
+        "paragraph_end": 5,
+        "char_start": 363,
+        "char_end": 453,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 13 Reporting",
+        "evidence_label": "paragraph 4-5 · chars 363-453"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-B8A6E6655CA7",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 12 Reporting"
+          ],
+          "text": "Recipients must submit an annual report within 30 days. They must notify the Secretariat.",
+          "normalized_text": "Recipients must submit an annual report within 30 days. They must notify the Secretariat.",
+          "comparison_text": "recipientsmustsubmitanannualreportwithin30daystheymustnotifythesecretariat",
+          "ordinal": 3,
+          "line_start": 17,
+          "line_end": 17,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 4,
+          "paragraph_end": 4,
+          "char_start": 337,
+          "char_end": 426,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 12 Reporting",
+          "evidence_label": "paragraph 4 · chars 337-426"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-0581BA1AB15B",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 13 Reporting"
+          ],
+          "text": "Recipients must submit an annual report within 30 days.",
+          "normalized_text": "Recipients must submit an annual report within 30 days.",
+          "comparison_text": "recipientsmustsubmitanannualreportwithin30days",
+          "ordinal": 3,
+          "line_start": 17,
+          "line_end": 17,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 4,
+          "paragraph_end": 4,
+          "char_start": 363,
+          "char_end": 418,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 13 Reporting",
+          "evidence_label": "paragraph 4 · chars 363-418"
+        },
+        {
+          "block_id": "BLK-BFDC3187283D",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 13 Reporting"
+          ],
+          "text": "They must notify the Secretariat.",
+          "normalized_text": "They must notify the Secretariat.",
+          "comparison_text": "theymustnotifythesecretariat",
+          "ordinal": 4,
+          "line_start": 19,
+          "line_end": 19,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 5,
+          "paragraph_end": 5,
+          "char_start": 420,
+          "char_end": 453,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 13 Reporting",
+          "evidence_label": "paragraph 5 · chars 420-453"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "Recipients must submit an annual report within 30 days.",
+          "new_text": "Recipients must submit an annual report within 30 days.",
+          "old_start": 0,
+          "old_end": 18,
+          "new_start": 0,
+          "new_end": 18
+        },
+        {
+          "operation": "replace",
+          "old_text": " ",
+          "new_text": "\n",
+          "old_start": 18,
+          "old_end": 19,
+          "new_start": 18,
+          "new_end": 19
+        },
+        {
+          "operation": "equal",
+          "old_text": "They must notify the Secretariat.",
+          "new_text": "They must notify the Secretariat.",
+          "old_start": 19,
+          "old_end": 29,
+          "new_start": 19,
+          "new_end": 29
+        }
+      ],
+      "temporal_changes": [],
+      "findings": [
+        {
+          "fingerprint": "GVD-0428BF4AB8",
+          "check_id": "substantive-text-changed",
+          "severity": "low",
+          "breaking": false,
+          "summary": "The clause changed, but no configured breaking pattern was confirmed.",
+          "field": "text",
+          "old_value": "changed",
+          "new_value": "changed",
+          "old_evidence": "Recipients must submit an annual report within 30 days. They must notify the Secretariat.",
+          "new_evidence": "Recipients must submit an annual report within 30 days.\nThey must notify the Secretariat.",
+          "explanation": "This is a review cue, not a claim that the policy effect changed.",
+          "confidence_score": 0.7410349500000001,
+          "confidence_level": "medium",
+          "confidence_reasons": [
+            "parent change is high confidence (0.95)",
+            "substantive-text-changed rule specificity is 0.48"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "changed",
+            "new": "changed"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "changed",
+            "new": "changed"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-B861A85174",
+          "check_id": "article-remapped",
+          "severity": "info",
+          "breaking": false,
+          "summary": "The clause maps from Article 12 to Article 13.",
+          "field": "article",
+          "old_value": "Article 12",
+          "new_value": "Article 13",
+          "old_evidence": "GovernDiff Grant Policy > Article 12 Reporting",
+          "new_evidence": "GovernDiff Grant Policy > Article 13 Reporting",
+          "explanation": "Aligned clause evidence indicates that the article identity was retained while its marker changed.",
+          "confidence_score": 0.94818,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "1 aligned clause pair(s) support this mapping",
+            "mean clause similarity is 1.00",
+            "no close competing target article was observed"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Article 12",
+            "new": "Article 13"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Article 12",
+            "new": "Article 13"
+          },
+          "active": true
+        }
+      ]
+    },
+    {
+      "fingerprint": "GVC-3C4BF6E08A",
+      "change_type": "moved",
+      "similarity": 1.0,
+      "severity": "medium",
+      "section": "GovernDiff Grant Policy > Article 21 Disclosures",
+      "section_path": [
+        "GovernDiff Grant Policy",
+        "Article 21 Disclosures"
+      ],
+      "section_id": "SEC-6B7A1F57E9",
+      "old_article": "Article 20",
+      "new_article": "Article 21",
+      "article_mapping": {
+        "old_key": "article:20",
+        "new_key": "article:21",
+        "old_article": "Article 20",
+        "new_article": "Article 21",
+        "evidence_count": 1,
+        "average_similarity": 1.0,
+        "confidence_score": 0.61,
+        "confidence_level": "low",
+        "confidence_reasons": [
+          "1 aligned clause pair(s) support this mapping",
+          "mean clause similarity is 1.00",
+          "two or more target articles have near-equal evidence"
+        ],
+        "status": "ambiguous",
+        "competition_margin": 0.0,
+        "candidates": [
+          {
+            "new_key": "article:21",
+            "new_article": "Article 21",
+            "evidence_count": 1,
+            "average_similarity": 1.0,
+            "competition_score": 0.5,
+            "rank": 1,
+            "selected": false
+          },
+          {
+            "new_key": "article:22",
+            "new_article": "Article 22",
+            "evidence_count": 1,
+            "average_similarity": 1.0,
+            "competition_score": 0.5,
+            "rank": 2,
+            "selected": false
+          }
+        ]
+      },
+      "confidence_score": 0.87,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "clause text has an exact or formatting-only match",
+        "article mapping is unresolved (ambiguous)"
+      ],
+      "alignment_status": "needs-review",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-BFD2AEFF2A44",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 20 Disclosures"
+        ],
+        "text": "Alpha governance disclosure remains unchanged.",
+        "normalized_text": "Alpha governance disclosure remains unchanged.",
+        "comparison_text": "alphagovernancedisclosureremainsunchanged",
+        "ordinal": 4,
+        "line_start": 21,
+        "line_end": 21,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 5,
+        "paragraph_end": 5,
+        "char_start": 455,
+        "char_end": 501,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 20 Disclosures",
+        "evidence_label": "paragraph 5 · chars 455-501"
+      },
+      "new_block": {
+        "block_id": "BLK-B608885B054E",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 21 Disclosures"
+        ],
+        "text": "Alpha governance disclosure remains unchanged.",
+        "normalized_text": "Alpha governance disclosure remains unchanged.",
+        "comparison_text": "alphagovernancedisclosureremainsunchanged",
+        "ordinal": 5,
+        "line_start": 23,
+        "line_end": 23,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 6,
+        "paragraph_end": 6,
+        "char_start": 482,
+        "char_end": 528,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 21 Disclosures",
+        "evidence_label": "paragraph 6 · chars 482-528"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-BFD2AEFF2A44",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 20 Disclosures"
+          ],
+          "text": "Alpha governance disclosure remains unchanged.",
+          "normalized_text": "Alpha governance disclosure remains unchanged.",
+          "comparison_text": "alphagovernancedisclosureremainsunchanged",
+          "ordinal": 4,
+          "line_start": 21,
+          "line_end": 21,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 5,
+          "paragraph_end": 5,
+          "char_start": 455,
+          "char_end": 501,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 20 Disclosures",
+          "evidence_label": "paragraph 5 · chars 455-501"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-B608885B054E",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 21 Disclosures"
+          ],
+          "text": "Alpha governance disclosure remains unchanged.",
+          "normalized_text": "Alpha governance disclosure remains unchanged.",
+          "comparison_text": "alphagovernancedisclosureremainsunchanged",
+          "ordinal": 5,
+          "line_start": 23,
+          "line_end": 23,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 6,
+          "paragraph_end": 6,
+          "char_start": 482,
+          "char_end": 528,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 21 Disclosures",
+          "evidence_label": "paragraph 6 · chars 482-528"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "Alpha governance disclosure remains unchanged.",
+          "new_text": "Alpha governance disclosure remains unchanged.",
+          "old_start": 0,
+          "old_end": 10,
+          "new_start": 0,
+          "new_end": 10
+        }
+      ],
+      "temporal_changes": [],
+      "findings": [
+        {
+          "fingerprint": "GVD-A5777FB2E9",
+          "check_id": "article-mapping-conflict",
+          "severity": "medium",
+          "breaking": false,
+          "summary": "Article mapping for Article 20 is not uniquely resolved.",
+          "field": "article",
+          "old_value": "Article 20",
+          "new_value": null,
+          "old_evidence": "GovernDiff Grant Policy > Article 20 Disclosures",
+          "new_evidence": "GovernDiff Grant Policy > Article 21 Disclosures",
+          "explanation": "Candidate targets and competition scores: Article 21 (0.50), Article 22 (0.50).",
+          "confidence_score": 0.8925000000000001,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.87)",
+            "article-mapping-conflict rule specificity is 0.92"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "Article 20",
+            "new": null
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "Article 20",
+            "new": null
+          },
+          "active": true
+        }
+      ]
+    },
+    {
+      "fingerprint": "GVC-B674DBAB56",
+      "change_type": "moved",
+      "similarity": 1.0,
+      "severity": "info",
+      "section": "GovernDiff Grant Policy > Article 22 Disclosures",
+      "section_path": [
+        "GovernDiff Grant Policy",
+        "Article 22 Disclosures"
+      ],
+      "section_id": "SEC-BF9D013342",
+      "old_article": "Article 20",
+      "new_article": "Article 22",
+      "article_mapping": null,
+      "confidence_score": 0.89,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "clause text has an exact or formatting-only match",
+        "article numbers differ without a supported remapping"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-28626052732E",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 20 Disclosures"
+        ],
+        "text": "Beta governance disclosure remains unchanged.",
+        "normalized_text": "Beta governance disclosure remains unchanged.",
+        "comparison_text": "betagovernancedisclosureremainsunchanged",
+        "ordinal": 5,
+        "line_start": 23,
+        "line_end": 23,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 6,
+        "paragraph_end": 6,
+        "char_start": 503,
+        "char_end": 548,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 20 Disclosures",
+        "evidence_label": "paragraph 6 · chars 503-548"
+      },
+      "new_block": {
+        "block_id": "BLK-46A2BAD583D7",
+        "section": [
+          "GovernDiff Grant Policy",
+          "Article 22 Disclosures"
+        ],
+        "text": "Beta governance disclosure remains unchanged.",
+        "normalized_text": "Beta governance disclosure remains unchanged.",
+        "comparison_text": "betagovernancedisclosureremainsunchanged",
+        "ordinal": 6,
+        "line_start": 27,
+        "line_end": 27,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 7,
+        "paragraph_end": 7,
+        "char_start": 557,
+        "char_end": 602,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "GovernDiff Grant Policy > Article 22 Disclosures",
+        "evidence_label": "paragraph 7 · chars 557-602"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-28626052732E",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 20 Disclosures"
+          ],
+          "text": "Beta governance disclosure remains unchanged.",
+          "normalized_text": "Beta governance disclosure remains unchanged.",
+          "comparison_text": "betagovernancedisclosureremainsunchanged",
+          "ordinal": 5,
+          "line_start": 23,
+          "line_end": 23,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 6,
+          "paragraph_end": 6,
+          "char_start": 503,
+          "char_end": 548,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 20 Disclosures",
+          "evidence_label": "paragraph 6 · chars 503-548"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-46A2BAD583D7",
+          "section": [
+            "GovernDiff Grant Policy",
+            "Article 22 Disclosures"
+          ],
+          "text": "Beta governance disclosure remains unchanged.",
+          "normalized_text": "Beta governance disclosure remains unchanged.",
+          "comparison_text": "betagovernancedisclosureremainsunchanged",
+          "ordinal": 6,
+          "line_start": 27,
+          "line_end": 27,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 7,
+          "paragraph_end": 7,
+          "char_start": 557,
+          "char_end": 602,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "GovernDiff Grant Policy > Article 22 Disclosures",
+          "evidence_label": "paragraph 7 · chars 557-602"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "Beta governance disclosure remains unchanged.",
+          "new_text": "Beta governance disclosure remains unchanged.",
+          "old_start": 0,
+          "old_end": 10,
+          "new_start": 0,
+          "new_end": 10
+        }
+      ],
+      "temporal_changes": [],
+      "findings": []
+    }
+  ],
+  "unfiltered_summary": {
+    "total_changes": 6,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 3,
+      "split": 1,
+      "merged": 0,
+      "moved": 2,
+      "format_only": 0
+    },
+    "findings": 10,
+    "active_findings": 10,
+    "breaking_findings": 3,
+    "high_confidence_breaking_findings": 2,
+    "review_states": {
+      "unreviewed": 6,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "confidence": {
+      "changes": {
+        "high": 6,
+        "medium": 0,
+        "low": 0
+      },
+      "findings": {
+        "high": 8,
+        "medium": 2,
+        "low": 0
+      }
+    },
+    "article_mappings": 5,
+    "renumbered_article_mappings": 4,
+    "article_mapping_conflicts": 1,
+    "highest_severity": "high"
+  }
+}

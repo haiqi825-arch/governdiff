@@ -1,0 +1,51 @@
+{
+  "name": "governdiff-reviewer",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "start": "vinext start",
+    "preview": "node scripts/preview.mjs",
+    "test": "npm run typecheck && npm run test:components && npm run build && node --test tests/rendered-html.test.mjs tests/performance.test.mjs && npm run test:browser",
+    "test:components": "vitest run --config vitest.config.ts",
+    "test:performance": "node scripts/benchmark-ui.mjs --strict",
+    "test:browser": "node scripts/build-browser-fixtures.mjs && node scripts/browser-gate.mjs --strict",
+    "test:reproducible": "node scripts/verify-reproducible-build.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit --incremental false"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.51.2",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "axe-core": "4.11.4",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.3.0",
+    "fake-indexeddb": "6.2.5",
+    "jsdom": "30.0.1",
+    "playwright": "1.62.0",
+    "react-server-dom-webpack": "19.2.8",
+    "typescript": "5.9.3",
+    "vinext": "0.0.45",
+    "vite": "8.2.1",
+    "vitest": "4.1.10",
+    "wrangler": "4.120.1"
+  },
+  "type": "module"
+}

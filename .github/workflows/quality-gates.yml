@@ -1,0 +1,151 @@
+name: Phase 8 release candidate gates
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  platform-install:
+    name: ${{ matrix.os }} install, CLI, and reports
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: reviewer-ui/package-lock.json
+          package-manager-cache: false
+      - run: npm ci
+        working-directory: reviewer-ui
+      - run: npm run build
+        working-directory: reviewer-ui
+      - run: python -m pip install .
+      - run: python scripts/platform_smoke.py --output phase7-platform.json
+      - uses: actions/upload-artifact@v7
+        with:
+          name: phase7-platform-${{ runner.os }}
+          path: phase7-platform.json
+          if-no-files-found: error
+
+  privacy-and-performance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: reviewer-ui/package-lock.json
+          package-manager-cache: false
+      - run: npm ci
+        working-directory: reviewer-ui
+      - run: npm run build
+        working-directory: reviewer-ui
+      - run: python -m pip install .
+      - name: Prove AI-off zero egress
+        run: python scripts/verify_zero_egress.py --output phase7-zero-egress.json
+      - name: Enforce 100-page 90-second target
+        run: python scripts/benchmark_phase7.py --strict --output phase7-performance.json
+      - name: Enforce Reviewer 200 ms target
+        run: npm run test:performance -- --output ../phase7-ui-performance.json
+        working-directory: reviewer-ui
+      - uses: actions/upload-artifact@v7
+        with:
+          name: phase7-privacy-performance
+          path: |
+            phase7-zero-egress.json
+            phase7-performance.json
+            phase7-ui-performance.json
+          if-no-files-found: error
+
+  dependency-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pypa/gh-action-pip-audit@v1.1.0
+        with:
+          inputs: .
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: reviewer-ui/package-lock.json
+          package-manager-cache: false
+      - run: npm ci
+        working-directory: reviewer-ui
+      - run: npm audit --audit-level=high
+        working-directory: reviewer-ui
+
+  reproducible-build-and-artifact-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: reviewer-ui/package-lock.json
+          package-manager-cache: false
+      - run: npm ci
+        working-directory: reviewer-ui
+      - run: npm run build
+        working-directory: reviewer-ui
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install setuptools==83.0.0 wheel==0.47.0
+      - run: python scripts/verify_reproducible_builds.py --output phase8-python-build.json
+      - run: python scripts/verify_release_candidate.py --output-dir release-candidate --result phase8-release-candidate.json
+      - run: npm run test:reproducible -- --output ../phase7-reviewer-build.json
+        working-directory: reviewer-ui
+      - name: Assemble release artifacts
+        shell: bash
+        run: |
+          mkdir -p release-artifacts/python
+          cp release-candidate/* release-artifacts/python/
+      - name: Scan release artifacts
+        id: artifact-scan
+        uses: anchore/scan-action@v7
+        with:
+          path: release-artifacts
+          fail-build: true
+          severity-cutoff: high
+          output-format: sarif
+          output-file: artifact-scan.sarif
+      - name: Upload artifact scan to code scanning
+        if: ${{ always() && hashFiles('artifact-scan.sarif') != '' }}
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: artifact-scan.sarif
+          category: phase7-release-artifacts
+      - uses: actions/upload-artifact@v7
+        if: ${{ always() }}
+        with:
+          name: phase7-build-and-scan
+          path: |
+            phase8-python-build.json
+            phase8-release-candidate.json
+            phase7-reviewer-build.json
+            release-artifacts
+            artifact-scan.sarif
+          if-no-files-found: warn

@@ -1,0 +1,53 @@
+name: GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v6
+      - name: Build static site
+        env:
+          REPOSITORY_URL: https://github.com/${{ github.repository }}
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: >-
+          python scripts/build_pages_site.py
+          --output _site
+          --repository-url "$REPOSITORY_URL"
+          --site-url "$SITE_URL"
+      - name: Validate static site
+        run: python scripts/check_pages_site.py --site _site
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    permissions:
+      actions: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

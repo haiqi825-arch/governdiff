@@ -1,0 +1,1 @@
+{"cli": "python -m governdiff", "passed": true, "platform": "windows", "python": "3.12.13", "reports": ["json", "html"], "schema_version": "governdiff-platform-smoke/1.0"}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://governdiff.dev/schema/waiver/1.0.json",
+  "title": "GovernDiff waiver file",
+  "type": "object",
+  "required": ["schema_version", "waivers"],
+  "properties": {
+    "schema_version": { "const": "governdiff-waiver/1.0" },
+    "waivers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/waiver" }
+    }
+  },
+  "$defs": {
+    "dateOrDateTime": {
+      "anyOf": [
+        { "type": "string", "format": "date" },
+        { "type": "string", "format": "date-time" }
+      ]
+    },
+    "waiver": {
+      "type": "object",
+      "required": ["fingerprint", "reason", "approved_by", "created_at", "expires_at"],
+      "properties": {
+        "fingerprint": { "type": "string", "pattern": "^GVD-[A-Z0-9]+$" },
+        "reason": { "type": "string", "minLength": 1 },
+        "approved_by": { "type": "string", "minLength": 1 },
+        "created_at": { "$ref": "#/$defs/dateOrDateTime" },
+        "expires_at": { "$ref": "#/$defs/dateOrDateTime" },
+        "reference": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

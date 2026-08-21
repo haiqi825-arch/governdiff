@@ -1,0 +1,12 @@
+{
+  "schema_version": "governdiff-reviewer-reproducible-build/1.0",
+  "source_date_epoch": "1704067200",
+  "lockfile_version": 3,
+  "exact_root_versions": true,
+  "file_count": 28,
+  "normalized_manifest_sha256": "1fb3df57b2648dda91a1a5b856bf2422993352c1f4aed8c5b317d55e99e31061",
+  "cryptographic_secrets_rotated": true,
+  "normalized_byte_identical": true,
+  "differing_paths": [],
+  "passed": true
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://governdiff.dev/schema/review/1.1.json",
+  "title": "GovernDiff portable review",
+  "type": "object",
+  "required": ["schema_version", "report", "exported_at", "decisions", "field_edits", "alignment_overrides"],
+  "properties": {
+    "schema_version": { "const": "governdiff-review/1.1" },
+    "report": {
+      "type": "object",
+      "required": ["old_sha256", "new_sha256", "generated_at"],
+      "properties": {
+        "old_sha256": { "$ref": "#/$defs/sha256" },
+        "new_sha256": { "$ref": "#/$defs/sha256" },
+        "generated_at": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "exported_at": { "type": "string", "format": "date-time" },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["change_fingerprint", "state", "note", "updated_at"],
+        "properties": {
+          "change_fingerprint": { "$ref": "#/$defs/changeFingerprint" },
+          "state": { "$ref": "#/$defs/reviewState" },
+          "note": { "type": "string" },
+          "updated_at": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "field_edits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["change_fingerprint", "finding_fingerprint", "field", "machine_old_value", "machine_new_value", "reviewed_old_value", "reviewed_new_value", "updated_at"],
+        "properties": {
+          "change_fingerprint": { "$ref": "#/$defs/changeFingerprint" },
+          "finding_fingerprint": { "$ref": "#/$defs/findingFingerprint" },
+          "field": { "type": "string", "minLength": 1 },
+          "machine_old_value": { "type": ["string", "null"] },
+          "machine_new_value": { "type": ["string", "null"] },
+          "reviewed_old_value": { "type": ["string", "null"] },
+          "reviewed_new_value": { "type": ["string", "null"] },
+          "updated_at": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "alignment_overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action", "original_change_fingerprint", "old_block_ids", "new_block_ids"],
+        "properties": {
+          "action": { "enum": ["unlink", "relink"] },
+          "original_change_fingerprint": { "$ref": "#/$defs/changeFingerprint" },
+          "old_block_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "new_block_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "updated_at": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "filters": {
+      "type": "object",
+      "properties": {
+        "visible_change_fingerprints": { "type": "array", "items": { "$ref": "#/$defs/changeFingerprint" }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "reviewState": { "enum": ["unreviewed", "confirmed", "rejected", "modified", "waived"] },
+    "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+    "changeFingerprint": { "type": "string", "pattern": "^GVC-[A-Z0-9]+$" },
+    "findingFingerprint": { "type": "string", "pattern": "^GVD-[A-Z0-9]+$" }
+  },
+  "additionalProperties": false
+}

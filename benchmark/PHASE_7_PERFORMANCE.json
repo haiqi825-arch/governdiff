@@ -1,0 +1,32 @@
+{
+  "schema_version": "governdiff-performance/1.0",
+  "generated_at": "2026-08-11T06:32:04.940501+00:00",
+  "target": {
+    "pages_per_document": 100,
+    "cpu_cores": 4,
+    "memory_gib": 8,
+    "maximum_seconds": 90.0
+  },
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "logical_cpu_count": 18,
+    "benchmark_affinity": {
+      "requested_logical_cores": 4,
+      "applied": true,
+      "effective_logical_cores": 4
+    },
+    "python": "3.12.13"
+  },
+  "result": {
+    "old_page_count": 100,
+    "new_page_count": 100,
+    "elapsed_seconds": 1.2115,
+    "changes": 10,
+    "findings": 20,
+    "rendered_json_bytes": 253949,
+    "peak_traced_memory_mib": 3.959
+  },
+  "passed": true
+}

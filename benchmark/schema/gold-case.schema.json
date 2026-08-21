@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://governdiff.dev/schema/benchmark-gold-case-1.0.json",
+  "title": "GovernDiff focused Gold benchmark case",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "language",
+    "provenance",
+    "annotation"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "language": { "enum": ["en", "zh"] },
+    "domain": { "type": "string" },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_pair",
+        "source_change_fingerprint",
+        "old_snapshot",
+        "new_snapshot"
+      ],
+      "properties": {
+        "source_pair": { "type": "string" },
+        "source_change_fingerprint": { "type": "string" },
+        "old_snapshot": { "type": "string" },
+        "new_snapshot": { "type": "string" },
+        "old_block_id": { "type": ["string", "null"] },
+        "new_block_id": { "type": ["string", "null"] },
+        "source_manifest_sha256": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "annotation": {
+      "type": "object",
+      "required": [
+        "expected_change_type",
+        "expected_checks",
+        "expected_breaking",
+        "article_mapping",
+        "review_passes",
+        "notes"
+      ],
+      "properties": {
+        "expected_change_type": {
+          "enum": ["added", "removed", "modified", "moved", "format_only", "unchanged"]
+        },
+        "expected_checks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string" }
+        },
+        "expected_breaking": { "type": "boolean" },
+        "article_mapping": {
+          "type": ["object", "null"],
+          "properties": {
+            "old_article": { "type": "string" },
+            "new_article": { "type": "string" },
+            "required": { "const": true }
+          },
+          "required": ["old_article", "new_article", "required"],
+          "additionalProperties": false
+        },
+        "review_passes": { "type": "integer", "minimum": 1 },
+        "notes": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

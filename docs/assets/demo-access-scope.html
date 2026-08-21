@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GovernDiff report</title>
+  <style>
+    :root { color-scheme: light; --ink:#17231d; --muted:#607168; --paper:#f4f2eb; --card:#fffef9; --line:#d7ddd7; --accent:#146c4a; --high:#a63424; --medium:#9a6500; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; }
+    main { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:48px 0 72px; }
+    .hero { padding:34px; color:white; background:linear-gradient(135deg,#123e31,#1d684f); border-radius:22px; box-shadow:0 18px 50px #183c2a24; }
+    .hero h1 { margin:.1em 0; font-size:clamp(2rem,6vw,4.6rem); letter-spacing:-.055em; }
+    .hero p { max-width:820px; }
+    .eyebrow { margin:0; color:var(--muted); font-size:.76rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .hero .eyebrow { color:#c7e7d8; }
+    .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:18px 0; }
+    .meta div,.stat,.notice,.change,.empty { background:var(--card); border:1px solid var(--line); border-radius:16px; }
+    .meta div { padding:14px 16px; overflow-wrap:anywhere; }
+    .meta dt,.values dt,.waiver dt { color:var(--muted); font-size:.75rem; font-weight:800; text-transform:uppercase; }
+    .meta dd,.values dd,.waiver dd { margin:4px 0 0; }
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:24px 0; }
+    .stat { padding:18px; } .stat strong { display:block; font-size:2rem; }
+    .notice { padding:18px 22px; margin:18px 0; } .notice ul { margin-bottom:0; }
+    .change { margin:24px 0; overflow:hidden; } .change>header { padding:22px 24px; border-bottom:1px solid var(--line); }
+    .change h2,.finding h3 { margin:.25rem 0; }
+    .finding { padding:22px 24px; border-bottom:1px solid var(--line); } .finding:last-child { border-bottom:0; }
+    .finding-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; }
+    .badges { display:flex; flex-wrap:wrap; gap:6px; justify-content:flex-end; }
+    .badge { padding:3px 9px; border-radius:999px; background:#edf1ed; font-size:.76rem; font-weight:800; text-transform:uppercase; white-space:nowrap; }
+    .severity-high,.severity-critical { color:#8b281c; background:#ffe4df; } .severity-medium { color:#755000; background:#fff0c5; }
+    .evidence-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    blockquote { margin:0; padding:16px; background:#f5f7f3; border-left:4px solid var(--accent); border-radius:8px; overflow-wrap:anywhere; }
+    blockquote span { display:block; margin-bottom:7px; color:var(--muted); font-size:.75rem; font-weight:800; text-transform:uppercase; }
+    .values,.waiver { display:grid; grid-template-columns:110px 1fr; gap:7px 12px; margin:16px 0 0; }
+    .empty { padding:32px; text-align:center; }
+    footer { margin-top:34px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    @media (max-width:700px) { .evidence-grid { grid-template-columns:1fr; } .finding-head { display:block; } .badges { justify-content:flex-start; margin-top:10px; } }
+    @media print { body { background:white; } main { width:100%; padding:0; } .hero { box-shadow:none; } .change { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero"><p class="eyebrow">GovernDiff · audit report</p><h1>Policy change review</h1><p>GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise.</p></header>
+  <dl class="meta">
+    <div><dt>Generator</dt><dd>governdiff/0.6.0 · schema 1.5</dd></div>
+    <div><dt>Generated</dt><dd>2026-08-21T13:07:16.781320+00:00</dd></div>
+    <div><dt>Scope</dt><dd>all · redacted no</dd></div>
+    <div><dt>Old document</dt><dd>examples/public-cases/02-access-scope/old.md<br>953030ddd679381ea70f6d87e8c31b3d905982270dd048d7a6bc4c80f6dfa7ad</dd></div>
+    <div><dt>New document</dt><dd>examples/public-cases/02-access-scope/new.md<br>001f08bbc0bec7cd4219f8280c44c152b49950606cddc1c0d22fb36dfc422eef</dd></div>
+  </dl>
+  <section aria-labelledby="overview"><h2 id="overview">Overview</h2><div class="stats">
+    <div class="stat"><span>Changes</span><strong>1</strong></div>
+    <div class="stat"><span>Findings</span><strong>2</strong></div>
+    <div class="stat"><span>Active</span><strong>2</strong></div>
+    <div class="stat"><span>Breaking</span><strong>2</strong></div>
+  </div></section>
+
+
+  <section aria-labelledby="changes"><h2 id="changes">Changes and evidence</h2><article class="change" data-change-fingerprint="GVC-89A893C43B"><header><p class="eyebrow">modified · GVC-89A893C43B</p><h2>Repository access policy &gt; Eligibility</h2><p>Alignment confidence high 0.85 · review unreviewed</p></header><section class="finding" data-finding-fingerprint="GVD-B8C03980CA"><div class="finding-head"><div><p class="eyebrow">scope-expanded · scope</p><h3>The governed scope may have expanded.</h3></div><div class="badges"><span class="badge severity-high">high</span><span class="badge">high 0.80</span><span class="badge">unreviewed</span></div></div><p>The revised clause contains more universal or inclusive scope terms without more limiting terms.</p><div class="evidence-grid"><blockquote><span>Before</span>Approved employees may access the governance repository.</blockquote><blockquote><span>After</span>All employees and contractors may access the governance repository.</blockquote></div><dl class="values"><dt>Machine</dt><dd>0 → 1</dd><dt>Effective</dt><dd>0 → 1</dd></dl></section><section class="finding" data-finding-fingerprint="GVD-CFC35C0F88"><div class="finding-head"><div><p class="eyebrow">authority-shifted · actor</p><h3>Responsibility or authority shifted from Approved employees to All employees and contractors.</h3></div><div class="badges"><span class="badge severity-high">high</span><span class="badge">high 0.86</span><span class="badge">unreviewed</span></div></div><p>The grammatical actor attached to normative language changed in the aligned clause.</p><div class="evidence-grid"><blockquote><span>Before</span>Approved employees may access the governance repository.</blockquote><blockquote><span>After</span>All employees and contractors may access the governance repository.</blockquote></div><dl class="values"><dt>Machine</dt><dd>Approved employees → All employees and contractors</dd><dt>Effective</dt><dd>Approved employees → All employees and contractors</dd></dl></section></article></section>
+  <footer>GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise. Generated by governdiff/0.6.0.</footer>
+</main>
+</body>
+</html>

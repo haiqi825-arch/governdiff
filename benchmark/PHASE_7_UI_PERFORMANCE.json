@@ -1,0 +1,32 @@
+{
+  "schema_version": "governdiff-ui-performance/1.0",
+  "generated_at": "2026-08-11T06:26:45.116Z",
+  "runtime": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "workload": {
+    "changes": 5000,
+    "iterations": 40
+  },
+  "threshold_ms": 200,
+  "interactions": {
+    "search": {
+      "iterations": 40,
+      "p95_ms": 5.806,
+      "maximum_ms": 6.991
+    },
+    "filter": {
+      "iterations": 40,
+      "p95_ms": 0.959,
+      "maximum_ms": 2.69
+    },
+    "switch_card": {
+      "iterations": 40,
+      "p95_ms": 0.098,
+      "maximum_ms": 0.202
+    }
+  },
+  "passed": true
+}

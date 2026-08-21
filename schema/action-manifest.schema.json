@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://governdiff.dev/schema/action-manifest-1.0.json",
+  "title": "GovernDiff Action manifest 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_channel",
+    "generated_at",
+    "mode",
+    "base_ref",
+    "base_commit",
+    "patterns",
+    "gate",
+    "summary",
+    "files"
+  ],
+  "properties": {
+    "schema_version": {"const": "governdiff-action/1.0"},
+    "release_channel": {"const": "v1"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "mode": {"enum": ["pair", "git-base"]},
+    "base_ref": {"type": ["string", "null"]},
+    "base_commit": {
+      "anyOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^[0-9a-f]{40,64}$"}
+      ]
+    },
+    "patterns": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "gate": {"$ref": "#/$defs/gate"},
+    "summary": {"$ref": "#/$defs/summary"},
+    "files": {"type": "array", "items": {"$ref": "#/$defs/file"}}
+  },
+  "$defs": {
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "failed",
+        "minimum_confidence",
+        "minimum_severity",
+        "finding_count",
+        "reason"
+      ],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "failed": {"type": "boolean"},
+        "minimum_confidence": {"enum": ["low", "medium", "high"]},
+        "minimum_severity": {"enum": ["info", "low", "medium", "high", "critical"]},
+        "finding_count": {"type": "integer", "minimum": 0},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "files",
+        "changes",
+        "active_findings",
+        "breaking_at_confidence_threshold",
+        "high_confidence_breaking_findings",
+        "matched_waivers",
+        "statuses"
+      ],
+      "properties": {
+        "files": {"type": "integer", "minimum": 0},
+        "changes": {"type": "integer", "minimum": 0},
+        "active_findings": {"type": "integer", "minimum": 0},
+        "breaking_at_confidence_threshold": {"type": "integer", "minimum": 0},
+        "high_confidence_breaking_findings": {"type": "integer", "minimum": 0},
+        "matched_waivers": {"type": "integer", "minimum": 0},
+        "statuses": {
+          "type": "object",
+          "additionalProperties": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "old_path",
+        "new_path",
+        "display_path",
+        "old_sha256",
+        "new_sha256",
+        "summary",
+        "breaking_at_confidence_threshold",
+        "gate_finding_fingerprints",
+        "reports"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "added",
+            "broken_pairing",
+            "copied",
+            "deleted",
+            "modified",
+            "renamed",
+            "type_changed",
+            "unmerged",
+            "unknown"
+          ]
+        },
+        "old_path": {"type": ["string", "null"]},
+        "new_path": {"type": ["string", "null"]},
+        "display_path": {"type": "string", "minLength": 1},
+        "old_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "new_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "summary": {"type": "object"},
+        "breaking_at_confidence_threshold": {"type": "integer", "minimum": 0},
+        "gate_finding_fingerprints": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^GVD-[A-F0-9]+$"},
+          "uniqueItems": true
+        },
+        "reports": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["json", "markdown", "html", "csv"],
+          "properties": {
+            "json": {"type": "string", "minLength": 1},
+            "markdown": {"type": "string", "minLength": 1},
+            "html": {"type": "string", "minLength": 1},
+            "csv": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}

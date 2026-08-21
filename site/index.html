@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GovernDiff — Policy changes, reviewed like code</title>
+    <meta name="description" content="Local-first policy diff and CI for PDF, DOCX, HTML, Markdown, and text. Evidence-backed, deterministic, and AI-off.">
+    <meta name="theme-color" content="#061224">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GovernDiff — Policy changes, reviewed like code">
+    <meta property="og:description" content="Catch review-worthy policy changes locally and deterministically before they merge.">
+    <meta property="og:image" content="{{SOCIAL_IMAGE_URL}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GovernDiff — Policy changes, reviewed like code">
+    <meta name="twitter:description" content="Local-first Policy CI with evidence, stable fingerprints, and no document upload.">
+    <meta name="twitter:image" content="{{SOCIAL_IMAGE_URL}}">
+    <link rel="canonical" href="{{SITE_URL}}/">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="GovernDiff home">
+        <span class="brand-mark" aria-hidden="true">GD</span>
+        <span>GovernDiff</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#example">Example</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#compare">Compare</a>
+        <a href="#quickstart">Quick start</a>
+      </nav>
+      <a class="header-cta" href="{{REPOSITORY_URL}}">View source</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Open source · MIT · Python 3.10+</p>
+          <h1>Policy changes,<br><em>reviewed like code.</em></h1>
+          <p class="hero-lede">
+            GovernDiff finds changes to duties, scope, deadlines, exceptions,
+            and authority across PDF, DOCX, HTML, Markdown, and text—locally,
+            deterministically, and with evidence a person can verify.
+          </p>
+          <p class="hero-zh">把政策文件当代码审查：不上传文档，不依赖大模型。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="demo/incident-deadline.html">Open the synthetic demo</a>
+            <a class="button secondary" href="#quickstart">Run it locally</a>
+          </div>
+          <ul class="trust-list" aria-label="Product principles">
+            <li>No document upload</li>
+            <li>No telemetry</li>
+            <li>No LLM required</li>
+          </ul>
+        </div>
+
+        <div class="policy-stage" aria-label="Example of a policy change blocked by CI">
+          <div class="policy-card before-card">
+            <span class="card-label">Before</span>
+            <p class="policy-heading">Incident notification</p>
+            <p>Vendors <mark class="removed">may</mark> report a security incident within <mark class="removed">72 hours</mark>.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="policy-card after-card">
+            <span class="card-label">After</span>
+            <p class="policy-heading">Incident notification</p>
+            <p>Vendors <mark class="added">must</mark> report a security incident within <mark class="added">24 hours</mark>.</p>
+          </div>
+          <div class="finding-row">
+            <span>modality-strengthened</span>
+            <span>deadline-shortened</span>
+          </div>
+          <div class="gate-result"><strong>CI gate blocked</strong><span>2 high-confidence findings</span></div>
+        </div>
+      </section>
+
+      <section class="proof-strip" aria-label="GovernDiff at a glance">
+        <div><strong>5</strong><span>input formats</span></div>
+        <div><strong>15</strong><span>explicit checks</span></div>
+        <div><strong>4</strong><span>report formats</span></div>
+        <div><strong>0</strong><span>network calls in AI-off flow</span></div>
+      </section>
+
+      <section class="section example-section" id="example">
+        <div class="section-heading">
+          <p class="kicker">See the result first</p>
+          <h2>A line diff shows words.<br>GovernDiff shows what changed.</h2>
+          <p>Every finding carries its source evidence, confidence reasons, severity, review state, and a stable fingerprint for CI and waivers.</p>
+        </div>
+        <div class="signal-grid">
+          <article>
+            <span class="signal-index">01</span>
+            <h3>Normative force</h3>
+            <p><code>may</code> became <code>must</code>. GovernDiff marks the obligation as strengthened instead of leaving the reviewer to infer it from colored text.</p>
+          </article>
+          <article>
+            <span class="signal-index">02</span>
+            <h3>Deadline pressure</h3>
+            <p><code>72 hours</code> became <code>24 hours</code>. The value pair and aligned source sentence remain attached to the finding.</p>
+          </article>
+          <article>
+            <span class="signal-index">03</span>
+            <h3>Review continuity</h3>
+            <p>A stable <code>GVD-*</code> fingerprint connects the CLI, pull-request gate, local Reviewer, exported decision log, and future waiver.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="workflow">
+        <div class="section-heading compact">
+          <p class="kicker">One evidence chain</p>
+          <h2>Compare. Decide. Gate.</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><div><h3>Compare locally</h3><p>Parse digital PDF, DOCX, HTML, Markdown, or text. Align clauses through moves, splits, and merges.</p></div></li>
+          <li><span>2</span><div><h3>Review the evidence</h3><p>Confirm, reject, modify, or waive findings in the packaged loopback-only Reviewer.</p></div></li>
+          <li><span>3</span><div><h3>Protect the pull request</h3><p>Block configured changes while retaining complete JSON, Markdown, HTML, and CSV artifacts.</p></div></li>
+        </ol>
+        <figure class="reviewer-shot">
+          <img src="assets/reviewer-evidence.png" alt="GovernDiff Reviewer showing a queue, side-by-side source evidence, findings, and review controls" loading="lazy">
+          <figcaption>The Reviewer keeps machine values, human decisions, source evidence, and portable review state together.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section compare-section" id="compare">
+        <div class="section-heading compact">
+          <p class="kicker">Built for review, not spectacle</p>
+          <h2>Why not ordinary document diff?</h2>
+        </div>
+        <div class="comparison" role="region" aria-label="GovernDiff comparison" tabindex="0">
+          <table>
+            <thead><tr><th>Capability</th><th>Plain diff</th><th>Generic LLM</th><th>GovernDiff</th></tr></thead>
+            <tbody>
+              <tr><th>Clause moves, splits, and merges</th><td>Line-level</td><td>Prompt-dependent</td><td class="yes">Deterministic alignment</td></tr>
+              <tr><th>Before/after source evidence</th><td>Text context</td><td>Often summarized</td><td class="yes">Page, paragraph, cell, or line</td></tr>
+              <tr><th>Stable finding identity</th><td>—</td><td>—</td><td class="yes"><code>GVD-*</code> fingerprints</td></tr>
+              <tr><th>Reproducible AI-off output</th><td>Raw diff only</td><td>No</td><td class="yes">Yes</td></tr>
+              <tr><th>Policy text remains local</th><td>Usually</td><td>Often uploaded</td><td class="yes">Yes; no telemetry</td></tr>
+              <tr><th>Portable reviewer decisions</th><td>—</td><td>Service-specific</td><td class="yes"><code>governdiff-review/1.1</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section quickstart-section" id="quickstart">
+        <div class="quickstart-copy">
+          <p class="kicker">Five-minute path</p>
+          <h2>Start with one synthetic case.</h2>
+          <p>Install from the repository, generate a self-contained HTML report, then open the local review workflow. Your policy text stays on the machine.</p>
+          <a href="{{REPOSITORY_URL}}#quick-start">Read the full documentation →</a>
+        </div>
+        <div class="terminal" aria-label="GovernDiff quick-start commands">
+          <div class="terminal-bar"><span></span><span></span><span></span><strong>terminal</strong></div>
+          <pre><code><span class="prompt">$</span> python -m pip install .
+
+<span class="prompt">$</span> governdiff diff \
+  examples/public-cases/01-incident-deadline/old.md \
+  examples/public-cases/01-incident-deadline/new.md \
+  --format html --output report.html
+
+<span class="output">✓ 1 change · 2 findings · evidence retained</span></code></pre>
+        </div>
+      </section>
+
+      <section class="section boundary-section">
+        <div>
+          <p class="kicker">Deliberate boundaries</p>
+          <h2>Evidence for a person—not a legal conclusion.</h2>
+        </div>
+        <ul>
+          <li><strong>Breaking</strong> is a deterministic review cue, not legal advice or a compliance determination.</li>
+          <li>Digital-text inputs only; image-only PDFs are diagnosed and OCR is not performed.</li>
+          <li>No accounts, hosted document processing, telemetry, remote AI, or public Reviewer service.</li>
+          <li>All examples, reports, screenshots, and performance fixtures on this site are synthetic.</li>
+        </ul>
+      </section>
+
+      <section class="closing">
+        <p class="kicker">Policy CI, without the upload</p>
+        <h2>Make the important change<br>impossible to miss.</h2>
+        <div class="hero-actions">
+          <a class="button primary" href="{{REPOSITORY_URL}}">View GovernDiff on GitHub</a>
+          <a class="button secondary" href="demo/incident-deadline.html">Inspect the evidence</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">GD</span><span>GovernDiff</span></div>
+      <p>Local-first, deterministic, evidence-backed.</p>
+      <p>MIT licensed · Synthetic public demo</p>
+    </footer>
+  </body>
+</html>

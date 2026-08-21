@@ -1,0 +1,58 @@
+{
+  "schema_version": "governdiff-action/1.0",
+  "release_channel": "v1",
+  "generated_at": "2026-08-11T08:00:00+00:00",
+  "mode": "git-base",
+  "base_ref": "8b35e0ef7ddfc70212cf80118480330e8129d6c9",
+  "base_commit": "8b35e0ef7ddfc70212cf80118480330e8129d6c9",
+  "patterns": ["policies/**/*.md", "GOVERNANCE.md"],
+  "gate": {
+    "enabled": true,
+    "failed": false,
+    "minimum_confidence": "medium",
+    "minimum_severity": "high",
+    "finding_count": 0,
+    "reason": "No active breaking finding crossed both thresholds."
+  },
+  "summary": {
+    "files": 1,
+    "changes": 1,
+    "active_findings": 1,
+    "breaking_at_confidence_threshold": 0,
+    "high_confidence_breaking_findings": 0,
+    "matched_waivers": 0,
+    "statuses": {
+      "added": 0,
+      "broken_pairing": 0,
+      "copied": 0,
+      "deleted": 0,
+      "modified": 1,
+      "renamed": 0,
+      "type_changed": 0,
+      "unmerged": 0,
+      "unknown": 0
+    }
+  },
+  "files": [
+    {
+      "status": "modified",
+      "old_path": "policies/access.md",
+      "new_path": "policies/access.md",
+      "display_path": "policies/access.md",
+      "old_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "new_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "summary": {
+        "total_changes": 1,
+        "active_findings": 1
+      },
+      "breaking_at_confidence_threshold": 0,
+      "gate_finding_fingerprints": [],
+      "reports": {
+        "json": "reports/001-policies-access.md-10bb62de/report.json",
+        "markdown": "reports/001-policies-access.md-10bb62de/report.md",
+        "html": "reports/001-policies-access.md-10bb62de/report.html",
+        "csv": "reports/001-policies-access.md-10bb62de/report.csv"
+      }
+    }
+  ]
+}

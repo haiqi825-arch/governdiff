@@ -1,0 +1,526 @@
+{
+  "schema_version": "1.5",
+  "generator": "governdiff/0.6.0",
+  "generated_at": "2026-08-13T00:00:00+00:00",
+  "disclaimer": "GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise.",
+  "selection": {
+    "scope": "all",
+    "minimum_confidence": "low",
+    "filters": {},
+    "selected_change_count": 1,
+    "selected_finding_count": 2
+  },
+  "redacted": false,
+  "review_import": null,
+  "waiver_diagnostics": [],
+  "old_document": {
+    "path": "examples/public-cases/01-incident-deadline/old.md",
+    "sha256": "55dbb4cf8170d29e82169ecbbd0962b479f649b07e0db89b992d5dd269f9947c",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-13T00:00:00+00:00",
+    "block_count": 1,
+    "word_count": 11,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-ABA1FD0A9C",
+        "title": "Vendor incident response policy",
+        "path": [
+          "Vendor incident response policy"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-AB74EECBC7",
+            "title": "Notification",
+            "path": [
+              "Vendor incident response policy",
+              "Notification"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-5B3FEEFA513E"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 124,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 3,
+      "word_count": 16,
+      "character_count": 124,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "new_document": {
+    "path": "examples/public-cases/01-incident-deadline/new.md",
+    "sha256": "516f8aa9aa304f2789595d14160245dd816ea65b9a40ebe743e1e50f1176a65f",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-13T00:00:00+00:00",
+    "block_count": 1,
+    "word_count": 11,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-ABA1FD0A9C",
+        "title": "Vendor incident response policy",
+        "path": [
+          "Vendor incident response policy"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-AB74EECBC7",
+            "title": "Notification",
+            "path": [
+              "Vendor incident response policy",
+              "Notification"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-AC6F6DC7E7A1"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 125,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 3,
+      "word_count": 16,
+      "character_count": 125,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 2,
+    "active_findings": 2,
+    "breaking_findings": 2,
+    "high_confidence_breaking_findings": 2,
+    "confidence": {
+      "changes": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "findings": {
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "high"
+  },
+  "article_mappings": [],
+  "section_tree": [
+    {
+      "section_id": "SEC-ABA1FD0A9C",
+      "title": "Vendor incident response policy",
+      "path": [
+        "Vendor incident response policy"
+      ],
+      "depth": 1,
+      "change_count": 1,
+      "breaking_count": 1,
+      "change_types": {
+        "modified": 1
+      },
+      "confidence": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "children": [
+        {
+          "section_id": "SEC-AB74EECBC7",
+          "title": "Notification",
+          "path": [
+            "Vendor incident response policy",
+            "Notification"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 1,
+          "change_types": {
+            "modified": 1
+          },
+          "confidence": {
+            "high": 1,
+            "medium": 0,
+            "low": 0
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "fingerprint": "GVC-81A584FE55",
+      "change_type": "modified",
+      "similarity": 0.956,
+      "severity": "high",
+      "section": "Vendor incident response policy > Notification",
+      "section_path": [
+        "Vendor incident response policy",
+        "Notification"
+      ],
+      "section_id": "SEC-AB74EECBC7",
+      "old_article": null,
+      "new_article": null,
+      "article_mapping": null,
+      "confidence_score": 0.9236,
+      "confidence_level": "high",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.96"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-5B3FEEFA513E",
+        "section": [
+          "Vendor incident response policy",
+          "Notification"
+        ],
+        "text": "Vendors may report a security incident within 72 hours after discovery.",
+        "normalized_text": "Vendors may report a security incident within 72 hours after discovery.",
+        "comparison_text": "vendorsmayreportasecurityincidentwithin72hoursafterdiscovery",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 52,
+        "char_end": 123,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "Vendor incident response policy > Notification",
+        "evidence_label": "paragraph 1 · chars 52-123"
+      },
+      "new_block": {
+        "block_id": "BLK-AC6F6DC7E7A1",
+        "section": [
+          "Vendor incident response policy",
+          "Notification"
+        ],
+        "text": "Vendors must report a security incident within 24 hours after discovery.",
+        "normalized_text": "Vendors must report a security incident within 24 hours after discovery.",
+        "comparison_text": "vendorsmustreportasecurityincidentwithin24hoursafterdiscovery",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 52,
+        "char_end": 124,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "Vendor incident response policy > Notification",
+        "evidence_label": "paragraph 1 · chars 52-124"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-5B3FEEFA513E",
+          "section": [
+            "Vendor incident response policy",
+            "Notification"
+          ],
+          "text": "Vendors may report a security incident within 72 hours after discovery.",
+          "normalized_text": "Vendors may report a security incident within 72 hours after discovery.",
+          "comparison_text": "vendorsmayreportasecurityincidentwithin72hoursafterdiscovery",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 52,
+          "char_end": 123,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "Vendor incident response policy > Notification",
+          "evidence_label": "paragraph 1 · chars 52-123"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-AC6F6DC7E7A1",
+          "section": [
+            "Vendor incident response policy",
+            "Notification"
+          ],
+          "text": "Vendors must report a security incident within 24 hours after discovery.",
+          "normalized_text": "Vendors must report a security incident within 24 hours after discovery.",
+          "comparison_text": "vendorsmustreportasecurityincidentwithin24hoursafterdiscovery",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 52,
+          "char_end": 124,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "Vendor incident response policy > Notification",
+          "evidence_label": "paragraph 1 · chars 52-124"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "Vendors ",
+          "new_text": "Vendors ",
+          "old_start": 0,
+          "old_end": 2,
+          "new_start": 0,
+          "new_end": 2
+        },
+        {
+          "operation": "replace",
+          "old_text": "may",
+          "new_text": "must",
+          "old_start": 2,
+          "old_end": 3,
+          "new_start": 2,
+          "new_end": 3
+        },
+        {
+          "operation": "equal",
+          "old_text": " report a security incident within ",
+          "new_text": " report a security incident within ",
+          "old_start": 3,
+          "old_end": 14,
+          "new_start": 3,
+          "new_end": 14
+        },
+        {
+          "operation": "replace",
+          "old_text": "72",
+          "new_text": "24",
+          "old_start": 14,
+          "old_end": 15,
+          "new_start": 14,
+          "new_end": 15
+        },
+        {
+          "operation": "equal",
+          "old_text": " hours after discovery.",
+          "new_text": " hours after discovery.",
+          "old_start": 15,
+          "old_end": 22,
+          "new_start": 15,
+          "new_end": 22
+        }
+      ],
+      "temporal_changes": [
+        {
+          "kind": "deadline",
+          "old_value": "72 hours after",
+          "new_value": "24 hours after",
+          "old_normalized": "72 hours",
+          "new_normalized": "24 hours",
+          "direction": "shortened",
+          "old_evidence": "Vendors may report a security incident within 72 hours after discovery.",
+          "new_evidence": "Vendors must report a security incident within 24 hours after discovery."
+        }
+      ],
+      "findings": [
+        {
+          "fingerprint": "GVD-CA93F47FA2",
+          "check_id": "modality-strengthened",
+          "severity": "high",
+          "breaking": true,
+          "summary": "Normative force was strengthened.",
+          "field": "modality",
+          "old_value": "may",
+          "new_value": "must",
+          "old_evidence": "Vendors may report a security incident within 72 hours after discovery.",
+          "new_evidence": "Vendors must report a security incident within 24 hours after discovery.",
+          "explanation": "Detected a shift from permitted language to mandatory language.",
+          "confidence_score": 0.9219909090909091,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.92)",
+            "modality-strengthened rule specificity is 0.92"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "may",
+            "new": "must"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "may",
+            "new": "must"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-FE2A1C4EB0",
+          "check_id": "deadline-shortened",
+          "severity": "high",
+          "breaking": true,
+          "summary": "A deadline changed from 72 hours to 24 hours.",
+          "field": "deadline",
+          "old_value": "72 hours",
+          "new_value": "24 hours",
+          "old_evidence": "Vendors may report a security incident within 72 hours after discovery.",
+          "new_evidence": "Vendors must report a security incident within 24 hours after discovery.",
+          "explanation": "A relative duration with the same unit appears once in both aligned clauses.",
+          "confidence_score": 0.9399909090909091,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is high confidence (0.92)",
+            "deadline-shortened rule specificity is 0.96"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "72 hours",
+            "new": "24 hours"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "72 hours",
+            "new": "24 hours"
+          },
+          "active": true
+        }
+      ]
+    }
+  ],
+  "unfiltered_summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 2,
+    "active_findings": 2,
+    "breaking_findings": 2,
+    "high_confidence_breaking_findings": 2,
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "confidence": {
+      "changes": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      },
+      "findings": {
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "high"
+  }
+}

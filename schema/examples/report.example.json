@@ -1,0 +1,566 @@
+{
+  "schema_version": "1.5",
+  "generator": "governdiff/0.6.0",
+  "generated_at": "2026-08-11T02:06:46.477462+00:00",
+  "disclaimer": "GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise.",
+  "selection": {
+    "scope": "all",
+    "minimum_confidence": "low",
+    "filters": {},
+    "selected_change_count": 1,
+    "selected_finding_count": 1
+  },
+  "redacted": false,
+  "review_import": null,
+  "waiver_diagnostics": [],
+  "old_document": {
+    "path": "benchmark/cases/en-uk-modality-context-control/old.md",
+    "sha256": "a404deb9bb687131295f6171a901a16aa1567d970c8838b52573b95f076aa886",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-11T02:06:46.471020+00:00",
+    "block_count": 1,
+    "word_count": 33,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-BD3A0B1008",
+        "title": "(document root)",
+        "path": [
+          "(document root)"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [
+          "BLK-19B86AE64903"
+        ],
+        "children": []
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 186,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 1,
+      "word_count": 34,
+      "character_count": 186,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "new_document": {
+    "path": "benchmark/cases/en-uk-modality-context-control/new.md",
+    "sha256": "c29d1a6fc71a70158077cae3143cf518cf63553af8e0de595a32e96be3fe90cb",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-11T02:06:46.473023+00:00",
+    "block_count": 1,
+    "word_count": 31,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-BD3A0B1008",
+        "title": "(document root)",
+        "path": [
+          "(document root)"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [
+          "BLK-003C8879D5D8"
+        ],
+        "children": []
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 198,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 1,
+      "word_count": 32,
+      "character_count": 198,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 1,
+    "active_findings": 1,
+    "breaking_findings": 0,
+    "high_confidence_breaking_findings": 0,
+    "confidence": {
+      "changes": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      }
+    },
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "low"
+  },
+  "article_mappings": [],
+  "section_tree": [
+    {
+      "section_id": "SEC-BD3A0B1008",
+      "title": "(document root)",
+      "path": [
+        "(document root)"
+      ],
+      "depth": 1,
+      "change_count": 1,
+      "breaking_count": 0,
+      "change_types": {
+        "modified": 1
+      },
+      "confidence": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "children": []
+    }
+  ],
+  "changes": [
+    {
+      "fingerprint": "GVC-D53A3DEC8E",
+      "change_type": "modified",
+      "similarity": 0.5654,
+      "severity": "low",
+      "section": "(document root)",
+      "section_path": [],
+      "section_id": "SEC-0A020294C0",
+      "old_article": null,
+      "new_article": null,
+      "article_mapping": null,
+      "confidence_score": 0.6892,
+      "confidence_level": "medium",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.57"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-19B86AE64903",
+        "section": [],
+        "text": "7.21 This is primarily a matter which must be left to the good sense of Ministers. But any Minister in doubt or difficulty over this should seek the advice of their Permanent Secretary.",
+        "normalized_text": "7.21 This is primarily a matter which must be left to the good sense of Ministers. But any Minister in doubt or difficulty over this should seek the advice of their Permanent Secretary.",
+        "comparison_text": "721thisisprimarilyamatterwhichmustbelefttothegoodsenseofministersbutanyministerindoubtordifficultyoverthisshouldseektheadviceoftheirpermanentsecretary",
+        "ordinal": 0,
+        "line_start": 1,
+        "line_end": 1,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 0,
+        "char_end": 185,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "(document root)",
+        "evidence_label": "paragraph 1 · chars 0-185"
+      },
+      "new_block": {
+        "block_id": "BLK-003C8879D5D8",
+        "section": [],
+        "text": "3.28 In cases of any doubt about the application of these principles to a particular situation, ministers should seek advice from their permanent secretary, who may also consult the Cabinet Office.",
+        "normalized_text": "3.28 In cases of any doubt about the application of these principles to a particular situation, ministers should seek advice from their permanent secretary, who may also consult the Cabinet Office.",
+        "comparison_text": "328incasesofanydoubtabouttheapplicationoftheseprinciplestoaparticularsituationministersshouldseekadvicefromtheirpermanentsecretarywhomayalsoconsultthecabinetoffice",
+        "ordinal": 0,
+        "line_start": 1,
+        "line_end": 1,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 0,
+        "char_end": 197,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "(document root)",
+        "evidence_label": "paragraph 1 · chars 0-197"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-19B86AE64903",
+          "section": [],
+          "text": "7.21 This is primarily a matter which must be left to the good sense of Ministers. But any Minister in doubt or difficulty over this should seek the advice of their Permanent Secretary.",
+          "normalized_text": "7.21 This is primarily a matter which must be left to the good sense of Ministers. But any Minister in doubt or difficulty over this should seek the advice of their Permanent Secretary.",
+          "comparison_text": "721thisisprimarilyamatterwhichmustbelefttothegoodsenseofministersbutanyministerindoubtordifficultyoverthisshouldseektheadviceoftheirpermanentsecretary",
+          "ordinal": 0,
+          "line_start": 1,
+          "line_end": 1,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 0,
+          "char_end": 185,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "(document root)",
+          "evidence_label": "paragraph 1 · chars 0-185"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-003C8879D5D8",
+          "section": [],
+          "text": "3.28 In cases of any doubt about the application of these principles to a particular situation, ministers should seek advice from their permanent secretary, who may also consult the Cabinet Office.",
+          "normalized_text": "3.28 In cases of any doubt about the application of these principles to a particular situation, ministers should seek advice from their permanent secretary, who may also consult the Cabinet Office.",
+          "comparison_text": "328incasesofanydoubtabouttheapplicationoftheseprinciplestoaparticularsituationministersshouldseekadvicefromtheirpermanentsecretarywhomayalsoconsultthecabinetoffice",
+          "ordinal": 0,
+          "line_start": 1,
+          "line_end": 1,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 0,
+          "char_end": 197,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "(document root)",
+          "evidence_label": "paragraph 1 · chars 0-197"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "replace",
+          "old_text": "7",
+          "new_text": "3",
+          "old_start": 0,
+          "old_end": 1,
+          "new_start": 0,
+          "new_end": 1
+        },
+        {
+          "operation": "equal",
+          "old_text": ".",
+          "new_text": ".",
+          "old_start": 1,
+          "old_end": 2,
+          "new_start": 1,
+          "new_end": 2
+        },
+        {
+          "operation": "replace",
+          "old_text": "21",
+          "new_text": "28",
+          "old_start": 2,
+          "old_end": 3,
+          "new_start": 2,
+          "new_end": 3
+        },
+        {
+          "operation": "equal",
+          "old_text": " ",
+          "new_text": " ",
+          "old_start": 3,
+          "old_end": 4,
+          "new_start": 3,
+          "new_end": 4
+        },
+        {
+          "operation": "replace",
+          "old_text": "This",
+          "new_text": "In",
+          "old_start": 4,
+          "old_end": 5,
+          "new_start": 4,
+          "new_end": 5
+        },
+        {
+          "operation": "equal",
+          "old_text": " ",
+          "new_text": " ",
+          "old_start": 5,
+          "old_end": 6,
+          "new_start": 5,
+          "new_end": 6
+        },
+        {
+          "operation": "replace",
+          "old_text": "is",
+          "new_text": "cases",
+          "old_start": 6,
+          "old_end": 7,
+          "new_start": 6,
+          "new_end": 7
+        },
+        {
+          "operation": "equal",
+          "old_text": " ",
+          "new_text": " ",
+          "old_start": 7,
+          "old_end": 8,
+          "new_start": 7,
+          "new_end": 8
+        },
+        {
+          "operation": "replace",
+          "old_text": "primarily",
+          "new_text": "of any doubt about the application of these principles to",
+          "old_start": 8,
+          "old_end": 9,
+          "new_start": 8,
+          "new_end": 27
+        },
+        {
+          "operation": "equal",
+          "old_text": " a ",
+          "new_text": " a ",
+          "old_start": 9,
+          "old_end": 12,
+          "new_start": 27,
+          "new_end": 30
+        },
+        {
+          "operation": "replace",
+          "old_text": "matter",
+          "new_text": "particular",
+          "old_start": 12,
+          "old_end": 13,
+          "new_start": 30,
+          "new_end": 31
+        },
+        {
+          "operation": "equal",
+          "old_text": " ",
+          "new_text": " ",
+          "old_start": 13,
+          "old_end": 14,
+          "new_start": 31,
+          "new_end": 32
+        },
+        {
+          "operation": "replace",
+          "old_text": "which must be left to the good sense of",
+          "new_text": "situation,",
+          "old_start": 14,
+          "old_end": 31,
+          "new_start": 32,
+          "new_end": 34
+        },
+        {
+          "operation": "equal",
+          "old_text": " Ministers",
+          "new_text": " ministers",
+          "old_start": 31,
+          "old_end": 33,
+          "new_start": 34,
+          "new_end": 36
+        },
+        {
+          "operation": "delete",
+          "old_text": ". But any Minister in doubt or difficulty over this",
+          "new_text": "",
+          "old_start": 33,
+          "old_end": 52,
+          "new_start": 36,
+          "new_end": 36
+        },
+        {
+          "operation": "equal",
+          "old_text": " should seek ",
+          "new_text": " should seek ",
+          "old_start": 52,
+          "old_end": 57,
+          "new_start": 36,
+          "new_end": 41
+        },
+        {
+          "operation": "delete",
+          "old_text": "the ",
+          "new_text": "",
+          "old_start": 57,
+          "old_end": 59,
+          "new_start": 41,
+          "new_end": 41
+        },
+        {
+          "operation": "equal",
+          "old_text": "advice ",
+          "new_text": "advice ",
+          "old_start": 59,
+          "old_end": 61,
+          "new_start": 41,
+          "new_end": 43
+        },
+        {
+          "operation": "replace",
+          "old_text": "of",
+          "new_text": "from",
+          "old_start": 61,
+          "old_end": 62,
+          "new_start": 43,
+          "new_end": 44
+        },
+        {
+          "operation": "equal",
+          "old_text": " their Permanent Secretary",
+          "new_text": " their permanent secretary",
+          "old_start": 62,
+          "old_end": 68,
+          "new_start": 44,
+          "new_end": 50
+        },
+        {
+          "operation": "insert",
+          "old_text": "",
+          "new_text": ", who may also consult the Cabinet Office",
+          "old_start": 68,
+          "old_end": 68,
+          "new_start": 50,
+          "new_end": 65
+        },
+        {
+          "operation": "equal",
+          "old_text": ".",
+          "new_text": ".",
+          "old_start": 68,
+          "old_end": 69,
+          "new_start": 65,
+          "new_end": 66
+        }
+      ],
+      "temporal_changes": [],
+      "findings": [
+        {
+          "fingerprint": "GVD-21390B05D9",
+          "check_id": "substantive-text-changed",
+          "severity": "low",
+          "breaking": false,
+          "summary": "The clause changed, but no configured breaking pattern was confirmed.",
+          "field": "text",
+          "old_value": "changed",
+          "new_value": "changed",
+          "old_evidence": "7.21 This is primarily a matter which must be left to the good sense of Ministers. But any Minister in doubt or difficulty over this should seek the advice of their Permanent Secretary.",
+          "new_evidence": "3.28 In cases of any doubt about the application of these principles to a particular situation, ministers should seek advice from their permanent secretary, who may also consult the Cabinet Office.",
+          "explanation": "This is a review cue, not a claim that the policy effect changed.",
+          "confidence_score": 0.5950712460063898,
+          "confidence_level": "low",
+          "confidence_reasons": [
+            "parent change is medium confidence (0.69)",
+            "substantive-text-changed rule specificity is 0.48"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "changed",
+            "new": "changed"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "changed",
+            "new": "changed"
+          },
+          "active": true
+        }
+      ]
+    }
+  ],
+  "unfiltered_summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 1,
+    "active_findings": 1,
+    "breaking_findings": 0,
+    "high_confidence_breaking_findings": 0,
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "confidence": {
+      "changes": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      }
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "low"
+  }
+}

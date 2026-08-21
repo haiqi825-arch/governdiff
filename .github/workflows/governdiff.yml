@@ -1,0 +1,74 @@
+name: GovernDiff
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "action.yml"
+      - "scripts/github_action.py"
+      - "src/governdiff/**"
+      - "tests/test_phase6.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  production-adapter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e .
+      - name: Exercise a real isolated Git repository
+        run: python -m unittest tests.test_phase6 -v
+
+  explicit-pair-canary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Audit a synthetic policy fixture through the composite Action
+        id: audit
+        uses: ./
+        with:
+          old: examples/public-cases/01-incident-deadline/old.md
+          new: examples/public-cases/01-incident-deadline/new.md
+          min-confidence: high
+          fail-on-breaking: "false"
+          artifact-name: governdiff-explicit-pair
+      - name: Verify complete single-file outputs
+        shell: bash
+        run: >-
+          test -s "${{ steps.audit.outputs.report-json }}" &&
+          test -s "${{ steps.audit.outputs.report-markdown }}" &&
+          test -s "${{ steps.audit.outputs.report-html }}" &&
+          test -s "${{ steps.audit.outputs.report-csv }}" &&
+          test -s "${{ steps.audit.outputs.report-manifest }}" &&
+          test -n "${{ steps.audit.outputs.artifact-url }}"
+
+  pull-request-base-canary:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Audit changed policy documents against the PR base
+        id: audit
+        uses: ./
+        with:
+          paths: |
+            GOVERNDIFF_PRD.md
+            docs/**/*.md
+            examples/**/*.md
+          fail-on-breaking: "false"
+          artifact-name: governdiff-pr-base
+      - name: Verify aggregate contract
+        shell: bash
+        run: >-
+          test "${{ steps.audit.outputs.action-schema }}" = "governdiff-action/1.0" &&
+          test -s "${{ steps.audit.outputs.report-manifest }}" &&
+          test -s "${{ steps.audit.outputs.report-summary }}" &&
+          test -n "${{ steps.audit.outputs.artifact-url }}"

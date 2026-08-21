@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-21T16:48:14.986435+00:00",
+  "case_count": 7,
+  "passed": 7,
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "id": "en-one-to-two-split",
+      "passed": true,
+      "assertions": {
+        "change_type": true,
+        "old_blocks": true,
+        "new_blocks": true
+      }
+    },
+    {
+      "id": "zh-two-to-one-merge",
+      "passed": true,
+      "assertions": {
+        "change_type": true,
+        "old_blocks": true,
+        "new_blocks": true
+      }
+    },
+    {
+      "id": "en-word-replacement",
+      "passed": true,
+      "assertions": {
+        "change_type": true,
+        "checks": true,
+        "word_operations": true
+      }
+    },
+    {
+      "id": "zh-reference-retargeted",
+      "passed": true,
+      "assertions": {
+        "change_type": true,
+        "checks": true
+      }
+    },
+    {
+      "id": "en-effective-date-shift",
+      "passed": true,
+      "assertions": {
+        "change_type": true,
+        "checks": true,
+        "excluded_checks": true,
+        "temporal_kind": true
+      }
+    },
+    {
+      "id": "en-article-target-conflict",
+      "passed": true,
+      "assertions": {
+        "mapping_status": true,
+        "candidate_count": true
+      }
+    },
+    {
+      "id": "en-nested-section-tree",
+      "passed": true,
+      "assertions": {
+        "change_type": true,
+        "section_tree": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "schema_version": "1.5",
+  "generator": "governdiff/0.6.0",
+  "generated_at": "2026-08-13T00:00:00+00:00",
+  "disclaimer": "GovernDiff provides machine-assisted document comparison and review cues. It does not constitute legal advice, a policy-effect assessment, or a compliance determination. Important changes must be verified by a person with the appropriate responsibility and expertise.",
+  "selection": {
+    "scope": "all",
+    "minimum_confidence": "low",
+    "filters": {},
+    "selected_change_count": 1,
+    "selected_finding_count": 2
+  },
+  "redacted": false,
+  "review_import": null,
+  "waiver_diagnostics": [],
+  "old_document": {
+    "path": "examples/public-cases/03-exception-authority/old.md",
+    "sha256": "a5ef87c08a52d2396ce0d85c57f0a7498bbd835d2153b1bfc37038e26e0d8afc",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-13T00:00:00+00:00",
+    "block_count": 1,
+    "word_count": 7,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-070E0B3D51",
+        "title": "Grant exception policy",
+        "path": [
+          "Grant exception policy"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-D7C66BA51D",
+            "title": "Approval",
+            "path": [
+              "Grant exception policy",
+              "Approval"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-C67A0AC3A479"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 91,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 3,
+      "word_count": 11,
+      "character_count": 91,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "new_document": {
+    "path": "examples/public-cases/03-exception-authority/new.md",
+    "sha256": "d066ae4372412b231fccffb032d3b9ebdea8f36519fe56b06187bef700481506",
+    "language": "en",
+    "format": "markdown",
+    "imported_at": "2026-08-13T00:00:00+00:00",
+    "block_count": 1,
+    "word_count": 14,
+    "table_count": 0,
+    "section_tree": [
+      {
+        "section_id": "SEC-070E0B3D51",
+        "title": "Grant exception policy",
+        "path": [
+          "Grant exception policy"
+        ],
+        "depth": 1,
+        "block_count": 1,
+        "block_ids": [],
+        "children": [
+          {
+            "section_id": "SEC-D7C66BA51D",
+            "title": "Approval",
+            "path": [
+              "Grant exception policy",
+              "Approval"
+            ],
+            "depth": 2,
+            "block_count": 1,
+            "block_ids": [
+              "BLK-C3C620496659"
+            ],
+            "children": []
+          }
+        ]
+      }
+    ],
+    "tables": [],
+    "preflight": {
+      "source_format": "markdown",
+      "file_size_bytes": 131,
+      "status": "ok",
+      "page_count": null,
+      "paragraph_count": 3,
+      "word_count": 18,
+      "character_count": 131,
+      "text_coverage": 1.0,
+      "blank_pages": [],
+      "encrypted": false,
+      "suspected_scanned": false,
+      "has_garbled_text": false,
+      "issues": []
+    }
+  },
+  "summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 2,
+    "active_findings": 2,
+    "breaking_findings": 2,
+    "high_confidence_breaking_findings": 1,
+    "confidence": {
+      "changes": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": {
+        "high": 1,
+        "medium": 1,
+        "low": 0
+      }
+    },
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "high"
+  },
+  "article_mappings": [],
+  "section_tree": [
+    {
+      "section_id": "SEC-070E0B3D51",
+      "title": "Grant exception policy",
+      "path": [
+        "Grant exception policy"
+      ],
+      "depth": 1,
+      "change_count": 1,
+      "breaking_count": 1,
+      "change_types": {
+        "modified": 1
+      },
+      "confidence": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "children": [
+        {
+          "section_id": "SEC-D7C66BA51D",
+          "title": "Approval",
+          "path": [
+            "Grant exception policy",
+            "Approval"
+          ],
+          "depth": 2,
+          "change_count": 1,
+          "breaking_count": 1,
+          "change_types": {
+            "modified": 1
+          },
+          "confidence": {
+            "high": 0,
+            "medium": 1,
+            "low": 0
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "fingerprint": "GVC-1213E06FE3",
+      "change_type": "modified",
+      "similarity": 0.6545,
+      "severity": "high",
+      "section": "Grant exception policy > Approval",
+      "section_path": [
+        "Grant exception policy",
+        "Approval"
+      ],
+      "section_id": "SEC-D7C66BA51D",
+      "old_article": null,
+      "new_article": null,
+      "article_mapping": null,
+      "confidence_score": 0.7427,
+      "confidence_level": "medium",
+      "confidence_reasons": [
+        "paired-clause similarity is 0.65"
+      ],
+      "alignment_status": "automatic",
+      "review": {
+        "state": "unreviewed",
+        "note": null,
+        "updated_at": null
+      },
+      "old_block": {
+        "block_id": "BLK-C67A0AC3A479",
+        "section": [
+          "Grant exception policy",
+          "Approval"
+        ],
+        "text": "The Program Director must approve grant exceptions.",
+        "normalized_text": "The Program Director must approve grant exceptions.",
+        "comparison_text": "theprogramdirectormustapprovegrantexceptions",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 39,
+        "char_end": 90,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "Grant exception policy > Approval",
+        "evidence_label": "paragraph 1 · chars 39-90"
+      },
+      "new_block": {
+        "block_id": "BLK-C3C620496659",
+        "section": [
+          "Grant exception policy",
+          "Approval"
+        ],
+        "text": "The Finance Committee must approve grant exceptions unless the amount is below 500 dollars.",
+        "normalized_text": "The Finance Committee must approve grant exceptions unless the amount is below 500 dollars.",
+        "comparison_text": "thefinancecommitteemustapprovegrantexceptionsunlesstheamountisbelow500dollars",
+        "ordinal": 0,
+        "line_start": 5,
+        "line_end": 5,
+        "block_type": "paragraph",
+        "page_start": null,
+        "page_end": null,
+        "paragraph_start": 1,
+        "paragraph_end": 1,
+        "char_start": 39,
+        "char_end": 130,
+        "list_level": null,
+        "table_id": null,
+        "table_row": null,
+        "table_column": null,
+        "is_noise": false,
+        "section_label": "Grant exception policy > Approval",
+        "evidence_label": "paragraph 1 · chars 39-130"
+      },
+      "old_blocks": [
+        {
+          "block_id": "BLK-C67A0AC3A479",
+          "section": [
+            "Grant exception policy",
+            "Approval"
+          ],
+          "text": "The Program Director must approve grant exceptions.",
+          "normalized_text": "The Program Director must approve grant exceptions.",
+          "comparison_text": "theprogramdirectormustapprovegrantexceptions",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 39,
+          "char_end": 90,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "Grant exception policy > Approval",
+          "evidence_label": "paragraph 1 · chars 39-90"
+        }
+      ],
+      "new_blocks": [
+        {
+          "block_id": "BLK-C3C620496659",
+          "section": [
+            "Grant exception policy",
+            "Approval"
+          ],
+          "text": "The Finance Committee must approve grant exceptions unless the amount is below 500 dollars.",
+          "normalized_text": "The Finance Committee must approve grant exceptions unless the amount is below 500 dollars.",
+          "comparison_text": "thefinancecommitteemustapprovegrantexceptionsunlesstheamountisbelow500dollars",
+          "ordinal": 0,
+          "line_start": 5,
+          "line_end": 5,
+          "block_type": "paragraph",
+          "page_start": null,
+          "page_end": null,
+          "paragraph_start": 1,
+          "paragraph_end": 1,
+          "char_start": 39,
+          "char_end": 130,
+          "list_level": null,
+          "table_id": null,
+          "table_row": null,
+          "table_column": null,
+          "is_noise": false,
+          "section_label": "Grant exception policy > Approval",
+          "evidence_label": "paragraph 1 · chars 39-130"
+        }
+      ],
+      "word_diff": [
+        {
+          "operation": "equal",
+          "old_text": "The ",
+          "new_text": "The ",
+          "old_start": 0,
+          "old_end": 2,
+          "new_start": 0,
+          "new_end": 2
+        },
+        {
+          "operation": "replace",
+          "old_text": "Program",
+          "new_text": "Finance",
+          "old_start": 2,
+          "old_end": 3,
+          "new_start": 2,
+          "new_end": 3
+        },
+        {
+          "operation": "equal",
+          "old_text": " ",
+          "new_text": " ",
+          "old_start": 3,
+          "old_end": 4,
+          "new_start": 3,
+          "new_end": 4
+        },
+        {
+          "operation": "replace",
+          "old_text": "Director",
+          "new_text": "Committee",
+          "old_start": 4,
+          "old_end": 5,
+          "new_start": 4,
+          "new_end": 5
+        },
+        {
+          "operation": "equal",
+          "old_text": " must approve grant exceptions",
+          "new_text": " must approve grant exceptions",
+          "old_start": 5,
+          "old_end": 13,
+          "new_start": 5,
+          "new_end": 13
+        },
+        {
+          "operation": "insert",
+          "old_text": "",
+          "new_text": " unless the amount is below 500 dollars",
+          "old_start": 13,
+          "old_end": 13,
+          "new_start": 13,
+          "new_end": 27
+        },
+        {
+          "operation": "equal",
+          "old_text": ".",
+          "new_text": ".",
+          "old_start": 13,
+          "old_end": 14,
+          "new_start": 27,
+          "new_end": 28
+        }
+      ],
+      "temporal_changes": [],
+      "findings": [
+        {
+          "fingerprint": "GVD-94DAC88183",
+          "check_id": "exception-added",
+          "severity": "medium",
+          "breaking": true,
+          "summary": "An exception was added.",
+          "field": "exception",
+          "old_value": null,
+          "new_value": "unless",
+          "old_evidence": "The Program Director must approve grant exceptions.",
+          "new_evidence": "The Finance Committee must approve grant exceptions unless the amount is below 500 dollars.",
+          "explanation": "Exception language changes which cases are governed by the general rule.",
+          "confidence_score": 0.8180000000000001,
+          "confidence_level": "high",
+          "confidence_reasons": [
+            "parent change is medium confidence (0.74)",
+            "exception-added rule specificity is 0.91"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": null,
+            "new": "unless"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": null,
+            "new": "unless"
+          },
+          "active": true
+        },
+        {
+          "fingerprint": "GVD-53DB62E149",
+          "check_id": "authority-shifted",
+          "severity": "high",
+          "breaking": true,
+          "summary": "Responsibility or authority shifted from The Program Director to The Finance Committee.",
+          "field": "actor",
+          "old_value": "The Program Director",
+          "new_value": "The Finance Committee",
+          "old_evidence": "The Program Director must approve grant exceptions.",
+          "new_evidence": "The Finance Committee must approve grant exceptions unless the amount is below 500 dollars.",
+          "explanation": "The grammatical actor attached to normative language changed in the aligned clause.",
+          "confidence_score": 0.7955000000000001,
+          "confidence_level": "medium",
+          "confidence_reasons": [
+            "parent change is medium confidence (0.74)",
+            "authority-shifted rule specificity is 0.86"
+          ],
+          "waived": false,
+          "waiver_reason": null,
+          "waiver_approver": null,
+          "waiver_created_at": null,
+          "waiver_expires_at": null,
+          "review_state": "unreviewed",
+          "review_note": null,
+          "review_updated_at": null,
+          "reviewed_old_value": null,
+          "reviewed_new_value": null,
+          "field_modified": false,
+          "machine_values": {
+            "old": "The Program Director",
+            "new": "The Finance Committee"
+          },
+          "reviewed_values": null,
+          "effective_values": {
+            "old": "The Program Director",
+            "new": "The Finance Committee"
+          },
+          "active": true
+        }
+      ]
+    }
+  ],
+  "unfiltered_summary": {
+    "total_changes": 1,
+    "change_types": {
+      "added": 0,
+      "removed": 0,
+      "modified": 1,
+      "split": 0,
+      "merged": 0,
+      "moved": 0,
+      "format_only": 0
+    },
+    "findings": 2,
+    "active_findings": 2,
+    "breaking_findings": 2,
+    "high_confidence_breaking_findings": 1,
+    "review_states": {
+      "unreviewed": 1,
+      "confirmed": 0,
+      "rejected": 0,
+      "modified": 0,
+      "waived": 0
+    },
+    "confidence": {
+      "changes": {
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "findings": {
+        "high": 1,
+        "medium": 1,
+        "low": 0
+      }
+    },
+    "article_mappings": 0,
+    "renumbered_article_mappings": 0,
+    "article_mapping_conflicts": 0,
+    "highest_severity": "high"
+  }
+}
