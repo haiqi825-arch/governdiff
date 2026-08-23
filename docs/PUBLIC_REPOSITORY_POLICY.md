@@ -6,7 +6,8 @@ It is not a mirror of the private engineering workspace.
 ## Included
 
 - GovernDiff source, schemas, packaging metadata, and composite Action
-- Reviewer source, lockfile, tests, and third-party notices
+- Reviewer source, lockfile, tests, third-party notices, and the deterministic
+  runtime bundle required by clean-source installs and the Marketplace Action
 - GovernDiff-authored synthetic examples, fixtures, and benchmark cases
 - Public documentation, screenshots, demo reports, and release workflows
 - Tests and checked-in evidence that do not contain external policy text or
@@ -18,8 +19,13 @@ It is not a mirror of the private engineering workspace.
 - Contributor Covenant and other third-party policy copies, even where
   redistribution may be permitted
 - Internal handoffs, acceptance workpapers, raw local run logs, and machine paths
-- `.openai` hosting configuration, caches, temporary files, build directories,
-  local release candidates, and `node_modules`
+- `.openai` hosting configuration, caches, temporary files, unapproved build
+  directories, local release candidates, and `node_modules`
+
+`reviewer-ui/dist` is the sole approved generated runtime tree. It is built from
+the checked-in lockfile, covered by the reproducible-build gate, and intentionally
+committed so `pip install .` and `uses: haiqi825-arch/governdiff@v1` work from a
+clean checkout without a separate Node.js build.
 
 This is a product and release-control boundary, not a claim that excluded
 material cannot legally be redistributed. External-source evaluation may be
