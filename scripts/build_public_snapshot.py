@@ -104,6 +104,7 @@ FILE_ALLOWLIST = (
     "reviewer-ui/scripts/capture-public-demo.mjs",
     "reviewer-ui/scripts/preview.mjs",
     "reviewer-ui/scripts/review-session.mjs",
+    "reviewer-ui/scripts/sanitize-server-errors.mjs",
     "reviewer-ui/scripts/verify-reproducible-build.mjs",
     "reviewer-ui/tsconfig.json",
     "reviewer-ui/vite.config.ts",

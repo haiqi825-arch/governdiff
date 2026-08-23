@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build",
+    "build": "vinext build && node scripts/sanitize-server-errors.mjs",
     "start": "vinext start",
     "preview": "node scripts/preview.mjs",
     "test": "npm run typecheck && npm run test:components && npm run build && node --test tests/rendered-html.test.mjs tests/performance.test.mjs && npm run test:browser",

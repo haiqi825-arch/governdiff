@@ -9694,7 +9694,7 @@ async function _handleRequest(request, __reqCtx, _mwCtx) {
 				headers: { "content-type": "application/json" }
 			});
 		} catch (e) {
-			return new Response(JSON.stringify({ error: String(e) }), {
+			return new Response(JSON.stringify({ error: "Prerender parameter generation failed." }), {
 				status: 500,
 				headers: { "content-type": "application/json" }
 			});
