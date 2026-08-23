@@ -1,13 +1,8 @@
 # GovernDiff release checklist
 
-This checklist separates local release preparation from publication. Completing
-the first section does not authorize any remote, tag, upload, release, or
-deployment action.
-
-The next window must repeat the final local acceptance in
-`docs/PRE_RELEASE_FINAL_ACCEPTANCE_PLAN.zh-CN.md` and record the result in
-`docs/PRE_RELEASE_FINAL_ACCEPTANCE_REPORT.zh-CN.md` before any publication
-authorization is considered.
+This checklist records both completed v0.6.0 publication evidence and the few
+account-bound steps that remain. A checked box must have a public or reproducible
+evidence path; it is not a substitute for a passing release gate.
 
 ## Local release candidate
 
@@ -23,9 +18,8 @@ authorization is considered.
   exist.
 - [x] Corpus redistribution and dependency-licence decisions are documented.
 - [x] Reviewer screenshots and demo GIF use synthetic sample data.
-- [x] Local history/remote state was inspected without rewriting or creating a
-  remote: branch `codex/phase-7-1-baseline`, no configured remote, and a dirty
-  pre-release working tree that must be intentionally curated before publishing.
+- [x] The public snapshot was assembled from an explicit synthetic-only allowlist
+  and began with curated history that excludes the private engineering workspace.
 
 Run the gate from the repository root:
 
@@ -42,25 +36,26 @@ python scripts/verify_release_candidate.py
 The release result is written to `release-candidate/` and is intentionally
 ignored by Git. Record the wheel/sdist SHA-256 values in the release notes.
 
-## Publication-only actions — explicit authorization required
+## Publication status
 
-- [ ] Review and approve the exact source diff and local history shape.
-- [ ] Decide public repository owner/name and configure the remote.
-- [ ] Create curated commits; push the release branch.
-- [ ] Run and link hosted Windows/macOS/Linux, CodeQL, dependency, and artifact
+- [x] Review and approve the exact source diff and local history shape.
+- [x] Publish `haiqi825-arch/governdiff` with curated commits.
+- [x] Run and link hosted Windows/macOS/Linux, CodeQL, dependency, and artifact
   scan jobs.
-- [ ] Choose the final public version. Do not infer `1.0.0` from the Action
-  contract or change `0.6.0` without a release decision.
-- [ ] Create the immutable version tag and, if approved, update the compatible
+- [x] Publish the tested Python artifacts as GitHub Release `v0.6.0`.
+- [x] Create immutable Action tag `v1.0.1` and update the compatible
   Action `v1` tag according to `docs/ACTION_RELEASE_POLICY.md`.
-- [ ] Upload the wheel and sdist to the approved PyPI destination; install back
-  from that destination and repeat the five-minute quick start.
-- [ ] Create the GitHub Release with hashes, compatibility notes, limitations,
-  and the corpus notice.
+- [ ] Bind the PyPI pending Trusted Publisher described in
+  `docs/PYPI_RELEASE.md`, run the OIDC workflow, then install back from PyPI and
+  repeat the five-minute quick start.
+- [x] Publish GitHub Pages with the synthetic demo, social image, and technical
+  article.
+- [ ] Accept the GitHub Marketplace Developer Agreement and publish the prepared
+  `v1.0.1` Action release draft.
 - [ ] Deploy the public Reviewer from `reviewer-ui/` only after validating that
   no user document is uploaded and no telemetry is enabled.
-- [ ] Replace placeholder security contact language and Issue Template security
-  URL with the actual public repository advisory link.
+- [x] Use the repository private vulnerability-reporting path for security
+  disclosures.
 
 ## Abort conditions
 

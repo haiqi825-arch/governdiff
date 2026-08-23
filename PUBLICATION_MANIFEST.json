@@ -1,7 +1,7 @@
 {
   "schema_version": "governdiff-publication-manifest/1.0",
   "policy": "synthetic-only-explicit-allowlist",
-  "file_count": 241,
+  "file_count": 243,
   "files": [
     {
       "path": ".gitattributes",
@@ -42,6 +42,11 @@
       "path": ".github/workflows/pages.yml",
       "bytes": 1281,
       "sha256": "89bc32a6930872ec5af0b2f3a63eb6ca9c99b251cad846c2fc1d7ce4c59a88ea"
+    },
+    {
+      "path": ".github/workflows/pypi-publish.yml",
+      "bytes": 2052,
+      "sha256": "d149f1700c479bcd90a78875a268efedda91d966685839505288e98631038cf3"
     },
     {
       "path": ".github/workflows/quality-gates.yml",
@@ -165,8 +170,8 @@
     },
     {
       "path": "docs/ACTION_RELEASE_POLICY.md",
-      "bytes": 1437,
-      "sha256": "3ffb31fcb27034f1b4470f9f8ce6d3d3d81979d84778de2c68d478f1c7c2880c"
+      "bytes": 1436,
+      "sha256": "03e1fb3d97e152cbe09a70f262cc2da0b6267c91a3becb197da822d2bf6ef597"
     },
     {
       "path": "docs/CORPUS_LICENSE_AUDIT.md",
@@ -204,9 +209,14 @@
       "sha256": "8ca5283e674b92f8eda1986420da2a71b5e3abc70a60d035557bab9cc933630c"
     },
     {
+      "path": "docs/PYPI_RELEASE.md",
+      "bytes": 1721,
+      "sha256": "b4155df2fd2a5e162126e3bc4fe57bac2227baa445bddae86375f0d15c498195"
+    },
+    {
       "path": "docs/RELEASE_CHECKLIST.md",
-      "bytes": 3283,
-      "sha256": "7d1d36469c257ffaa0da708e249bb65d81ac1f415f5f33310310b07755050686"
+      "bytes": 2938,
+      "sha256": "ad54694a0e8929ccf4678831e755b1b33fcb1e6ff089d8b9cd7459a5e6420961"
     },
     {
       "path": "docs/REQUIREMENTS_TRACEABILITY_MATRIX.zh-CN.md",
@@ -855,8 +865,8 @@
     },
     {
       "path": "scripts/build_public_snapshot.py",
-      "bytes": 10668,
-      "sha256": "aba444d8dd2d1f611d20a735c88100f67492734bdba384bebe7525535d701249"
+      "bytes": 10738,
+      "sha256": "5d5a6b271ceb362ffd2b6ea661f505c926a1bd5d00ab9284942a8edae0f69ffa"
     },
     {
       "path": "scripts/build_reviewer_sample.py",

@@ -1,0 +1,64 @@
+name: Publish verified Python release to PyPI
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: pypi-v0.6.0
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Retrieve and verify GitHub Release assets
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Download the exact release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: v0.6.0
+        run: |
+          mkdir -p dist verification
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern 'governdiff-*.whl' --pattern 'governdiff-*.tar.gz' --dir dist
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern 'SHA256SUMS.txt' --dir verification
+
+      - name: Verify the release manifest and file set
+        shell: bash
+        run: |
+          test "$(find dist -maxdepth 1 -type f | wc -l)" -eq 2
+          test "$(find dist -maxdepth 1 -type f -name '*.whl' | wc -l)" -eq 1
+          test "$(find dist -maxdepth 1 -type f -name '*.tar.gz' | wc -l)" -eq 1
+          cd dist
+          sha256sum --check ../verification/SHA256SUMS.txt
+
+      - name: Pass verified distributions to the isolated publisher
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0 # v7.0.1
+        with:
+          name: pypi-distributions-v0.6.0
+          path: dist/
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    name: Publish with PyPI Trusted Publishing
+    needs: prepare
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/governdiff
+    permissions:
+      id-token: write
+    steps:
+      - name: Retrieve verified distributions
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: pypi-distributions-v0.6.0
+          path: dist/
+
+      - name: Publish distributions and attestations
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2

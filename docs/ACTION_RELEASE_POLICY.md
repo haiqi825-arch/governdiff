@@ -14,13 +14,13 @@ Consumers can choose one of three pinning levels:
 
 ```yaml
 # Recommended default: compatible fixes within Action major v1.
-- uses: your-org/governdiff@v1
+- uses: haiqi825-arch/governdiff@v1
 
 # Immutable release behavior.
-- uses: your-org/governdiff@v1.0.0
+- uses: haiqi825-arch/governdiff@v1.0.1
 
 # Strongest supply-chain pin; update intentionally.
-- uses: your-org/governdiff@0123456789abcdef0123456789abcdef01234567
+- uses: haiqi825-arch/governdiff@403dfa795d788e2d5aa2e5d70b9f58ff527e5dd1
 ```
 
 Before advancing `v1`, maintainers must run the full Python suite, the Phase 6
@@ -28,7 +28,6 @@ real-Git integration suite, schema validation, and the checked-in GitHub-hosted
 canary workflow. The release notes must name the package version, immutable
 tag, Action schema, report schema, review schema, and waiver schema.
 
-This repository currently has no initial commit or remote. Phase 6 defines and
-tests the release contract; creating the first immutable and moving Git tags is
-part of the Phase 8 publication step and must not be simulated in an uncommitted
-working tree.
+The current compatible channel is `v1`. Immutable `v1.0.1` and moving `v1` both
+resolve to the tested clean-source fix commit recorded above. Future compatible
+updates must repeat the same canary and supply-chain gates before `v1` moves.
