@@ -27,6 +27,7 @@ TREE_ALLOWLIST = (
     "tests/format_fixtures",
     "reviewer-ui/app",
     "reviewer-ui/build",
+    "reviewer-ui/dist",
     "reviewer-ui/public",
     "reviewer-ui/tests",
     "reviewer-ui/worker",
@@ -301,7 +302,7 @@ def build(output: Path) -> dict[str, object]:
             "external policy corpora and derived Gold cases",
             "internal handoffs and raw acceptance workpapers",
             "hosting configuration and local machine state",
-            "build outputs, release candidates, caches, and temporary files",
+            "unapproved build outputs, release candidates, caches, and temporary files",
         ],
     }
     (output / "PUBLICATION_MANIFEST.json").write_text(
