@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Building Policy CI without uploading the policy — GovernDiff</title>
+    <meta name="description" content="How GovernDiff turns policy edits into deterministic, evidence-backed pull-request checks while keeping documents local.">
+    <meta name="theme-color" content="#061224">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Building Policy CI without uploading the policy">
+    <meta property="og:description" content="The engineering choices behind deterministic, local-first review for policy changes.">
+    <meta property="og:image" content="https://haiqi825-arch.github.io/governdiff/assets/social-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Building Policy CI without uploading the policy">
+    <meta name="twitter:description" content="Deterministic policy review, source evidence, stable finding IDs, and a zero-egress core flow.">
+    <meta name="twitter:image" content="https://haiqi825-arch.github.io/governdiff/assets/social-preview.png">
+    <link rel="canonical" href="https://haiqi825-arch.github.io/governdiff/articles/policy-ci-without-uploading-documents.html">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to article</a>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="GovernDiff home">
+        <span class="brand-mark" aria-hidden="true">GD</span>
+        <span>GovernDiff</span>
+      </a>
+      <nav aria-label="Article navigation">
+        <a href="#problem">Problem</a>
+        <a href="#design">Design</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#shipping">Shipping</a>
+      </nav>
+      <a class="header-cta" href="https://github.com/haiqi825-arch/governdiff">View source</a>
+    </header>
+
+    <main id="article" class="article-shell">
+      <p class="article-kicker">Engineering notes · GovernDiff v0.6</p>
+      <h1>Building Policy CI without uploading the policy</h1>
+      <p class="article-deck">A policy edit can look small in a line diff and still change who must act, how soon they must act, or who may grant an exception. We built GovernDiff to catch those changes in a pull request while keeping the source documents on the runner or the reviewer’s machine.</p>
+      <div class="article-meta">
+        <span>23 August 2026</span>
+        <span>8 minute read</span>
+        <span>Open source · MIT</span>
+      </div>
+
+      <article>
+        <h2 id="problem">The problem is not finding changed words</h2>
+        <p>Ordinary diff tools are good at showing that text changed. The harder question is what the edit means for a reviewer. Moving from “may report within 72 hours” to “must report within 24 hours” changes both normative force and deadline pressure. A red-and-green character diff leaves that interpretation to every reader, every time.</p>
+        <p>A generic language model can summarize the change, but a summary is a poor CI contract. The output may vary, evidence can be compressed away, and private documents may cross a service boundary. GovernDiff takes a narrower approach: deterministic checks, explicit confidence reasons, source locations, and stable finding fingerprints.</p>
+        <blockquote><p>The unit of output is not a verdict. It is a review cue with enough evidence for a person to verify.</p></blockquote>
+
+        <h2 id="design">Four contracts keep the system honest</h2>
+        <h3>1. Parse structure before comparing prose</h3>
+        <p>GovernDiff accepts digital PDF, DOCX, HTML, Markdown, and plain text. Each parser produces a shared block model with physical page, paragraph, line, section, table, and cell locations where the source format permits it. That model lets table cells participate in comparison and keeps evidence attached to its original location.</p>
+        <p>The preflight step is deliberately strict. Empty, encrypted, corrupt, oversized, low-text-coverage, and image-only inputs receive actionable diagnostics. OCR is outside the current release rather than being silently invoked.</p>
+
+        <h3>2. Align clauses through document churn</h3>
+        <p>Policies are often reorganized while they are edited. A useful comparison must distinguish an addition from a move and cope with one clause splitting into two or several clauses merging. GovernDiff aligns blocks first, classifies the relationship, and then produces token-level spans for the evidence view.</p>
+        <p>Article references get separate treatment. When numbering changes, the report retains ranked mapping candidates and ambiguity instead of forcing a confident-looking answer.</p>
+
+        <h3>3. Run small, explainable checks</h3>
+        <p>The v0.6 contract contains 15 bilingual checks covering modality, permission, prohibition, scope, authority, deadlines, thresholds, exceptions, effective dates, definitions, and reference retargeting. Every finding records the before and after values, the aligned source evidence, severity, confidence layer, and confidence reasons.</p>
+        <p>A content-derived <code>GVD-*</code> fingerprint identifies the substantive finding across line movement and report formats. That identity connects CI output, human decisions, exports, and dated waivers without relying on a database.</p>
+
+        <h3>4. Separate machine output from human decisions</h3>
+        <p>The local Reviewer can confirm, reject, modify, or waive a finding. Machine-extracted values remain alongside the effective human-reviewed values, so a correction does not erase what the detector originally produced. Decisions export as portable JSON and can be reapplied by the CLI.</p>
+        <p>The Reviewer binds to loopback, uses a session cookie, and does not create a hosted document service. The core AI-off verification records zero network attempts across all five supported formats.</p>
+
+        <h2 id="evidence">What the pull-request gate actually does</h2>
+        <p>The composite Action compares configured paths against the pull request’s base commit. It writes JSON, Markdown, HTML, and CSV reports before enforcing the gate, so a failed check still leaves a complete artifact. Workflow annotations are privacy-safe by default; repository paths, source lines, and finding summaries require an explicit opt-in.</p>
+        <pre><code>- uses: haiqi825-arch/governdiff@v1
+  with:
+    paths: "policies/**/*.md"
+    min-confidence: high
+    fail-on-severity: high</code></pre>
+        <p>The <a href="https://github.com/haiqi825-arch/governdiff/pull/4">public synthetic example PR</a> shortens an incident deadline from 24 hours to 12 hours. It is intentionally left as a Draft. The page shows the same workflow a real repository receives: automatic PR-base comparison, a finding in the Job Summary, a complete report artifact, CodeQL, dependency checks, and cross-platform installation gates.</p>
+
+        <h2 id="shipping">A release test caught a packaging mistake</h2>
+        <p>The first public tag contained a working wheel, but the Marketplace Action installs from its source checkout. Our initial public tree excluded the Reviewer build output, so a clean-source Action install failed even though the wheel and the main quality workflow passed. The workflow had built the frontend before installing Python, which masked the mismatch.</p>
+        <p>We fixed the boundary in <a href="https://github.com/haiqi825-arch/governdiff/pull/5">PR #5</a>. The 26-file, 4.4 MB deterministic runtime bundle is now the single approved generated tree. Hosting state remains excluded. A regression test asserts that a public snapshot contains the required runtime files and no <code>.openai</code> directory.</p>
+        <p>The fix was merged only after Windows, macOS, and Linux clean installs, both Action canaries, CodeQL, dependency audit, Grype artifact scanning, and reproducible-build checks passed. The stable <code>v1</code> Action channel now points to that verified commit; <code>v1.0.1</code> is the immutable tag.</p>
+
+        <h2>Try the evidence, not the pitch</h2>
+        <p>Start with the bundled synthetic case. It contains no third-party policy text and produces a self-contained HTML report you can inspect offline.</p>
+        <pre><code>git clone https://github.com/haiqi825-arch/governdiff.git
+cd governdiff
+python -m pip install .
+governdiff diff \
+  examples/public-cases/01-incident-deadline/old.md \
+  examples/public-cases/01-incident-deadline/new.md \
+  --format html --output report.html</code></pre>
+        <div class="article-callout">
+          <h3>Useful links</h3>
+          <p><a href="../demo/incident-deadline.html">Open the static evidence report</a> · <a href="https://github.com/haiqi825-arch/governdiff#quick-start">Read the quick start</a> · <a href="https://github.com/haiqi825-arch/governdiff/issues">Report a boundary case</a></p>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">GD</span><span>GovernDiff</span></div>
+      <p>Local-first, deterministic, evidence-backed.</p>
+      <p>MIT licensed · Synthetic public demo</p>
+    </footer>
+  </body>
+</html>
