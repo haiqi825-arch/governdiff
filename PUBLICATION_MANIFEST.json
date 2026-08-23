@@ -171,7 +171,7 @@
     {
       "path": "docs/ACTION_RELEASE_POLICY.md",
       "bytes": 1436,
-      "sha256": "03e1fb3d97e152cbe09a70f262cc2da0b6267c91a3becb197da822d2bf6ef597"
+      "sha256": "c4464bbe71564a5fcb6499a3fa18767b93b467232b7d86885c8fc8bf4ce4a45b"
     },
     {
       "path": "docs/CORPUS_LICENSE_AUDIT.md",
@@ -216,7 +216,7 @@
     {
       "path": "docs/RELEASE_CHECKLIST.md",
       "bytes": 2938,
-      "sha256": "ad54694a0e8929ccf4678831e755b1b33fcb1e6ff089d8b9cd7459a5e6420961"
+      "sha256": "5ccf6f528dbb1c840c698c43c99604c46576d246bd48cb4900c1d931145d35d9"
     },
     {
       "path": "docs/REQUIREMENTS_TRACEABILITY_MATRIX.zh-CN.md",
@@ -935,8 +935,8 @@
     },
     {
       "path": "site/articles/policy-ci-without-uploading-documents.html",
-      "bytes": 9441,
-      "sha256": "5a05bae36eb3abeb91183655cca055991f80a3263fe5b14784f2c8c9db26fdf0"
+      "bytes": 9444,
+      "sha256": "d69c09dce6548a0da58af452af16741ba0f15c9b3814157fe296660296d71866"
     },
     {
       "path": "site/index.html",

@@ -43,7 +43,7 @@ ignored by Git. Record the wheel/sdist SHA-256 values in the release notes.
 - [x] Run and link hosted Windows/macOS/Linux, CodeQL, dependency, and artifact
   scan jobs.
 - [x] Publish the tested Python artifacts as GitHub Release `v0.6.0`.
-- [x] Create immutable Action tag `v1.0.1` and update the compatible
+- [x] Create immutable Action tag `v1.0.2` and update the compatible
   Action `v1` tag according to `docs/ACTION_RELEASE_POLICY.md`.
 - [ ] Bind the PyPI pending Trusted Publisher described in
   `docs/PYPI_RELEASE.md`, run the OIDC workflow, then install back from PyPI and
@@ -51,7 +51,7 @@ ignored by Git. Record the wheel/sdist SHA-256 values in the release notes.
 - [x] Publish GitHub Pages with the synthetic demo, social image, and technical
   article.
 - [ ] Accept the GitHub Marketplace Developer Agreement and publish the prepared
-  `v1.0.1` Action release draft.
+  `v1.0.2` Action release draft.
 - [ ] Deploy the public Reviewer from `reviewer-ui/` only after validating that
   no user document is uploaded and no telemetry is enabled.
 - [x] Use the repository private vulnerability-reporting path for security
