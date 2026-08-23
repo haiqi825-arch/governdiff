@@ -32,6 +32,18 @@ class PhaseEightReleaseTests(unittest.TestCase):
         for relative in required:
             self.assertTrue((ROOT / relative).is_file(), relative)
 
+    def test_generated_reviewer_does_not_expose_prerender_errors(self) -> None:
+        package = json.loads(
+            (ROOT / "reviewer-ui" / "package.json").read_text(encoding="utf-8")
+        )
+        server = (ROOT / "reviewer-ui" / "dist" / "server" / "index.js").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("sanitize-server-errors.mjs", package["scripts"]["build"])
+        self.assertNotIn("JSON.stringify({ error: String(e) })", server)
+        self.assertIn("Prerender parameter generation failed.", server)
+
     def test_installed_reviewer_layout_precedes_source_layout(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "site-packages" / "governdiff"

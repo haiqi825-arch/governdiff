@@ -5,8 +5,13 @@ on:
     paths:
       - "**/*.md"
       - "action.yml"
+      - "setup.py"
       - "scripts/github_action.py"
       - "src/governdiff/**"
+      - "reviewer-ui/dist/**"
+      - "reviewer-ui/package.json"
+      - "reviewer-ui/scripts/review-session.mjs"
+      - "reviewer-ui/scripts/sanitize-server-errors.mjs"
       - "tests/test_phase6.py"
   workflow_dispatch:
 
