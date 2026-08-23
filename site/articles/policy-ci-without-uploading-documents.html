@@ -79,7 +79,7 @@
         <h2 id="shipping">A release test caught a packaging mistake</h2>
         <p>The first public tag contained a working wheel, but the Marketplace Action installs from its source checkout. Our initial public tree excluded the Reviewer build output, so a clean-source Action install failed even though the wheel and the main quality workflow passed. The workflow had built the frontend before installing Python, which masked the mismatch.</p>
         <p>We fixed the boundary in <a href="https://github.com/haiqi825-arch/governdiff/pull/5">PR #5</a>. The 26-file, 4.4 MB deterministic runtime bundle is now the single approved generated tree. Hosting state remains excluded. A regression test asserts that a public snapshot contains the required runtime files and no <code>.openai</code> directory.</p>
-        <p>The fix was merged only after Windows, macOS, and Linux clean installs, both Action canaries, CodeQL, dependency audit, Grype artifact scanning, and reproducible-build checks passed. The stable <code>v1</code> Action channel now points to that verified commit; <code>v1.0.1</code> is the immutable tag.</p>
+        <p>The fixes were merged only after Windows, macOS, and Linux clean installs, both Action canaries, CodeQL, dependency audit, Grype artifact scanning, and reproducible-build checks passed. The stable <code>v1</code> Action channel now points to that verified commit; <code>v1.0.2</code> is the immutable tag.</p>
 
         <h2>Try the evidence, not the pitch</h2>
         <p>Start with the bundled synthetic case. It contains no third-party policy text and produces a self-contained HTML report you can inspect offline.</p>

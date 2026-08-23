@@ -17,10 +17,10 @@ Consumers can choose one of three pinning levels:
 - uses: haiqi825-arch/governdiff@v1
 
 # Immutable release behavior.
-- uses: haiqi825-arch/governdiff@v1.0.1
+- uses: haiqi825-arch/governdiff@v1.0.2
 
 # Strongest supply-chain pin; update intentionally.
-- uses: haiqi825-arch/governdiff@403dfa795d788e2d5aa2e5d70b9f58ff527e5dd1
+- uses: haiqi825-arch/governdiff@a8922d8056e943480e82baea633b53aa765f7ded
 ```
 
 Before advancing `v1`, maintainers must run the full Python suite, the Phase 6
@@ -28,6 +28,6 @@ real-Git integration suite, schema validation, and the checked-in GitHub-hosted
 canary workflow. The release notes must name the package version, immutable
 tag, Action schema, report schema, review schema, and waiver schema.
 
-The current compatible channel is `v1`. Immutable `v1.0.1` and moving `v1` both
+The current compatible channel is `v1`. Immutable `v1.0.2` and moving `v1` both
 resolve to the tested clean-source fix commit recorded above. Future compatible
 updates must repeat the same canary and supply-chain gates before `v1` moves.
