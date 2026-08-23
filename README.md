@@ -9,7 +9,9 @@ aligns clauses even when they move, detects review-worthy changes to duties,
 scope, deadlines, exceptions, and authority, and produces evidence a person can
 verify. No document upload or LLM is required.
 
-[30-second demo](docs/LAUNCH_DEMO.md) ·
+[Live demo](https://haiqi825-arch.github.io/governdiff/) ·
+[Technical article](https://haiqi825-arch.github.io/governdiff/articles/policy-ci-without-uploading-documents.html) ·
+[30-second walkthrough](docs/LAUNCH_DEMO.md) ·
 [Why GovernDiff?](docs/WHY_GOVERNDIFF.md) ·
 [Input boundaries](docs/INPUT_FORMATS.md) ·
 [Public repository policy](docs/PUBLIC_REPOSITORY_POLICY.md) ·

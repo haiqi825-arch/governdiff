@@ -1,7 +1,7 @@
 {
   "schema_version": "governdiff-publication-manifest/1.0",
   "policy": "synthetic-only-explicit-allowlist",
-  "file_count": 240,
+  "file_count": 241,
   "files": [
     {
       "path": ".gitattributes",
@@ -80,8 +80,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 18565,
-      "sha256": "268fd3359fd2ee58e267599295423a1601c7a17c60c142418e40b408b7b5d080"
+      "bytes": 18751,
+      "sha256": "0de4d97ddcff94dd185791236e5d555deeb05b47c67a74967969885ab23cfa55"
     },
     {
       "path": "ROADMAP.md",
@@ -919,9 +919,14 @@
       "sha256": "a7662d7ceef969b8a3c1bb010e562fc3cad0813b43c04e8a9ec07829aa8224c8"
     },
     {
+      "path": "site/articles/policy-ci-without-uploading-documents.html",
+      "bytes": 9441,
+      "sha256": "5a05bae36eb3abeb91183655cca055991f80a3263fe5b14784f2c8c9db26fdf0"
+    },
+    {
       "path": "site/index.html",
-      "bytes": 10621,
-      "sha256": "0855e64456041f4444cca619c6e5e6e81ef865dd2ed2b5ca8ae5e6439d22f9b2"
+      "bytes": 10831,
+      "sha256": "5e070013a19b97e8a2a1a496cce01d7493d61135c441b11c70581ee30c4cbb15"
     },
     {
       "path": "site/robots.txt",
@@ -930,8 +935,8 @@
     },
     {
       "path": "site/styles.css",
-      "bytes": 12760,
-      "sha256": "20861bbdb9cfcb74a6f2f15fa7df8df2833f86f7ed7f5ae31b01e37eaacab915"
+      "bytes": 14692,
+      "sha256": "4efda4960191328caf5c20ce53ac52af505e4f5173aaa54669c1b011593d56a9"
     },
     {
       "path": "src/governdiff/__init__.py",
