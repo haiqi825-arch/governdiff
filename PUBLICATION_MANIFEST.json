@@ -35,8 +35,8 @@
     },
     {
       "path": ".github/workflows/governdiff.yml",
-      "bytes": 2341,
-      "sha256": "1f14363179de6f548ae8a27c26d322958728a302560f7834695b627fbda09de5"
+      "bytes": 2531,
+      "sha256": "0271025879bb0aacb49d00d7acb9870818ac53141adedbddebca3e7015cbbea9"
     },
     {
       "path": ".github/workflows/pages.yml",
