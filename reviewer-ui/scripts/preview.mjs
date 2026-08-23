@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
+import { open } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -23,10 +23,15 @@ async function assetResponse(request) {
   const target = normalize(join(root, relative));
   if (!target.startsWith(root)) return new Response("Not found", { status: 404 });
   try {
-    if (!(await stat(target)).isFile()) return new Response("Not found", { status: 404 });
-    return new Response(await readFile(target), {
-      headers: { "content-type": types[extname(target)] ?? "application/octet-stream" },
-    });
+    const handle = await open(target, "r");
+    try {
+      if (!(await handle.stat()).isFile()) return new Response("Not found", { status: 404 });
+      return new Response(await handle.readFile(), {
+        headers: { "content-type": types[extname(target)] ?? "application/octet-stream" },
+      });
+    } finally {
+      await handle.close();
+    }
   } catch {
     return new Response("Not found", { status: 404 });
   }

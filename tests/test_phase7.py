@@ -119,6 +119,15 @@ class Phase7PerformanceAndSupplyChainTests(unittest.TestCase):
             self.assertIn('"01-incident-deadline"', source, name)
             self.assertNotIn("contributor-covenant", source, name)
 
+    def test_reviewer_asset_servers_use_one_descriptor_for_check_and_read(self) -> None:
+        for name in ("preview.mjs", "browser-gate.mjs"):
+            source = (ROOT / "reviewer-ui" / "scripts" / name).read_text(encoding="utf-8")
+            self.assertIn('await open(target, "r")', source, name)
+            self.assertIn("await handle.stat()", source, name)
+            self.assertIn("await handle.readFile()", source, name)
+            self.assertIn("await handle.close()", source, name)
+            self.assertNotIn("await stat(target)", source, name)
+
     def test_two_100_page_documents_finish_within_90_seconds(self) -> None:
         result = BENCHMARK.benchmark(100, 90.0)
         self.assertTrue(result["passed"], result)

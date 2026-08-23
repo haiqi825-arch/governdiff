@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import { cpus, freemem, platform, release, totalmem } from "node:os";
-import { readFile, stat, writeFile } from "node:fs/promises";
+import { open, readFile, writeFile } from "node:fs/promises";
 import { extname, join, normalize, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -97,10 +97,15 @@ async function assetResponse(request) {
   const target = normalize(join(assetRoot, relative));
   if (!target.startsWith(assetRoot)) return new Response("Not found", { status: 404 });
   try {
-    if (!(await stat(target)).isFile()) return new Response("Not found", { status: 404 });
-    return new Response(await readFile(target), {
-      headers: { "content-type": contentTypes[extname(target)] ?? "application/octet-stream" },
-    });
+    const handle = await open(target, "r");
+    try {
+      if (!(await handle.stat()).isFile()) return new Response("Not found", { status: 404 });
+      return new Response(await handle.readFile(), {
+        headers: { "content-type": contentTypes[extname(target)] ?? "application/octet-stream" },
+      });
+    } finally {
+      await handle.close();
+    }
   } catch {
     return new Response("Not found", { status: 404 });
   }

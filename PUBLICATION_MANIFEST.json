@@ -105,8 +105,8 @@
     },
     {
       "path": "benchmark/PHASE_7_6_BROWSER.json",
-      "bytes": 5835,
-      "sha256": "39015143b1d0707826f5a4a6c793d21cc0e8a7044b65414054ff6ff4311f7e0e"
+      "bytes": 5853,
+      "sha256": "c5eb47641390ab9541c855c4a14661ca855e5c2bd7012416531fd8fcc96ae835"
     },
     {
       "path": "benchmark/PHASE_7_DEPENDENCY_AUDIT.json",
@@ -570,8 +570,8 @@
     },
     {
       "path": "reviewer-ui/scripts/browser-gate.mjs",
-      "bytes": 27014,
-      "sha256": "512d531fa3748e5bae3626e23f4c3ebd498d44f9cbe4040a56c74e1cc31e17a8"
+      "bytes": 27128,
+      "sha256": "167f6c8d754e4a6d57814818a57f9ba7a17b7da58ee78a04194af97cfa17600d"
     },
     {
       "path": "reviewer-ui/scripts/build-browser-fixtures.mjs",
@@ -585,8 +585,8 @@
     },
     {
       "path": "reviewer-ui/scripts/preview.mjs",
-      "bytes": 1972,
-      "sha256": "ab39aa59046ab96bb686666ef365c150f350d7904dde9deb518ff9480a65d74c"
+      "bytes": 2076,
+      "sha256": "8ad30041faa28c01ce634a38fa0cd598acec9368f0a6013398f0670899b4412d"
     },
     {
       "path": "reviewer-ui/scripts/review-session.mjs",
@@ -1060,8 +1060,8 @@
     },
     {
       "path": "tests/test_phase7.py",
-      "bytes": 7288,
-      "sha256": "1ea14ced200a88c2b4d8e01ee2016085a10004349a8c082a837138b3d1ad5731"
+      "bytes": 7852,
+      "sha256": "8147082e13415153c6f69c7334770d8885ff557997d16c633228d837dafb35be"
     },
     {
       "path": "tests/test_phase7_5.py",
