@@ -755,8 +755,8 @@
     },
     {
       "path": "scripts/platform_smoke.py",
-      "bytes": 2227,
-      "sha256": "e709f7ac2b271a4a5f2a45fe24d58f75d953468a7347f6919fad099c861ac18f"
+      "bytes": 2224,
+      "sha256": "1711572ac8ae8dd38ccc45367d0456f8642e3be681f5f39c13531c0396e98db9"
     },
     {
       "path": "scripts/validate_schemas.py",
@@ -775,8 +775,8 @@
     },
     {
       "path": "scripts/verify_reproducible_builds.py",
-      "bytes": 4538,
-      "sha256": "046a01e483f6d32cfac0689f278bd37b09c17e036879370e363583d622b905a7"
+      "bytes": 4535,
+      "sha256": "5ddc53a05c2bba3d031387060dab4e0f37101075921fe40841b74eec0fea6e6a"
     },
     {
       "path": "scripts/verify_zero_egress.py",
@@ -1060,8 +1060,8 @@
     },
     {
       "path": "tests/test_phase7.py",
-      "bytes": 6683,
-      "sha256": "6f40909dfc546a229e4be93dd00ade81b80dd5aecc23e5657af719ba13c123df"
+      "bytes": 7288,
+      "sha256": "1ea14ced200a88c2b4d8e01ee2016085a10004349a8c082a837138b3d1ad5731"
     },
     {
       "path": "tests/test_phase7_5.py",

@@ -81,13 +81,14 @@ def verify() -> dict[str, object]:
             str(clean_python), "-m", "pip", "install", "--no-deps", str(wheels[0])
         ], environment=environment)
         report = root / "clean-report.json"
+        case = ROOT / "examples" / "public-cases" / "01-incident-deadline"
         _run([
             str(clean_python),
             "-m",
             "governdiff",
             "diff",
-            str(ROOT / "examples" / "contributor-covenant" / "v2.1.md"),
-            str(ROOT / "examples" / "contributor-covenant" / "v3.0.md"),
+            str(case / "old.md"),
+            str(case / "new.md"),
             "--format",
             "json",
             "--output",

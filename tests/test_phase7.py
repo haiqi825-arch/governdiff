@@ -108,6 +108,17 @@ class Phase7PrivacyTests(unittest.TestCase):
 
 
 class Phase7PerformanceAndSupplyChainTests(unittest.TestCase):
+    def test_release_smoke_scripts_use_checked_in_synthetic_case(self) -> None:
+        case = ROOT / "examples" / "public-cases" / "01-incident-deadline"
+        self.assertTrue((case / "old.md").is_file())
+        self.assertTrue((case / "new.md").is_file())
+
+        for name in ("platform_smoke.py", "verify_reproducible_builds.py"):
+            source = (ROOT / "scripts" / name).read_text(encoding="utf-8")
+            self.assertIn('"public-cases"', source, name)
+            self.assertIn('"01-incident-deadline"', source, name)
+            self.assertNotIn("contributor-covenant", source, name)
+
     def test_two_100_page_documents_finish_within_90_seconds(self) -> None:
         result = BENCHMARK.benchmark(100, 90.0)
         self.assertTrue(result["passed"], result)

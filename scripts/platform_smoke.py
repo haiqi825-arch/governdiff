@@ -22,8 +22,9 @@ def main(argv: list[str] | None = None) -> int:
         target = Path(directory)
         json_report = target / "report.json"
         html_report = target / "report.html"
-        old = ROOT / "examples" / "contributor-covenant" / "v2.1.md"
-        new = ROOT / "examples" / "contributor-covenant" / "v3.0.md"
+        case = ROOT / "examples" / "public-cases" / "01-incident-deadline"
+        old = case / "old.md"
+        new = case / "new.md"
         common = [sys.executable, "-m", "governdiff", "diff", str(old), str(new)]
         subprocess.run(
             [*common, "--format", "json", "--output", str(json_report)],
