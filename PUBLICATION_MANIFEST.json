@@ -1,7 +1,7 @@
 {
   "schema_version": "governdiff-publication-manifest/1.0",
   "policy": "synthetic-only-explicit-allowlist",
-  "file_count": 214,
+  "file_count": 240,
   "files": [
     {
       "path": ".gitattributes",
@@ -200,8 +200,8 @@
     },
     {
       "path": "docs/PUBLIC_REPOSITORY_POLICY.md",
-      "bytes": 1862,
-      "sha256": "7792b688319f9c31feeabdbcfafb238570541615b8d4b7bc2a63026f72ca2ea6"
+      "bytes": 2265,
+      "sha256": "8ca5283e674b92f8eda1986420da2a71b5e3abc70a60d035557bab9cc933630c"
     },
     {
       "path": "docs/RELEASE_CHECKLIST.md",
@@ -370,8 +370,8 @@
     },
     {
       "path": "reviewer-ui/.gitignore",
-      "bytes": 553,
-      "sha256": "c95a192c21c86b8dece08b9ec103dfc58cf8651543650b9f48ced4af66ac6865"
+      "bytes": 561,
+      "sha256": "f69ae9b1b2bdc00d693b322454b6f07f3fb4d4d844e965a40cbef3032c7ad8c6"
     },
     {
       "path": "reviewer-ui/README.md",
@@ -512,6 +512,136 @@
       "path": "reviewer-ui/build/sites-vite-plugin.ts",
       "bytes": 1036,
       "sha256": "341c31fb947f66d11e9bfc08cfd219d04c989de27f856c29d76435369283618b"
+    },
+    {
+      "path": "reviewer-ui/dist/client/.assetsignore",
+      "bytes": 24,
+      "sha256": "4f83140d5f4293ab55bd1207327e995c83258f1e7d3145b1b5d7a3d17fdfe0a7"
+    },
+    {
+      "path": "reviewer-ui/dist/client/.vite/manifest.json",
+      "bytes": 1101,
+      "sha256": "5aabfdadea516acfac35df0380c403540a863323da3a6c128e29f09cfa7ad5b9"
+    },
+    {
+      "path": "reviewer-ui/dist/client/_headers",
+      "bytes": 125,
+      "sha256": "9e55124bccd40b43dbc6e002daa777fa8f32a230420152910784ca65501d9e0f"
+    },
+    {
+      "path": "reviewer-ui/dist/client/assets/framework--oxmXcTK.js",
+      "bytes": 189757,
+      "sha256": "1bac27871637488fdefbb21d1a3da6ff4ca16895500e0b0f3d9699e47a0d55b0"
+    },
+    {
+      "path": "reviewer-ui/dist/client/assets/index-C1N42fHy.js",
+      "bytes": 51070,
+      "sha256": "103f98814c39ab3422ad8666eb2cc21b857b3371f866be38b69329d4a2e3a319"
+    },
+    {
+      "path": "reviewer-ui/dist/client/assets/index-DxD7XlY8.css",
+      "bytes": 51387,
+      "sha256": "fa5981ed5e8258ad3b3f2d660e81e2db327fb98d543da5f07bdd01b68ac6ebea"
+    },
+    {
+      "path": "reviewer-ui/dist/client/assets/rolldown-runtime-B0Z9INg1.js",
+      "bytes": 901,
+      "sha256": "5e9b0d884d2ebb14e241ab38b43e41efb61bce2e74d71507b0b95b264fba4047"
+    },
+    {
+      "path": "reviewer-ui/dist/client/assets/worker-entry-aNBLm7-1.js",
+      "bytes": 247509,
+      "sha256": "45ebdc05b637f66d1d6270b83960ebcf299453a558c2916f575066ded02b51ae"
+    },
+    {
+      "path": "reviewer-ui/dist/client/favicon.svg",
+      "bytes": 712,
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7"
+    },
+    {
+      "path": "reviewer-ui/dist/client/file.svg",
+      "bytes": 391,
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "path": "reviewer-ui/dist/client/globe.svg",
+      "bytes": 1035,
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "path": "reviewer-ui/dist/client/governdiff-reviewer-og.png",
+      "bytes": 2296350,
+      "sha256": "f33d43474588809e253425477cfe31f32ccc87635504c95004bd8ca73a48014e"
+    },
+    {
+      "path": "reviewer-ui/dist/client/sample-report.json",
+      "bytes": 73152,
+      "sha256": "a0d348bb4b26f1ebe437f593836905dde63d65029d32025a614e0e732fe0d707"
+    },
+    {
+      "path": "reviewer-ui/dist/client/window.svg",
+      "bytes": 385,
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "path": "reviewer-ui/dist/server/.vite/manifest.json",
+      "bytes": 282,
+      "sha256": "529bd4fb40dc2a8c7d3a00f795ba4b72c33c9d0b2b16f96d1ffd2c3d30ba354f"
+    },
+    {
+      "path": "reviewer-ui/dist/server/__vite_rsc_assets_manifest.js",
+      "bytes": 1199,
+      "sha256": "b69eb502dae2f19efbe9fb4f4e2e5108c343fb247bccbfdeb3be62e70697c555"
+    },
+    {
+      "path": "reviewer-ui/dist/server/assets/index-DxD7XlY8.css",
+      "bytes": 51387,
+      "sha256": "fa5981ed5e8258ad3b3f2d660e81e2db327fb98d543da5f07bdd01b68ac6ebea"
+    },
+    {
+      "path": "reviewer-ui/dist/server/image-config.json",
+      "bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "reviewer-ui/dist/server/index.js",
+      "bytes": 427036,
+      "sha256": "b1dc5b8f7394f64136831971d14a94d5e6ead167531b0478167c1f0ee47342a8"
+    },
+    {
+      "path": "reviewer-ui/dist/server/ssr/__vite_rsc_assets_manifest.js",
+      "bytes": 1199,
+      "sha256": "b69eb502dae2f19efbe9fb4f4e2e5108c343fb247bccbfdeb3be62e70697c555"
+    },
+    {
+      "path": "reviewer-ui/dist/server/ssr/assets/worker-entry-b3RRIgdl.js",
+      "bytes": 443914,
+      "sha256": "aaf2db36346d3673b2e97fb28bb56e1b51c1243c83afa2fac32a2e66accf6b50"
+    },
+    {
+      "path": "reviewer-ui/dist/server/ssr/index.js",
+      "bytes": 551500,
+      "sha256": "135d800236ec70d2e18eafd2d79a68aaa3a3045a6a979c04c6c50a073065ae50"
+    },
+    {
+      "path": "reviewer-ui/dist/server/ssr/vinext-server.json",
+      "bytes": 86,
+      "sha256": "dd2eeaef56cddd0aec5e6a7b889e3e6e9a2a47b550641857e95f402ad947cfbf"
+    },
+    {
+      "path": "reviewer-ui/dist/server/vinext-externals.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "reviewer-ui/dist/server/vinext-server.json",
+      "bytes": 86,
+      "sha256": "dd2eeaef56cddd0aec5e6a7b889e3e6e9a2a47b550641857e95f402ad947cfbf"
+    },
+    {
+      "path": "reviewer-ui/dist/server/wrangler.json",
+      "bytes": 1187,
+      "sha256": "41d34a43e0fe325f4860721bd97358572c5768b18b530fae70eedab7b824d0f6"
     },
     {
       "path": "reviewer-ui/eslint.config.mjs",
@@ -725,8 +855,8 @@
     },
     {
       "path": "scripts/build_public_snapshot.py",
-      "bytes": 10633,
-      "sha256": "c751f118089f1f9ae30d02cdb8a5d2080bf60aab394fb573239208d94fde76f8"
+      "bytes": 10668,
+      "sha256": "aba444d8dd2d1f611d20a735c88100f67492734bdba384bebe7525535d701249"
     },
     {
       "path": "scripts/build_reviewer_sample.py",
@@ -1070,14 +1200,14 @@
     },
     {
       "path": "tests/test_phase8.py",
-      "bytes": 2926,
-      "sha256": "2b3183f62c8949c8d3e409bd5cd0b138c8e73ea6037a764da4ed6f27d55b2c2e"
+      "bytes": 3763,
+      "sha256": "e76d694f6b5c2bd1bb6af645fc34626f83a1495948a1ac4f50464c4bed9f1203"
     }
   ],
   "excluded_categories": [
     "external policy corpora and derived Gold cases",
     "internal handoffs and raw acceptance workpapers",
     "hosting configuration and local machine state",
-    "build outputs, release candidates, caches, and temporary files"
+    "unapproved build outputs, release candidates, caches, and temporary files"
   ]
 }

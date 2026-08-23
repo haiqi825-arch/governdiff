@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib.util
 import json
 import tempfile
 import unittest
@@ -10,9 +11,27 @@ import governdiff.review_session as review_session
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SNAPSHOT_SPEC = importlib.util.spec_from_file_location(
+    "governdiff_public_snapshot", ROOT / "scripts" / "build_public_snapshot.py"
+)
+assert SNAPSHOT_SPEC and SNAPSHOT_SPEC.loader
+SNAPSHOT = importlib.util.module_from_spec(SNAPSHOT_SPEC)
+SNAPSHOT_SPEC.loader.exec_module(SNAPSHOT)
 
 
 class PhaseEightReleaseTests(unittest.TestCase):
+    def test_clean_source_contains_marketplace_reviewer_runtime(self) -> None:
+        required = {
+            "reviewer-ui/dist/server/index.js",
+            "reviewer-ui/dist/client/.vite/manifest.json",
+        }
+        selected = {path.as_posix() for path in SNAPSHOT._relative_files()}
+
+        self.assertTrue(required.issubset(selected))
+        self.assertFalse(any(".openai" in path.split("/") for path in selected))
+        for relative in required:
+            self.assertTrue((ROOT / relative).is_file(), relative)
+
     def test_installed_reviewer_layout_precedes_source_layout(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "site-packages" / "governdiff"
