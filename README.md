@@ -10,6 +10,8 @@ scope, deadlines, exceptions, and authority, and produces evidence a person can
 verify. No document upload or LLM is required.
 
 [Live demo](https://haiqi825-arch.github.io/governdiff/) ·
+[Release](https://github.com/haiqi825-arch/governdiff/releases/tag/v0.6.0) ·
+[Feedback / boundary cases](https://github.com/haiqi825-arch/governdiff/discussions/10) ·
 [Technical article](https://haiqi825-arch.github.io/governdiff/articles/policy-ci-without-uploading-documents.html) ·
 [30-second walkthrough](docs/LAUNCH_DEMO.md) ·
 [Why GovernDiff?](docs/WHY_GOVERNDIFF.md) ·
@@ -278,7 +280,7 @@ file gets full JSON, Markdown, self-contained HTML, and CSV reports.
 ```yaml
 steps:
   - uses: actions/checkout@v6
-  - uses: your-org/governdiff@v1
+  - uses: haiqi825-arch/governdiff@v1
     with:
       paths: |
         GOVERNANCE.md
