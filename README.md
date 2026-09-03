@@ -10,6 +10,8 @@ scope, deadlines, exceptions, and authority, and produces evidence a person can
 verify. No document upload or LLM is required.
 
 [Live demo](https://haiqi825-arch.github.io/governdiff/) ·
+[PyPI](https://pypi.org/project/governdiff/) ·
+[GitHub Action Marketplace](https://github.com/marketplace/actions/governdiff-policy-review) ·
 [Release](https://github.com/haiqi825-arch/governdiff/releases/tag/v0.6.0) ·
 [Feedback / boundary cases](https://github.com/haiqi825-arch/governdiff/discussions/10) ·
 [Technical article](https://haiqi825-arch.github.io/governdiff/articles/policy-ci-without-uploading-documents.html) ·
@@ -25,6 +27,19 @@ After:  Vendors must report incidents within 24 hours.
 
 GovernDiff: modality-strengthened · deadline-shortened · CI gate failed
 ```
+
+### Try it now
+
+Install the published package and generate a self-contained HTML report from
+two local policy files:
+
+```bash
+python -m pip install governdiff
+governdiff diff old-policy.md new-policy.md --format html --output report.html
+```
+
+[Try the synthetic demo](https://haiqi825-arch.github.io/governdiff/demo/incident-deadline.html) ·
+[Use the GitHub Action](https://github.com/marketplace/actions/governdiff-policy-review)
 
 ### What you get
 
@@ -101,7 +116,7 @@ account, remote document store, or public processing service in this release.
 ## Quick start
 
 Python 3.10+ is required. The interactive local Reviewer additionally requires
-Node.js 22.13+. After the package is published, the five-minute path is:
+Node.js 22.13+. Install the current release from PyPI:
 
 ```bash
 python -m pip install governdiff
