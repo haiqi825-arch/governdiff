@@ -48,7 +48,8 @@
           <p class="hero-zh">把政策文件当代码审查：不上传文档，不依赖大模型。</p>
           <div class="hero-actions">
             <a class="button primary" href="demo/incident-deadline.html">Open the synthetic demo</a>
-            <a class="button secondary" href="#quickstart">Run it locally</a>
+            <a class="button secondary" href="https://pypi.org/project/governdiff/">Install from PyPI</a>
+            <a class="button secondary" href="https://github.com/marketplace/actions/governdiff-policy-review">Use the GitHub Action</a>
           </div>
           <ul class="trust-list" aria-label="Product principles">
             <li>No document upload</li>
@@ -148,17 +149,17 @@
       <section class="section quickstart-section" id="quickstart">
         <div class="quickstart-copy">
           <p class="kicker">Five-minute path</p>
-          <h2>Start with one synthetic case.</h2>
-          <p>Install from the repository, generate a self-contained HTML report, then open the local review workflow. Your policy text stays on the machine.</p>
+          <h2>Compare two local policy files.</h2>
+          <p>Install the published package from PyPI and generate a self-contained HTML report. Your policy text stays on the machine.</p>
           <a href="{{REPOSITORY_URL}}#quick-start">Read the full documentation →</a>
         </div>
         <div class="terminal" aria-label="GovernDiff quick-start commands">
           <div class="terminal-bar"><span></span><span></span><span></span><strong>terminal</strong></div>
-          <pre><code><span class="prompt">$</span> python -m pip install .
+          <pre><code><span class="prompt">$</span> python -m pip install governdiff
 
 <span class="prompt">$</span> governdiff diff \
-  examples/public-cases/01-incident-deadline/old.md \
-  examples/public-cases/01-incident-deadline/new.md \
+  old-policy.md \
+  new-policy.md \
   --format html --output report.html
 
 <span class="output">✓ 1 change · 2 findings · evidence retained</span></code></pre>

@@ -28,6 +28,13 @@ classifiers = [
 ]
 dependencies = ["pypdf>=5,<7"]
 
+[project.urls]
+Homepage = "https://haiqi825-arch.github.io/governdiff/"
+Repository = "https://github.com/haiqi825-arch/governdiff"
+Documentation = "https://haiqi825-arch.github.io/governdiff/"
+Issues = "https://github.com/haiqi825-arch/governdiff/issues"
+Changelog = "https://github.com/haiqi825-arch/governdiff/releases"
+
 [project.scripts]
 governdiff = "governdiff.cli:main"
 
