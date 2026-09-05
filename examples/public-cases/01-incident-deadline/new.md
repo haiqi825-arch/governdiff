@@ -2,4 +2,4 @@
 
 ## Notification
 
-Vendors must report a security incident within 24 hours after discovery.
+Vendors must report a security incident within 12 hours after discovery.
