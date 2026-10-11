@@ -22,10 +22,10 @@ jobs:
   production-adapter:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: python -m pip install -e .
@@ -35,7 +35,7 @@ jobs:
   explicit-pair-canary:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Audit a synthetic policy fixture through the composite Action
         id: audit
         uses: ./
@@ -59,7 +59,7 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Audit changed policy documents against the PR base
         id: audit
         uses: ./
